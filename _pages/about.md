@@ -32,7 +32,6 @@ Amanat Ur Rahman is a Ph.D. student in Industrial Engineering at the University 
 
 His research develops two-stage stochastic programming models and exact decomposition algorithms for scheduling systems that commit capacity before demand is realized, with outpatient appointment scheduling as the principal application. He has also applied stochastic optimization to air cargo network planning at Atlas Air and predictive modeling to semiconductor process control.
 
-He is on the academic job market for positions beginning Fall 2027.
 
 **Research interests**
 
