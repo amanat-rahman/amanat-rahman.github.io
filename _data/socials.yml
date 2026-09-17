@@ -1,0 +1,9 @@
+# Social links and identifiers shown under the profile photo and in the footer.
+# Ordering here controls the display order (jekyll-socials plugin).
+cv_pdf: /assets/pdf/Amanat_Ur_Rahman_CV.pdf # path to the CV PDF served from assets/pdf/
+email: rahmanah@mail.uc.edu
+scholar_userid: 2l4fFy4AAAAJ # Google Scholar profile ID
+linkedin_username: amanat-rahman
+github_username: amanat-rahman
+# orcid_id: # add once an ORCID record exists
+rss_icon: false
