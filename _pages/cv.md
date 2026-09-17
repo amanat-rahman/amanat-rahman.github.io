@@ -11,8 +11,9 @@ nav_order: 4
 
 ## Education
 
-- **Ph.D., Industrial Engineering**, University of Cincinnati, expected 2027
-  Dissertation: *Stochastic optimization and decomposition algorithms for large-scale scheduling systems under uncertainty*. Advisor: Dr. Tommaso Giovannelli
+- **Ph.D., Industrial Engineering**, University of Cincinnati, (expected Spring 2027)
+  - Dissertation: *Stochastic optimization and decomposition algorithms for large-scale scheduling systems under uncertainty*.
+  - Advisor: Dr. Tommaso Giovannelli
 - **M.S., Industrial Engineering**, University of Louisville, 2023
   Research: institutional variability and correlated multi-level factors in post-heart-transplant survivability.
 - **M.S., Industrial and Production Engineering**, Bangladesh University of Engineering and Technology, 2020
