@@ -59,30 +59,50 @@ names the file at fault.
 
 ## 2. Day-to-day editing
 
-Every change follows the same cycle: edit a file here, then
+### The cycle
 
-```bash
-git add .
-git commit -m "describe the change"
-git push
-```
+1. Open the folder: in GitHub Desktop, **Repository -> Show in Explorer**, or
+   Ctrl+Shift+F.
+2. Edit a file in any plain-text editor. Notepad works; VS Code or Notepad++ is
+   easier because it shows the structure.
+3. Back in GitHub Desktop, the left panel lists what changed. Click a file to
+   see the exact lines.
+4. Type a short summary in the box at the bottom left, click **Commit to main**,
+   then click **Push origin** at the top.
+5. Wait about two minutes. Check the **Actions** tab on GitHub: a green check
+   means the site is updated, a red X means the build failed and the log names
+   the file at fault. The old site stays up until a build succeeds.
 
-The Action rebuilds and redeploys automatically. There is no need to build
-locally.
+Never edit files while GitHub Desktop is mid-commit, and do not rename the
+`_pages`, `_news`, `_data`, or `_bibliography` folders.
+
+### The two rules that break a build
+
+**Front matter.** Every page begins with a block fenced by `---` lines. Keep
+the `key: value` shape, keep the indentation, and do not delete the fences. If a
+value contains a colon followed by a space, wrap the whole value in double
+quotes.
+
+**Blank lines.** Markdown needs a blank line before a list and before a heading.
+Two lines of text with no blank line between them render as one paragraph.
 
 ### What to edit, and where
 
 | Goal | File |
 |---|---|
-| Biography text on the home page | `_pages/about.md` (below the `---` block) |
-| Photo | replace `assets/img/prof_pic.jpg` (currently a placeholder) |
-| Office address block under the photo | `profile.more_info` in `_pages/about.md` |
-| Email, Scholar, LinkedIn, GitHub, CV link | `_data/socials.yml` |
-| Publications | `_bibliography/papers.bib` |
-| News items on the home page | `_news/` (one file per item) |
-| CV PDF served by the download icon | `assets/pdf/Amanat_Ur_Rahman_CV.pdf` |
-| Venue badge colors in the bibliography | `_data/venues.yml` |
+| Biography on the home page | `_pages/about.md`, below the closing `---` |
+| Office address under the photo | `profile.more_info` in `_pages/about.md` |
+| Photo | replace `assets/img/prof_pic.jpg`, keep the filename |
+| Research interests, projects, directions | `_pages/research.md` |
+| Publication list | `_bibliography/papers.bib` |
+| Courses, curriculum, mentoring | `_pages/teaching.md` |
+| CV summary page | `_pages/cv.md` |
+| CV PDF behind the download icon | `assets/pdf/Amanat_Ur_Rahman_CV.pdf`, keep the filename |
+| News items | `_news/`, one file per item |
+| Email, Scholar, LinkedIn, GitHub | `_data/socials.yml` |
+| Venue badge colors | `_data/venues.yml` |
 | Site title, URL, description, keywords | `_config.yml` |
+| Navigation order, hiding a page | `nav` and `nav_order` in each page's front matter |
 
 ### Adding a news item
 
@@ -96,24 +116,83 @@ inline: true
 related_posts: false
 ---
 
-Paper accepted at ...
+Paper accepted at Operations Research.
 ```
 
-The home page shows the five most recent items. Change `announcements.limit` in
-`_pages/about.md` to show more.
+The date in the filename and the `date:` field should match. The home page shows
+the five most recent; change `announcements.limit` in `_pages/about.md` to show
+more. Delete the file to remove the item.
 
 ### Adding a publication
 
-Append a BibTeX entry to `_bibliography/papers.bib`. Useful non-standard fields:
+Append an entry to `_bibliography/papers.bib`. Order does not matter; the page
+sorts by year.
 
-- `abbr={INFORMS}` renders a small badge on the left
-- `selected={true}` promotes the entry to the home page
-- `html={https://doi.org/...}` adds a link button
-- `pdf={filename.pdf}` links a file placed in `assets/pdf/`
-- `abstract={...}` adds an expandable abstract
+```bibtex
+@article{rahman2027example,
+  abbr={INFORMS},
+  title={Title of the Paper},
+  author={Rahman, Amanat Ur and Giovannelli, Tommaso},
+  journal={Operations Research},
+  volume={75},
+  number={2},
+  pages={100--120},
+  year={2027},
+  doi={10.1287/opre.2027.0001},
+  html={https://doi.org/10.1287/opre.2027.0001},
+  selected={true},
+  abstract={One paragraph.}
+}
+```
 
-Author names must be written `Rahman, Amanat Ur` so that jekyll-scholar bolds
-them (the matching rule lives under `scholar:` in `_config.yml`).
+- The key on the first line (`rahman2027example`) must be unique
+- `author=` must use `Last, First` form, so `Rahman, Amanat Ur`, or the name
+  will not render in bold
+- `abbr=` is the badge on the left; add its color to `_data/venues.yml`
+- `selected={true}` also promotes the entry to the home page
+- `html=` adds a link button, `pdf=filename.pdf` links a file in `assets/pdf/`
+- Every field ends with a comma except the last one
+
+When a manuscript moves from review to acceptance, edit its entry in place:
+change `abbr` from `Under Review` to the journal, and fill in `journal`,
+`volume`, `pages`, and `doi`.
+
+### Adding a course
+
+Copy an existing block in `_pages/teaching.md` and change the text. The pattern:
+
+```markdown
+- **ISE 4012: Probabilistic Systems Models.** Instructor, Fall 2027.
+  Topics: Markov chains, queueing models, reliability, simulation basics.
+```
+
+The second line must be indented by two spaces so it stays inside the bullet.
+To add an institution, add a `## Institution Name` heading.
+
+### Adding a research project
+
+Copy an existing block in `_pages/research.md`. The pattern is a bold title, an
+italic line of coauthors and status, then bullets:
+
+```markdown
+**Title of the project**
+*with A. Coauthor. Under review, 2027.*
+
+- First point
+- Second point
+```
+
+### Hiding or reordering pages
+
+In a page's front matter, `nav: false` removes it from the navigation bar
+without deleting the page, and `nav_order` sets left-to-right position. Current
+order: research 1, publications 2, teaching 3, cv 4.
+
+### If something goes wrong
+
+GitHub Desktop's **History** tab lists every commit. Right-click one and choose
+**Revert changes in commit** to undo it, then push. The site returns to its
+previous state on the next build.
 
 ---
 
