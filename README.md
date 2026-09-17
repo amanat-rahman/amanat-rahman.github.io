@@ -81,6 +81,7 @@ locally.
 | Publications | `_bibliography/papers.bib` |
 | News items on the home page | `_news/` (one file per item) |
 | CV PDF served by the download icon | `assets/pdf/Amanat_Ur_Rahman_CV.pdf` |
+| Venue badge colors in the bibliography | `_data/venues.yml` |
 | Site title, URL, description, keywords | `_config.yml` |
 
 ### Adding a news item
@@ -116,23 +117,24 @@ them (the matching rule lives under `scholar:` in `_config.yml`).
 
 ---
 
-## 3. Pages that exist but are hidden
+## 3. Adding more pages later
 
-The theme ships more pages than the site currently shows. Each is present with
-`nav: false` in its front matter. To publish one, change that line to
-`nav: true` and fill in its content:
+The site currently ships four pages: the home page (`_pages/about.md`), a
+publications page, a news archive, and a 404 page. Everything else from the
+al-folio demo was removed so the repository contains no placeholder content.
 
-| Page | File | Notes |
-|---|---|---|
-| Publications | `_pages/publications.md` | Ready now; content comes from `papers.bib`. Turning this on is the highest-value next step. |
-| Teaching | `_pages/teaching.md` | Requires course entries in a `_teachings/` folder (deleted with the demo content; recreate it). |
-| CV | `_pages/cv.md` | Renders a structured CV from `assets/rendercv/`; the PDF download icon already works without it. |
-| Projects | `_pages/projects.md` | Requires a `_projects/` folder. |
-| Blog | `_pages/blog.md` | Requires a `_posts/` folder. |
-| Repositories | `_pages/repositories.md` | Pulls GitHub stats from `_data/repositories.yml`. |
-| People | `_pages/profiles.md` | For a research group page. |
+**Publications** is built and ready but hidden. Open `_pages/publications.md`,
+change `nav: false` to `nav: true`, push, and the page appears in the navigation
+bar, rendering every entry in `_bibliography/papers.bib` grouped by year.
 
-`nav_order` controls the left-to-right order in the navigation bar.
+To add a teaching, projects, CV, blog, or group page later, copy the
+corresponding file from the upstream theme at
+<https://github.com/alshedivat/al-folio/tree/main/_pages> into `_pages/`, add
+the collection it depends on (for example a `_teachings/` folder and a
+`teachings:` entry under `collections:` in `_config.yml`), and set `nav: true`.
+
+`nav_order` in a page's front matter controls left-to-right position in the
+navigation bar.
 
 ---
 
@@ -165,4 +167,8 @@ Both serve the site at `http://localhost:8080`.
 - Google Scholar, LinkedIn, and GitHub handles in `_data/socials.yml` are set;
   add `orcid_id` once an ORCID record exists.
 - The publications page is the natural next addition; the bibliography that
-  feeds it is already complete.
+  feeds it is already complete. Flip `nav: false` to `nav: true` in
+  `_pages/publications.md` when the working papers are ready to be listed
+  publicly.
+- Two entries in `papers.bib` are marked `Under Review` and `In Prep.`. Update
+  those `abbr` and `journal` fields as the manuscripts progress.
