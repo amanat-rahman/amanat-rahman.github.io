@@ -117,24 +117,30 @@ them (the matching rule lives under `scholar:` in `_config.yml`).
 
 ---
 
-## 3. Adding more pages later
+## 3. Page set
 
-The site currently ships four pages: the home page (`_pages/about.md`), a
-publications page, a news archive, and a 404 page. Everything else from the
-al-folio demo was removed so the repository contains no placeholder content.
+| Page | File | In nav |
+|---|---|---|
+| Home / About | `_pages/about.md` | yes, permalink `/` |
+| Research | `_pages/research.md` | yes, order 1 |
+| Publications | `_pages/publications.md` | yes, order 2 |
+| Teaching | `_pages/teaching.md` | yes, order 3 |
+| CV | `_pages/cv.md` | yes, order 4 |
+| News archive | `_pages/news.md` | hidden, reachable at `/news/` |
+| 404 | `_pages/404.md` | n/a |
 
-**Publications** is built and ready but hidden. Open `_pages/publications.md`,
-change `nav: false` to `nav: true`, push, and the page appears in the navigation
-bar, rendering every entry in `_bibliography/papers.bib` grouped by year.
+`nav_order` in a page's front matter controls left-to-right position. Set
+`nav: false` to hide a page without deleting it.
 
-To add a teaching, projects, CV, blog, or group page later, copy the
-corresponding file from the upstream theme at
+Style note: these pages are deliberately itemized rather than narrative. Course
+entries carry a code, title, role, term, and topic list. Research entries carry
+a title, coauthors, status, and bullets. No teaching philosophy or statement
+prose appears on the site; those belong in the application package.
+
+To add a projects, blog, or group page later, copy the corresponding file from
 <https://github.com/alshedivat/al-folio/tree/main/_pages> into `_pages/`, add
-the collection it depends on (for example a `_teachings/` folder and a
-`teachings:` entry under `collections:` in `_config.yml`), and set `nav: true`.
-
-`nav_order` in a page's front matter controls left-to-right position in the
-navigation bar.
+the collection it depends on under `collections:` in `_config.yml`, and set
+`nav: true`.
 
 ---
 

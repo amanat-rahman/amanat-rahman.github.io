@@ -2,59 +2,76 @@
 layout: page
 permalink: /research/
 title: research
-description: Exact optimization methods for service systems in which capacity is committed before demand is realized.
+description: Stochastic optimization and exact decomposition for scheduling under uncertainty.
 nav: true
 nav_order: 1
 ---
 
-## Overview
+## Interests
 
-Amanat Ur Rahman's research develops exact optimization methods for service systems in which capacity is committed before demand and attendance are realized. The methodological core is two-stage stochastic programming with mixed-integer recourse, solved by decomposition within branch-and-cut, together with its extension to problems carrying several conflicting criteria, where the set of recourse solutions rather than a single value is the object of interest.
-
-The principal application is outpatient appointment scheduling, in which slots are assigned weeks in advance and a substantial fraction of patients do not attend as booked. Related work applies stochastic optimization to air cargo network planning and predictive modeling to semiconductor process control.
-
----
-
-## Current work
-
-### Two-stage stochastic programming for scheduling under no-shows and walk-ins
-
-This work formulates outpatient appointment scheduling with overbooking and walk-ins as a two-stage stochastic program over a multi-provider clinic session. The first stage assigns scheduled patients to providers and slots, designates which slots are double-booked, and reserves slots for walk-in patients under an open-access policy. The second stage determines walk-in admission after five sources of uncertainty are realized: deviations between actual and scheduled arrival times, walk-in arrival times, service durations for both patient streams, no-shows, and short-notice cancellations. The objective minimizes expected operational cost across patient waiting time, provider idle time, provider overtime, and denied walk-in admission.
-
-The recourse problem is itself a mixed-integer program containing bilinear terms that couple continuous service start times with binary sequencing indicators, so decomposition methods developed for a linear second stage do not apply. The algorithm is an enhanced integer L-shaped decomposition implemented as single-tree branch-and-cut, separating linear-programming optimality cuts, scenario-wise integer optimality cuts that enforce the exact recourse value at incumbent first-stage solutions, and no-good feasibility cuts that exclude first-stage patterns with infeasible recourse. The formulation is strengthened by scenario- and patient-specific big-M coefficients, McCormick envelopes that render the second stage mixed-integer linear, and symmetry-breaking inequalities exploiting the exchangeability of identical providers and of scheduled patients within a provider pool.
-
-The symmetry-breaking inequalities prove decisive. Instances that branch-and-cut cannot solve within a multi-hour limit are solved to optimality in a small fraction of that time once these inequalities are added, and the full algorithm solves every instance of the flexible walk-in model with up to 300 sampled scenarios to optimality.
-
-The computational study yields a structural result. Once scheduled demand exceeds nominal slot capacity, the optimal schedule relies entirely on double-booking and reserves no open-access capacity under any tested cost profile or walk-in volume. Reserving a slot guarantees one same-day admission but displaces a scheduled patient into an additional double-booked slot, while the appointments vacated by no-shows and short-notice cancellations already absorb walk-in demand. Flexible reassignment of walk-in patients across providers is the more effective mechanism for improving same-day access, and its value is largest when the clinic is not congested.
-
-Joint work with T. Giovannelli, K. S. Shehadeh, and J. Shi. Presented at the IISE Annual Conference (2026) and MOPTA (2026), with presentation at the INFORMS Annual Meeting scheduled for November 2026.
-
-### Set-valued formulation of open-access allocation
-
-Stochastic appointment scheduling models aggregate conflicting outcomes into a single expected cost by assigning a monetary weight to each. A clinic has no reliable basis for pricing a minute of patient waiting time against a minute of provider time or a minute of unmet same-day demand, and such a formulation returns one schedule per weight vector.
-
-This second line of work retains the outcomes as separate criteria. The setting is a single-provider session on a fixed slot grid, in which the first stage selects which slots are held open for same-day demand. The recourse is a multi-objective linear program in three criteria: total waiting time of attending scheduled patients, session completion time, and unmet same-day demand. Its solutions map to a nondominated set in criterion space. That set is a random closed set, and the first stage minimizes its expected value in the set-valued sense, where the expectation is the selection expectation defined through the Aumann integral. The binary first stage distinguishes this problem from the two-stage stochastic multi-objective programs treated in the literature, which assume a continuous first stage.
-
-The output is the full set of efficient open-access allocations rather than a single schedule conditional on assumed weights. In preparation with T. Giovannelli.
-
-### Related methodological work
-
-Three further projects extend the range of methods in this program. At Atlas Air in 2026, a stochastic evaluation framework with mixed-integer recourse was built for air cargo network planning, quantifying disruption cost through Monte Carlo evaluation of the recourse value function. In semiconductor manufacturing, a dual linear Kalman filter for material removal rate prediction in chemical mechanical planarization attained the lowest mean squared error against multiple linear regression, EWMA, and Bayesian ARX baselines. In health services research, a multi-task Cox proportional hazards model treating each transplantation center as a separate learning task over a shared representation integrated national registry records with tract-level deprivation measures to quantify center-level effects on post-heart-transplant survival.
+- **Methodology:** two-stage and multi-stage stochastic programming; mixed-integer recourse; integer L-shaped and Benders decomposition; branch-and-cut; multi-objective and set-valued optimization
+- **Applications:** healthcare operations and outpatient appointment scheduling; airline and air cargo network planning; semiconductor process control; supply chain analytics
 
 ---
 
-## Research agenda
+## Projects
 
-The goal over the next five years is to bring exact stochastic optimization to the scale at which health systems operate, and to make patient-level access a criterion these models optimize rather than report.
+**Stochastic appointment scheduling with overbooking and walk-ins**
+*with T. Giovannelli, K. S. Shehadeh, and J. Shi. In final co-author review, 2026.*
 
-**Direction 1. Clinic networks with shared providers.** Appointment scheduling models treat a clinic in isolation with a fixed provider panel. Health systems operate multiple sites that share providers and can route a patient to whichever site can see them soonest. Extending the first stage to joint assignment and routing changes the decomposition structure, since scenario subproblems separate by site only when routing is fixed. The aim is to characterize when the coupled problem admits a tractable decomposition, and to quantify the same-day access gained by cross-site routing against the additional travel imposed on patients.
+- Two-stage stochastic program over a multi-provider clinic session; first stage assigns patients to providers and slots and designates double-booked and open-access slots
+- Recourse is a mixed-integer program with bilinear terms, under five sources of uncertainty: arrival deviations, walk-in arrivals, service durations, no-shows, short-notice cancellations
+- Enhanced integer L-shaped algorithm in single-tree branch-and-cut, with scenario-wise integer optimality cuts, no-good feasibility cuts, McCormick envelopes, and symmetry-breaking inequalities
+- Every instance of the flexible walk-in model with up to 300 scenarios solved to optimality; symmetry breaking reduces multi-hour instances to a small fraction of the time limit
+- Structural finding: once demand exceeds nominal capacity, optimal schedules rely entirely on double-booking and reserve no open-access capacity; flexible cross-provider reassignment is the more effective access mechanism
+- Presented at IISE 2026 and MOPTA 2026; INFORMS Annual Meeting, November 2026
 
-**Direction 2. Scalability of exact decomposition.** The integer L-shaped method converges slowly on instances at operational size. Four areas of improvement are planned: optimality cuts strengthened through the structure of the scheduling polytope, cut aggregation across scenario subsets that trades cut count against cut strength, warm-starting the branch-and-cut tree from heuristic policies including iterated local search, and parallel scenario evaluation. Results here apply to two-stage stochastic programs with mixed-integer recourse generally, beyond the scheduling application.
+**Set-valued formulation of open-access allocation**
+*with T. Giovannelli. In preparation, 2026.*
 
-**Direction 3. Patient-level access as an explicit criterion.** Expected patient delay is an average, and a schedule can minimize it while consistently placing a subset of patients late in the queue. Formulating patient-level access criteria directly, through max-min access, dispersion across patient classes, and chance constraints on per-class delay, produces the cost-access trade-off surface rather than a single point on it.
+- Single-provider session on a fixed slot grid; binary first stage selects slots held open for same-day demand
+- Recourse is a multi-objective linear program in three criteria: waiting time of attending patients, session completion time, and unmet same-day demand
+- The nondominated set is treated as a random closed set, minimized in the set-valued sense through the selection expectation defined by the Aumann integral
+- Binary first stage distinguishes the problem from the continuous-first-stage results in the literature
+- Returns the full set of efficient allocations rather than one schedule per assumed weight vector
+
+**Stochastic evaluation for air cargo network planning**
+*Atlas Air, Network Planning, 2026.*
+
+- Scenario-based framework with mixed-integer recourse in Pyomo, HiGHS, and Gurobi
+- Monte Carlo evaluation of the recourse value function to quantify network disruption cost across fleet flow, capacity utilization, routing, capacity spill, and cascading delay
+
+**Virtual metrology for chemical mechanical planarization**
+*with X. Han and X. Jia. ASME MSEC 2024.*
+
+- Dual linear Kalman filter for material removal rate prediction
+- Lowest mean squared error against multiple linear regression, EWMA, and Bayesian ARX baselines
+
+**Multi-task survival modeling of post-heart-transplant outcomes**
+*with X. Chen, M. Gentili, and J. Trivedi. INFORMS 2022, Research!Louisville 2022.*
+
+- Multi-task Cox proportional hazards model treating each transplantation center as a task over a shared representation
+- National registry records integrated with tract-level deprivation measures within a 200-mile radius of each center
+- Benchmarked against CoxPH and non-linear CoxPH by concordance index
 
 ---
 
-## Undergraduate involvement
+## Directions
 
-Several components of this program are self-contained enough for undergraduate projects: scenario generation and reduction from clinic arrival and attendance records, discrete-event simulation models for validating the recourse approximation, sensitivity studies across cost profiles, benchmarking of heuristic policies against exact solutions, and decision-support interfaces that present a trade-off surface in operational terms. Each requires one programming course and one operations research course as preparation, and each produces output the larger project uses.
+**Clinic networks with shared providers.** Extending the first stage to joint assignment and routing across sites that share providers. Scenario subproblems separate by site only when routing is fixed, so the decomposition structure changes. Goal: characterize when the coupled problem stays tractable, and quantify same-day access gained against additional patient travel.
+
+**Scalability of exact decomposition.** Four routes to instances at full-clinic-day scale: optimality cuts strengthened through the scheduling polytope, cut aggregation across scenario subsets, warm-starting branch-and-cut from heuristic policies including iterated local search, and parallel scenario evaluation. Results apply to two-stage programs with mixed-integer recourse generally.
+
+**Patient-level access as a criterion.** Expected delay is an average, and a schedule can minimize it while placing the same patients late every session. Formulating max-min access, dispersion across patient classes, and chance constraints on per-class delay yields the cost-access trade-off surface rather than one point on it.
+
+---
+
+## Undergraduate projects
+
+Self-contained components suitable for final-year projects, each requiring one programming course and one operations research course:
+
+- Scenario generation and reduction from clinic arrival and attendance records
+- Discrete-event simulation models for validating the recourse approximation
+- Sensitivity studies across cost profiles
+- Benchmarking heuristic policies against exact solutions
+- Decision-support interfaces presenting a trade-off surface in operational terms
