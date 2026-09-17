@@ -1,2 +1,21 @@
+# Normalize all text files to LF in the repository and in the working tree.
+# The site is built on Linux by GitHub Actions, so LF everywhere avoids the
+# "this file uses LF line endings but Git is configured to convert them to
+# CRLF" notice on Windows checkouts.
+* text=auto eol=lf
+
 # Force LF line endings, needed for Docker to work on Windows
 *.sh text eol=lf
+
+# Treat these as binary so Git never rewrites their bytes.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.pdf binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary

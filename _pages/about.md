@@ -6,8 +6,8 @@ subtitle: Ph.D. Student, Industrial Engineering · <a href='https://ceas.uc.edu/
 
 profile:
   align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image: pic_medium_AR.jpg
+  image_circular: False # crops the image to make it circular
   more_info: >
     <p>Dept. of Mechanical, Materials,</p>
     <p>and Industrial Engineering</p>
