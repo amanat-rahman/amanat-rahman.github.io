@@ -4,7 +4,7 @@ permalink: /teaching/
 title: teaching
 description: Courses taught in operations research, production systems, and quantitative methods.
 nav: true
-nav_order: 3
+nav_order: 4
 ---
 
 ## University of Cincinnati

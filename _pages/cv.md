@@ -4,7 +4,7 @@ permalink: /cv/
 title: cv
 description: A summary. The full version is available as a PDF.
 nav: true
-nav_order: 4
+nav_order: 5
 ---
 
 <p><a href="{{ '/assets/pdf/Amanat_Ur_Rahman_CV.pdf' | relative_url }}" target="_blank" rel="noopener">Download the full CV (PDF)</a></p>
@@ -19,8 +19,7 @@ nav_order: 4
 - **M.S., Industrial and Production Engineering**, Bangladesh University of Engineering and Technology, 2020
   - Research: *Supply chain performance prediction using a grey-based neural network.*
 - **B.S., Industrial and Production Engineering**, Ahsanullah University of Science and Technology, 2014
-  - Research: *Analysis and suggestions for the supply chain performance of Glaxo
-SmithKline Bangladesh Limited.*
+  - Research: *Analysis and suggestions for the supply chain performance of GlaxoSmithKline Bangladesh Limited.*
 
 ## Academic appointments
 
@@ -48,6 +47,23 @@ SmithKline Bangladesh Limited.*
 - **Graduate Research Assistant**, P&G Digital Accelerator at the University of Cincinnati, 2024 to 2025
   - Azure Databricks pipelines translating SAP planning volumes into production-line recipe rates, reducing annual manual effort by approximately 550 hours
   - Automated Databricks-to-Tableau integration through KNIME; KPI dashboards for production planning
+
+## Teaching
+
+- **Ahsanullah University of Science and Technology**, 2015 to 2021
+  - Instructor of record for sixteen undergraduate courses and laboratories across operations research, production planning and control, supply chain management, engineering economy, industrial simulation, and numerical methods
+  - Authored four laboratory manuals adopted as standing departmental materials
+  - Supervised five undergraduate final-year project and thesis groups
+- **University of Cincinnati**, 2026
+  - Recitation instructor, ISE 3011 Deterministic Systems Models
+- **University of Louisville**, 2022
+  - Teaching assistant and recitation instructor, IE 370 Engineering Economic Analysis
+- **Prepared to teach**
+  - Deterministic and probabilistic operations research; optimization and mathematical programming; stochastic models
+  - Discrete-event simulation; production planning and control; supply chain management
+  - Engineering statistics and design of experiments; engineering economy
+  - Introductory programming and data analysis for engineers; manufacturing processes and laboratories
+  - Course-level detail on the [teaching]({{ '/teaching/' | relative_url }}) page
 
 ## Awards and honors
 
@@ -81,6 +97,11 @@ SmithKline Bangladesh Limited.*
 - **Membership**
   - INFORMS
 
-## Links
+## Publications and presentations
 
-- [Publications]({{ '/publications/' | relative_url }}) · [Research]({{ '/research/' | relative_url }}) · [Teaching]({{ '/teaching/' | relative_url }})
+- Seven publications: two refereed journal articles, three conference proceedings, two manuscripts in review or preparation. Full list on the [publications]({{ '/publications/' | relative_url }}) page
+- Five conference presentations, one poster, and one departmental seminar. Full list on the [talks]({{ '/talks/' | relative_url }}) page
+
+## Elsewhere on this site
+
+- [Research]({{ '/research/' | relative_url }}) · [Publications]({{ '/publications/' | relative_url }}) · [Talks]({{ '/talks/' | relative_url }}) · [Teaching]({{ '/teaching/' | relative_url }})

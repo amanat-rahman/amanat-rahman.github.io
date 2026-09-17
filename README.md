@@ -95,6 +95,7 @@ Two lines of text with no blank line between them render as one paragraph.
 | Photo | replace `assets/img/prof_pic.jpg`, keep the filename |
 | Research interests, projects, directions | `_pages/research.md` |
 | Publication list | `_bibliography/papers.bib` |
+| Presentations, posters, seminars | `_pages/talks.md` |
 | Courses, curriculum, mentoring | `_pages/teaching.md` |
 | CV summary page | `_pages/cv.md` |
 | CV PDF behind the download icon | `assets/pdf/Amanat_Ur_Rahman_CV.pdf`, keep the filename |
@@ -186,7 +187,7 @@ italic line of coauthors and status, then bullets:
 
 In a page's front matter, `nav: false` removes it from the navigation bar
 without deleting the page, and `nav_order` sets left-to-right position. Current
-order: research 1, publications 2, teaching 3, cv 4.
+order: research 1, publications 2, talks 3, teaching 4, cv 5.
 
 ### If something goes wrong
 
@@ -203,8 +204,9 @@ previous state on the next build.
 | Home / About | `_pages/about.md` | yes, permalink `/` |
 | Research | `_pages/research.md` | yes, order 1 |
 | Publications | `_pages/publications.md` | yes, order 2 |
-| Teaching | `_pages/teaching.md` | yes, order 3 |
-| CV | `_pages/cv.md` | yes, order 4 |
+| Talks | `_pages/talks.md` | yes, order 3 |
+| Teaching | `_pages/teaching.md` | yes, order 4 |
+| CV | `_pages/cv.md` | yes, order 5 |
 | News archive | `_pages/news.md` | hidden, reachable at `/news/` |
 | 404 | `_pages/404.md` | n/a |
 

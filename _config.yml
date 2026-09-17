@@ -9,11 +9,11 @@ last_name: Rahman
 contact_note: >
   Email is the fastest way to reach me.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Ph.D. student in Industrial Engineering at the University of Cincinnati. Stochastic programming, decomposition algorithms, and healthcare operations.
+  Ph.D. student in Industrial Engineering at the University of Cincinnati. Stochastic programming, exact decomposition algorithms, and applied operations research across healthcare, transportation, and manufacturing.
 footer_text: >
   Built with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and the <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: stochastic programming, operations research, appointment scheduling, healthcare operations, integer L-shaped method, optimization under uncertainty
+keywords: stochastic programming, operations research, operations research scientist, data scientist, appointment scheduling, healthcare operations, integer L-shaped method, Benders decomposition, mixed-integer programming, optimization under uncertainty, industrial engineering
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 📊 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 apple_touch_icon: # image name in /assets/img/ (or a rooted path / absolute URL) used for iOS home-screen bookmarks; needs a real 180x180 PNG, since Safari ignores the emoji favicon above. Left empty, iOS falls back to a screenshot of the page.
