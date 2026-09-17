@@ -25,37 +25,61 @@ SmithKline Bangladesh Limited.*
 ## Academic appointments
 
 - **Graduate Research Assistant**, University of Cincinnati, 2023 to present
-- **Graduate Research Assistant**, Logistics and Distribution Institute, University of Louisville, 2021 to 2023
+  - *Department of Mechanical, Materials, and Industrial Engineering*
+  - Two-stage stochastic programming for outpatient appointment scheduling, solved by integer L-shaped decomposition in Gurobi and Python
+  - Multi-objective extension within a stochastic set-optimization framework
+  - Dual linear Kalman filter virtual metrology for chemical mechanical planarization
+- **Graduate Research Assistant**, University of Louisville, 2021 to 2023
+  - *Logistics and Distribution Institute*
+  - Multi-task Cox proportional hazards modeling of center-level effects on post-heart-transplant survival
+  - Authored five modules for an NSF-funded workforce training program on cybersecurity in logistics systems
 - **Assistant Professor**, Ahsanullah University of Science and Technology, 2018 to 2021
+  - *Department of Mechanical and Production Engineering*
+  - Full teaching load across the operations research and production systems core; see [teaching]({{ '/teaching/' | relative_url }})
 - **Lecturer**, Ahsanullah University of Science and Technology, 2015 to 2018
+  - *Department of Mechanical and Production Engineering*
 
 ## Industry
 
 - **Data Scientist Intern (Optimization), Network Planning**, Atlas Air, Summer 2026
-  - Stochastic evaluation framework with mixed-integer recourse for cargo network planning; Monte Carlo evaluation of the recourse value function; Azure Databricks calibration workflow
+  - Stochastic evaluation framework with mixed-integer recourse for cargo network planning in Pyomo, HiGHS, and Gurobi
+  - Monte Carlo evaluation of the recourse value function to quantify network disruption cost
+  - Parameterized Azure Databricks calibration workflow with automated validation and run provenance
 - **Graduate Research Assistant**, P&G Digital Accelerator at the University of Cincinnati, 2024 to 2025
-  - Azure Databricks pipelines translating SAP planning volumes into production-line recipe rates, reducing annual manual effort by approximately 550 hours; KNIME and Tableau KPI dashboards
+  - Azure Databricks pipelines translating SAP planning volumes into production-line recipe rates, reducing annual manual effort by approximately 550 hours
+  - Automated Databricks-to-Tableau integration through KNIME; KPI dashboards for production planning
 
 ## Awards and honors
 
-- Research Travel Grant, Graduate Student Government, University of Cincinnati, 2026
-- Runner-up, Graduate Student Research Competition, Department of Industrial Engineering, University of Louisville, 2022
-- Third place, poster competition, Research!Louisville, 2022
-- Dean's Award, Ahsanullah University of Science and Technology, 2014
-- First position in graduating class, B.S. in Industrial and Production Engineering, 2014
+- **2026** Research Travel Grant, Graduate Student Government, University of Cincinnati
+- **2022** Runner-up, Graduate Student Research Competition, Department of Industrial Engineering, University of Louisville
+- **2022** Third place, poster competition, Research!Louisville
+- **2014** Dean's Award, Ahsanullah University of Science and Technology
+- **2014** First position in graduating class, B.S. in Industrial and Production Engineering
 
 ## Skills
 
-- **Methods:** stochastic programming, integer L-shaped and Benders decomposition, mixed-integer linear programming, multi-objective and set-valued optimization, Monte Carlo scenario generation, survival analysis, state-space filtering, design of experiments
-- **Optimization:** Gurobi, Pyomo, HiGHS, Simio
-- **Programming:** Python, PySpark, SQL, Git, LaTeX, R
-- **Platforms:** Azure Databricks, AWS, Amazon Neptune, KNIME, Tableau, SAP, ArcGIS
+- **Methods**
+  - Stochastic programming; integer L-shaped and Benders decomposition
+  - Mixed-integer linear programming; multi-objective and set-valued optimization
+  - Monte Carlo scenario generation; survival analysis; state-space filtering; design of experiments
+- **Optimization software**
+  - Gurobi, Pyomo, HiGHS, Simio
+- **Programming**
+  - Python, PySpark, SQL, Git, LaTeX, R
+- **Platforms**
+  - Azure Databricks, AWS, Amazon Neptune, KNIME, Tableau, SAP, ArcGIS
 
 ## Service
 
-- Journal reviewer: IEEE Transactions on Industrial Informatics, Journal of Process Control, Operations Research Forum
-- Program accreditation activities, Industrial and Production Engineering, Ahsanullah University of Science and Technology, 2015 to 2021
-- Member, INFORMS
+- **Journal reviewer**
+  - IEEE Transactions on Industrial Informatics
+  - Journal of Process Control
+  - Operations Research Forum
+- **Departmental**
+  - Program accreditation activities, Industrial and Production Engineering, Ahsanullah University of Science and Technology, 2015 to 2021
+- **Membership**
+  - INFORMS
 
 ## Links
 
