@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://amanat-rahman.github.io/sitemap.xml
