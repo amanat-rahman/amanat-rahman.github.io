@@ -1,0 +1,5 @@
+<div class="section-heading">
+  {%- if include.eyebrow %}<p class="eyebrow">{{ include.eyebrow }}</p>{% endif -%}
+  <h2 id="{{ include.title | slugify }}">{{ include.title }}</h2>
+  {%- if include.lede %}<p class="section-heading__lede">{{ include.lede }}</p>{% endif -%}
+</div>

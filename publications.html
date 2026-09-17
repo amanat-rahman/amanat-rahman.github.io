@@ -1,0 +1,22 @@
+---
+layout: default
+title: Publications
+slug: publications
+description: Journal articles, conference proceedings, and manuscripts in review by Amanat Ur Rahman.
+---
+<header class="page-head">
+  <p class="eyebrow">Publications</p>
+  <h1>Journal articles, proceedings, and manuscripts</h1>
+  <p class="lede">Grouped by category, most recent first. A <a href="https://scholar.google.com/citations?user=2l4fFy4AAAAJ" target="_blank" rel="noopener">Google Scholar profile</a> lists citations.</p>
+</header>
+
+{%- for cat in site.data.publications -%}
+<section class="section" id="{{ cat.key }}">
+  {% include section-heading.html title=cat.category %}
+  <ol class="pub-list">
+    {%- for pub in cat.entries -%}
+    {% include pub-entry.html pub=pub %}
+    {%- endfor -%}
+  </ol>
+</section>
+{%- endfor -%}

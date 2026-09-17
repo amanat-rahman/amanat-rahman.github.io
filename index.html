@@ -1,0 +1,89 @@
+---
+layout: default
+title: Amanat Ur Rahman
+slug: home
+description: Amanat Ur Rahman, Ph.D. student in Industrial Engineering at the University of Cincinnati. Stochastic programming, exact decomposition algorithms, and applied operations research.
+---
+{%- assign p = site.data.profile -%}
+<section class="hero">
+  <div class="hero__text">
+    <p class="eyebrow">{{ p.title }} · <a href="{{ p.institution_url }}" target="_blank" rel="noopener">{{ p.institution }}</a></p>
+    <h1 class="display">{{ p.first_name }} <span class="display__last">Ur {{ p.last_name }}</span></h1>
+    <p class="lede">{{ p.tagline }}</p>
+    <div class="prose hero__bio">
+      {%- for para in p.bio -%}
+      <p>{{ para }}</p>
+      {%- endfor -%}
+    </div>
+    <div class="btn-row">
+      <a class="btn btn--primary" href="{{ p.cv_pdf | relative_url }}" target="_blank" rel="noopener">{% include icon.html name="download" %} Curriculum vitae</a>
+      {%- for l in p.links -%}
+      <a class="btn" href="{{ l.url }}"{% unless l.icon == "mail" %} target="_blank" rel="noopener"{% endunless %}>{% include icon.html name=l.icon %} {{ l.label }}</a>
+      {%- endfor -%}
+    </div>
+  </div>
+  <figure class="hero__photo">
+    <div class="hero__frame">
+      <img src="{{ p.photo | relative_url }}" alt="Portrait of {{ p.name }}" width="800" height="636" loading="eager" fetchpriority="high">
+    </div>
+    <figcaption>
+      <span>{{ p.department }}</span>
+      <span>{{ p.institution }}, {{ p.location }}</span>
+      <a href="mailto:{{ p.email }}">{{ p.email }}</a>
+    </figcaption>
+  </figure>
+</section>
+
+<section class="glance" aria-label="At a glance">
+  {%- for g in p.glance -%}
+  <a class="glance__item" href="{{ g.url | relative_url }}">
+    <span class="glance__value">{{ g.value }}</span>
+    <span class="glance__label">{{ g.label }}</span>
+  </a>
+  {%- endfor -%}
+</section>
+
+<section class="section">
+  {% include section-heading.html eyebrow="Interests" title="Research interests" %}
+  <div class="interest-grid">
+    <div class="interest-col">
+      <h3 class="interest-col__title">Methodology</h3>
+      <ul class="chips">
+        {%- for i in p.interests.methodology -%}<li class="chip">{{ i }}</li>{%- endfor -%}
+      </ul>
+    </div>
+    <div class="interest-col">
+      <h3 class="interest-col__title">Applications</h3>
+      <ul class="chips">
+        {%- for i in p.interests.applications -%}<li class="chip">{{ i }}</li>{%- endfor -%}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  {% include section-heading.html eyebrow="Selected work" title="Selected publications" %}
+  <ol class="pub-list">
+    {%- for cat in site.data.publications -%}
+    {%- for pub in cat.entries -%}
+    {%- if pub.selected -%}
+    {% include pub-entry.html pub=pub %}
+    {%- endif -%}
+    {%- endfor -%}
+    {%- endfor -%}
+  </ol>
+  <p class="more"><a href="{{ '/publications/' | relative_url }}">All publications {% include icon.html name="arrow" %}</a></p>
+</section>
+
+<section class="section">
+  {% include section-heading.html eyebrow="Updates" title="News" %}
+  <ol class="news">
+    {%- assign items = site.data.news | sort: "date" | reverse -%}
+    {%- for n in items limit: 5 -%}
+    <li class="news__item">
+      <time class="news__date" datetime="{{ n.date }}">{{ n.date | date: "%b %Y" }}</time>
+      <p class="news__text">{{ n.text }}</p>
+    </li>
+    {%- endfor -%}
+  </ol>
+</section>

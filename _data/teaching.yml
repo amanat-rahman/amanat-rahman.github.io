@@ -1,0 +1,119 @@
+prepared_to_teach:
+  - Deterministic and probabilistic operations research
+  - Optimization and mathematical programming
+  - Stochastic models
+  - Discrete-event simulation
+  - Engineering economy
+  - Production planning and control
+  - Supply chain management
+  - Engineering statistics and design of experiments
+
+institutions:
+  - name: University of Cincinnati
+    unit: Department of Mechanical, Materials, and Industrial Engineering
+    location: Cincinnati, OH, USA
+    period: "2026"
+    roles:
+      - title: Recitation Instructor
+        period: April 2026
+    groups:
+      - courses:
+          - code: ISE 3011
+            title: Deterministic Systems Models
+            term: April 2026
+            topics: Linear programming formulation, the simplex method, duality and sensitivity analysis, network models
+
+  - name: University of Louisville
+    unit: Department of Industrial Engineering
+    location: Louisville, KY, USA
+    period: "2022"
+    roles:
+      - title: Teaching Assistant and Recitation Instructor
+        period: January to April 2022
+    groups:
+      - courses:
+          - code: IE 370
+            title: Engineering Economic Analysis
+            term: January to April 2022
+            topics: Time value of money, equivalence, present and annual worth, rate of return, replacement analysis, depreciation
+
+  - name: Ahsanullah University of Science and Technology
+    unit: Industrial and Production Engineering discipline, Department of Mechanical and Production Engineering
+    location: Dhaka, Bangladesh
+    period: 2015 to 2021
+    roles:
+      - title: Assistant Professor
+        period: December 2018 to July 2021
+      - title: Lecturer
+        period: June 2015 to November 2018
+    summary: Six years of full-time faculty appointment carrying a complete teaching load, centered on the operations research, production systems, and quantitative methods core of the curriculum, with laboratory instruction and service teaching to cohorts from other departments. Theory sections of approximately 50 students.
+    groups:
+      - heading: Operations research and production systems
+        courses:
+          - code: IPE 3107
+            title: Operations Research
+            topics: Linear programming and the simplex method, duality and sensitivity analysis, transportation and assignment models, network flows, integer programming
+          - code: IPE 3205
+            title: Production Planning and Control
+            topics: Demand forecasting, aggregate planning, master production scheduling, material requirements planning, inventory models, line balancing, shop-floor scheduling
+          - code: IPE 4105
+            title: Supply Chain Management
+            topics: Network design, sourcing and procurement, distribution and logistics, inventory pooling, the bullwhip effect, coordination and contracts
+          - code: IPE 4103
+            title: Operations and Project Management
+            topics: Operations strategy, work breakdown structures, CPM and PERT, crashing and resource levelling, project risk and quality planning
+          - code: IPE 4206
+            title: Industrial Simulation
+            lab: true
+            topics: Discrete-event simulation modeling, input distribution fitting, verification and validation, output analysis, scenario comparison
+      - heading: Quantitative methods and engineering economics
+        courses:
+          - code: MATH 2207
+            title: Numerical Analysis and Statistics
+            topics: Root finding, numerical integration and differentiation, curve fitting and interpolation, probability distributions, estimation, hypothesis testing, regression
+          - code: HUM 2107
+            title: Engineering Economy
+            topics: Time value of money, equivalence, present and annual worth analysis, rate of return, replacement and depreciation analysis, benefit-cost evaluation
+      - heading: Design, laboratory, and introductory instruction
+        courses:
+          - code: IPE 3104
+            title: Product Design and Development
+            lab: true
+          - code: IPE 2102
+            title: Manufacturing Process
+            lab: true
+            manual: true
+          - code: IPE 3210
+            title: Metal Forming and Sheet Metal Work
+            lab: true
+          - code: IPE 1110 / 1210
+            title: Machine Shop Practice I and II
+            lab: true
+            manual: true
+          - code: ME 1103
+            title: Introduction to Mechanical and Industrial Engineering
+      - heading: Service teaching for other departments
+        note: Core industrial engineering content (forecasting, capacity and production planning, inventory control, work study, break-even and investment analysis, organizational behavior) delivered to students outside the IPE major.
+        courses:
+          - code: ME 403
+            title: Production Planning and Control
+            audience: Textile Technology
+          - code: HUM 303
+            title: Industrial Management
+            audience: Textile Technology
+          - code: HUM 3209
+            title: Industrial Management
+            audience: Electrical and Electronic Engineering
+
+curriculum:
+  - title: Laboratory manuals
+    period: 2015 to 2021
+    text: Authored the laboratory manuals for IPE 4206 (Industrial Simulation), IPE 2102 (Manufacturing Process), and IPE 1210 and IPE 1110 (Machine Shop Practice II and I). All four were adopted as the standing course materials for those laboratories and remained in use.
+  - title: Program accreditation
+    period: 2015 to 2021
+    text: Contributed to periodic curriculum revision for the Industrial and Production Engineering program through outcome assessment and course mapping.
+
+mentoring:
+  - title: Undergraduate thesis supervisor
+    period: 2015 to 2021
+    text: Supervised five final-year project and thesis groups from problem formulation through data collection, analysis, and defense; advised on research methodology, technical writing, and preparation of results.

@@ -1,0 +1,33 @@
+- group: Methods
+  items:
+    - Two-stage stochastic programming
+    - Decomposition algorithms
+    - Mixed-integer linear programming
+    - Multi-objective and set-valued optimization
+    - Monte Carlo scenario generation
+    - Survival analysis
+    - State-space filtering
+    - Design of experiments
+- group: Optimization
+  items:
+    - Gurobi
+    - Pyomo
+    - HiGHS
+    - Simio
+- group: Programming
+  items:
+    - Python
+    - PySpark
+    - SQL
+    - Git
+    - LaTeX
+- group: Platforms
+  items:
+    - Azure Databricks
+    - AWS
+    - Amazon Neptune
+    - KNIME
+    - Tableau
+    - SAP
+    - ArcGIS
+    - Excel

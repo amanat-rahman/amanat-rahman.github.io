@@ -1,0 +1,18 @@
+{%- assign t = include.talk -%}
+{%- assign authors = t.authors | replace: "A. U. Rahman", "<strong>A. U. Rahman</strong>" -%}
+<li class="talk">
+  <div class="talk__when">
+    <span class="talk__date">{{ t.date }}</span>
+  </div>
+  <div class="talk__body">
+    <p class="talk__venue">{{ t.venue }}</p>
+    <p class="talk__meta">{{ t.location }}{% if t.note %} · {{ t.note }}{% endif %}</p>
+    <p class="talk__title">{{ t.title }}</p>
+    <p class="talk__authors">{{ authors }}</p>
+    <p class="talk__chips">
+      <span class="chip">{{ t.kind }}</span>
+      <span class="chip chip--muted">Presented by {{ t.presenter }}</span>
+      {%- if t.award %}<span class="chip chip--award">{{ t.award }}</span>{% endif -%}
+    </p>
+  </div>
+</li>

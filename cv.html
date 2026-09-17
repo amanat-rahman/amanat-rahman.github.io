@@ -1,0 +1,172 @@
+---
+layout: default
+title: CV
+slug: cv
+description: Curriculum vitae of Amanat Ur Rahman. Education, research and industry experience, teaching, awards, skills, and service.
+---
+{%- assign p = site.data.profile -%}
+<header class="page-head page-head--cv">
+  <div>
+    <p class="eyebrow">Curriculum vitae</p>
+    <h1>{{ p.name }}</h1>
+    <p class="lede">{{ p.title }} · {{ p.department }}, {{ p.institution }}</p>
+  </div>
+  <a class="btn btn--primary" href="{{ p.cv_pdf | relative_url }}" target="_blank" rel="noopener">{% include icon.html name="download" %} Download PDF</a>
+</header>
+
+<nav class="cv-toc" aria-label="CV sections">
+  <a href="#education">Education</a>
+  <a href="#research-experience">Research</a>
+  <a href="#industry-experience">Industry</a>
+  <a href="#teaching-experience">Teaching</a>
+  <a href="#awards-and-honors">Awards</a>
+  <a href="#technical-competencies">Skills</a>
+  <a href="#professional-service">Service</a>
+</nav>
+
+<section class="section cv-section">
+  {% include section-heading.html title="Education" %}
+  <ul class="entries">
+    {%- for e in site.data.education -%}
+    <li class="entry">
+      <div class="entry__when">{{ e.date }}</div>
+      <div class="entry__body">
+        <p class="entry__title">{{ e.degree }}{% if e.track %} <span class="entry__track">({{ e.track }})</span>{% endif %}</p>
+        <p class="entry__org">{{ e.institution }} · {{ e.location }}</p>
+        <ul class="entry__list">
+          <li><span class="label">{{ e.thesis_label }}</span> <em>{{ e.thesis }}</em></li>
+          {%- if e.advisor %}<li><span class="label">Advisor</span> {{ e.advisor }}</li>{% endif -%}
+          {%- if e.note %}<li>{{ e.note }}</li>{% endif -%}
+          {%- if e.coursework %}<li class="entry__coursework"><span class="label">Coursework</span> {{ e.coursework }}</li>{% endif -%}
+        </ul>
+      </div>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>
+
+<section class="section cv-section">
+  {% include section-heading.html title="Research interests" %}
+  <ul class="entry__list entry__list--flat">
+    <li><span class="label">Methodology</span> {{ p.interests.methodology | join: ", " }}</li>
+    <li><span class="label">Applications</span> {{ p.interests.applications | join: ", " }}</li>
+  </ul>
+</section>
+
+<section class="section cv-section">
+  {% include section-heading.html title="Research experience" %}
+  <ul class="entries">
+    {%- for x in site.data.experience.research -%}
+    <li class="entry">
+      <div class="entry__when">{{ x.start }} to {{ x.end }}</div>
+      <div class="entry__body">
+        <p class="entry__title">{{ x.role }}</p>
+        <p class="entry__org">{{ x.unit }}, {{ x.org }} · {{ x.location }}</p>
+        <ul class="entry__list">{%- for b in x.bullets -%}<li>{{ b }}</li>{%- endfor -%}</ul>
+      </div>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>
+
+<section class="section cv-section">
+  {% include section-heading.html title="Industry experience" %}
+  <ul class="entries">
+    {%- for x in site.data.experience.industry -%}
+    <li class="entry">
+      <div class="entry__when">{{ x.start }} to {{ x.end }}</div>
+      <div class="entry__body">
+        <p class="entry__title">{{ x.role }}</p>
+        <p class="entry__org">{{ x.org }} · {{ x.location }}</p>
+        <ul class="entry__list">{%- for b in x.bullets -%}<li>{{ b }}</li>{%- endfor -%}</ul>
+      </div>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>
+
+<section class="section cv-section">
+  {% include section-heading.html title="Teaching experience" %}
+  <p class="cv-prepared"><span class="label">Prepared to teach</span> {{ site.data.teaching.prepared_to_teach | join: ", " }}.</p>
+  <ul class="entries">
+    {%- for inst in site.data.teaching.institutions -%}
+    <li class="entry">
+      <div class="entry__when">{{ inst.period }}</div>
+      <div class="entry__body">
+        <p class="entry__title">{% for r in inst.roles %}{{ r.title }}{% unless forloop.last %}; {% endunless %}{% endfor %}</p>
+        <p class="entry__org">{{ inst.name }} · {{ inst.location }}</p>
+        <p class="entry__org">{% for r in inst.roles %}{{ r.title }}, {{ r.period }}{% unless forloop.last %} · {% endunless %}{% endfor %}</p>
+        {%- if inst.summary %}<p class="entry__note">{{ inst.summary }}</p>{% endif -%}
+        <ul class="entry__list">
+          {%- for g in inst.groups -%}{%- for c in g.courses -%}
+          <li><span class="label label--code">{{ c.code }}</span> {{ c.title }}{% if c.lab %} (laboratory){% endif %}{% if c.audience %}, for {{ c.audience }} students{% endif %}{% if c.term %}, {{ c.term }}{% endif %}</li>
+          {%- endfor -%}{%- endfor -%}
+        </ul>
+      </div>
+    </li>
+    {%- endfor -%}
+    {%- for c in site.data.teaching.curriculum -%}
+    <li class="entry">
+      <div class="entry__when">{{ c.period }}</div>
+      <div class="entry__body"><p class="entry__title">{{ c.title }}</p><p class="entry__note">{{ c.text }}</p></div>
+    </li>
+    {%- endfor -%}
+    {%- for m in site.data.teaching.mentoring -%}
+    <li class="entry">
+      <div class="entry__when">{{ m.period }}</div>
+      <div class="entry__body"><p class="entry__title">{{ m.title }}</p><p class="entry__note">{{ m.text }}</p></div>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>
+
+<section class="section cv-section">
+  {% include section-heading.html title="Awards and honors" %}
+  <ul class="entries entries--compact">
+    {%- for a in site.data.awards -%}
+    <li class="entry">
+      <div class="entry__when">{{ a.year }}</div>
+      <div class="entry__body"><p class="entry__title">{{ a.title }}</p><p class="entry__note">{{ a.detail }}</p></div>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>
+
+<section class="section cv-section">
+  {% include section-heading.html title="Technical competencies" %}
+  <ul class="entry__list entry__list--flat">
+    {%- for s in site.data.skills -%}
+    <li><span class="label">{{ s.group }}</span> {{ s.items | join: ", " }}</li>
+    {%- endfor -%}
+  </ul>
+</section>
+
+<section class="section cv-section">
+  {% include section-heading.html title="Professional service" %}
+  <ul class="entries entries--compact">
+    <li class="entry">
+      <div class="entry__when">{{ site.data.service.reviewing.period }}</div>
+      <div class="entry__body">
+        <p class="entry__title">Journal reviewer</p>
+        <p class="entry__note">{{ site.data.service.reviewing.journals | join: "; " }}</p>
+      </div>
+    </li>
+    {%- for o in site.data.service.other -%}
+    <li class="entry">
+      <div class="entry__when">{{ o.period }}</div>
+      <div class="entry__body"><p class="entry__note">{{ o.text }}</p></div>
+    </li>
+    {%- endfor -%}
+    {%- for a in site.data.service.affiliations -%}
+    <li class="entry">
+      <div class="entry__when">{{ a.period }}</div>
+      <div class="entry__body"><p class="entry__title">Member, {{ a.name }}</p></div>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>
+
+<section class="section cv-section">
+  {% include section-heading.html title="Publications and presentations" %}
+  <p class="entry__note">Seven publications and seven presentations, listed on the <a href="{{ '/publications/' | relative_url }}">publications</a> and <a href="{{ '/talks/' | relative_url }}">talks</a> pages.</p>
+</section>

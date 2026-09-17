@@ -1,0 +1,37 @@
+- degree: Ph.D. in Mechanical Engineering
+  track: Industrial and Systems Engineering track
+  institution: University of Cincinnati
+  location: Cincinnati, OH, USA
+  date: Expected Spring 2027
+  year: "2027"
+  thesis_label: Dissertation
+  thesis: Stochastic optimization and decomposition algorithms for large-scale scheduling systems under uncertainty
+  advisor: Dr. Tommaso Giovannelli
+  coursework: Optimization; Stochastic Operations Research; Stochastic Optimization Algorithms and Modeling; Industrial AI; Lean Six Sigma; Quality Control; Design of Experiments
+
+- degree: M.S. in Industrial Engineering
+  institution: University of Louisville
+  location: Louisville, KY, USA
+  date: August 2023
+  year: "2023"
+  thesis_label: Research
+  thesis: Impact of institutional variability and correlated multi-level factors on post-heart-transplant survivability
+  coursework: Foundations of Optimization I; Algorithms for Optimization; Design of Computer Algorithms; Simulation; Introduction to Machine Learning; Predictive Analytics II; Mathematical Statistics; Engineering Statistics II
+
+- degree: M.S. in Industrial and Production Engineering
+  institution: Bangladesh University of Engineering and Technology
+  location: Dhaka, Bangladesh
+  date: September 2020
+  year: "2020"
+  thesis_label: Research
+  thesis: Supply chain performance prediction using grey-based neural network
+  coursework: Probabilistic Methods in Engineering Design; Engineering Data Analysis; Production System Analysis; Advanced Manufacturing Process; Logistics Management
+
+- degree: B.S. in Industrial and Production Engineering
+  institution: Ahsanullah University of Science and Technology
+  location: Dhaka, Bangladesh
+  date: December 2014
+  year: "2014"
+  thesis_label: Research
+  thesis: Analysis and suggestions for the supply chain performance of GlaxoSmithKline Bangladesh Limited
+  note: Ranked first among 65 graduating students; Dean's Award

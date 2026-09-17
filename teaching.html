@@ -1,0 +1,72 @@
+---
+layout: default
+title: Teaching
+slug: teaching
+description: Courses taught by Amanat Ur Rahman in operations research, production systems, and quantitative methods, and courses he is prepared to teach.
+---
+{%- assign t = site.data.teaching -%}
+<header class="page-head">
+  <p class="eyebrow">Teaching</p>
+  <h1>Courses taught and prepared</h1>
+  <p class="lede">Six years as full-time faculty in Bangladesh and recitation instruction at two U.S. universities, centered on the operations research and production systems core of an industrial engineering curriculum.</p>
+</header>
+
+<section class="section">
+  {% include section-heading.html eyebrow="Readiness" title="Prepared to teach" %}
+  <ul class="chips chips--large">
+    {%- for c in t.prepared_to_teach -%}<li class="chip">{{ c }}</li>{%- endfor -%}
+  </ul>
+</section>
+
+{%- for inst in t.institutions -%}
+<section class="section inst">
+  <div class="inst__head">
+    <p class="eyebrow">{{ inst.period }}</p>
+    <h2 id="{{ inst.name | slugify }}">{{ inst.name }}</h2>
+    <p class="inst__unit">{{ inst.unit }} · {{ inst.location }}</p>
+    <ul class="inst__roles">
+      {%- for r in inst.roles -%}
+      <li><span class="inst__role-title">{{ r.title }}</span><span class="inst__role-period">{{ r.period }}</span></li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  {%- if inst.summary %}<p class="inst__summary">{{ inst.summary }}</p>{% endif -%}
+  {%- for g in inst.groups -%}
+  {%- if g.heading %}<h3 class="group-title">{{ g.heading }}</h3>{% endif -%}
+  {%- if g.note %}<p class="group-note">{{ g.note }}</p>{% endif -%}
+  <ul class="courses">
+    {%- for c in g.courses -%}
+    <li class="course">
+      <div class="course__head">
+        <span class="course__code">{{ c.code }}</span>
+        {%- if c.lab %}<span class="chip chip--muted">Laboratory</span>{% endif -%}
+        {%- if c.manual %}<span class="chip chip--award">Manual author</span>{% endif -%}
+        {%- if c.audience %}<span class="chip chip--muted">For {{ c.audience }}</span>{% endif -%}
+        {%- if c.term %}<span class="course__term">{{ c.term }}</span>{% endif -%}
+      </div>
+      <p class="course__title">{{ c.title }}</p>
+      {%- if c.topics %}<p class="course__topics">{{ c.topics }}</p>{% endif -%}
+    </li>
+    {%- endfor -%}
+  </ul>
+  {%- endfor -%}
+</section>
+{%- endfor -%}
+
+<section class="section">
+  {% include section-heading.html eyebrow="Beyond the classroom" title="Curriculum development and mentoring" %}
+  <ul class="entries">
+    {%- for c in t.curriculum -%}
+    <li class="entry">
+      <div class="entry__when">{{ c.period }}</div>
+      <div class="entry__body"><p class="entry__title">{{ c.title }}</p><p>{{ c.text }}</p></div>
+    </li>
+    {%- endfor -%}
+    {%- for m in t.mentoring -%}
+    <li class="entry">
+      <div class="entry__when">{{ m.period }}</div>
+      <div class="entry__body"><p class="entry__title">{{ m.title }}</p><p>{{ m.text }}</p></div>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>

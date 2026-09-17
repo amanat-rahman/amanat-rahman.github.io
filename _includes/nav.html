@@ -1,0 +1,23 @@
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand__name">{{ site.data.profile.name }}</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav">
+      <ul>
+        {%- for item in site.nav -%}
+        {%- assign active = false -%}
+        {%- if item.url == "/" and page.url == "/" -%}{%- assign active = true -%}{%- endif -%}
+        {%- if item.url != "/" and page.url contains item.url -%}{%- assign active = true -%}{%- endif -%}
+        <li><a href="{{ item.url | relative_url }}"{% if active %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        {%- endfor -%}
+      </ul>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle color theme">
+        {% include icon.html name="sun" %}{% include icon.html name="moon" %}
+      </button>
+    </nav>
+  </div>
+</header>

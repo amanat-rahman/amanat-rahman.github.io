@@ -1,0 +1,58 @@
+---
+layout: default
+title: Research
+slug: research
+description: Stochastic optimization and exact decomposition algorithms for scheduling and planning under uncertainty. Projects and research directions of Amanat Ur Rahman.
+---
+{%- assign r = site.data.research -%}
+<header class="page-head">
+  <p class="eyebrow">Research</p>
+  <h1>Optimization under uncertainty</h1>
+  <p class="lede">{{ r.intro }}</p>
+</header>
+
+<section class="section">
+  {% include section-heading.html eyebrow="Projects" title="Current and completed projects" %}
+  <div class="projects">
+    {%- for pr in r.projects -%}
+    <article class="project">
+      <header class="project__head">
+        <h3 class="project__title">{{ pr.title }}</h3>
+        <p class="project__meta">{% if pr.collaborators %}{{ pr.collaborators }} · {% endif %}<span class="project__status">{{ pr.status }}</span></p>
+        {%- if pr.tags -%}
+        <ul class="chips chips--small">{%- for t in pr.tags -%}<li class="chip">{{ t }}</li>{%- endfor -%}</ul>
+        {%- endif -%}
+      </header>
+      <dl class="kv">
+        {%- for row in pr.rows -%}
+        <div class="kv__row"><dt>{{ row.label }}</dt><dd>{{ row.text }}</dd></div>
+        {%- endfor -%}
+      </dl>
+      {%- if pr.links -%}
+      <p class="project__links">
+        {%- for l in pr.links -%}
+        {%- if l.url contains "http" -%}
+        <a class="chip chip--link" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }} {% include icon.html name="external" %}</a>
+        {%- else -%}
+        <a class="chip chip--link" href="{{ l.url | relative_url }}">{{ l.label }} {% include icon.html name="arrow" %}</a>
+        {%- endif -%}
+        {%- endfor -%}
+      </p>
+      {%- endif -%}
+    </article>
+    {%- endfor -%}
+  </div>
+</section>
+
+<section class="section">
+  {% include section-heading.html eyebrow="Agenda" title="Research directions" lede="Three directions that bring exact stochastic optimization to the scale at which health systems operate, and make patient-level access a criterion the models optimize rather than report." %}
+  <div class="cards">
+    {%- for d in r.directions -%}
+    <article class="card">
+      <span class="card__index">{{ forloop.index | prepend: "0" }}</span>
+      <h3 class="card__title">{{ d.title }}</h3>
+      <p>{{ d.text }}</p>
+    </article>
+    {%- endfor -%}
+  </div>
+</section>

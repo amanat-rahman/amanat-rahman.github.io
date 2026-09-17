@@ -1,0 +1,73 @@
+name: Amanat Ur Rahman
+first_name: Amanat
+last_name: Rahman
+title: Ph.D. Student, Industrial Engineering
+tagline: Stochastic optimization and exact decomposition algorithms for scheduling and planning under uncertainty.
+department: Department of Mechanical, Materials, and Industrial Engineering
+institution: University of Cincinnati
+institution_url: https://ceas.uc.edu/academics/departments/mechanical-materials-engineering.html
+location: Cincinnati, Ohio
+email: rahmanah@mail.uc.edu
+photo: /assets/img/pic_medium_AR.jpg
+cv_pdf: /assets/pdf/Amanat_Ur_Rahman_CV.pdf
+advisor:
+  name: Dr. Tommaso Giovannelli
+  url: https://sites.google.com/view/tommasogiovannelli
+
+links:
+  - label: Email
+    url: mailto:rahmanah@mail.uc.edu
+    icon: mail
+  - label: Google Scholar
+    url: https://scholar.google.com/citations?user=2l4fFy4AAAAJ
+    icon: scholar
+  - label: LinkedIn
+    url: https://linkedin.com/in/amanat-rahman/
+    icon: linkedin
+  - label: GitHub
+    url: https://github.com/amanat-rahman
+    icon: github
+
+bio:
+  - >-
+    Amanat Ur Rahman is a Ph.D. student in Industrial Engineering at the University of
+    Cincinnati, advised by <a href="https://sites.google.com/view/tommasogiovannelli">Dr. Tommaso
+    Giovannelli</a>. He holds an M.S. in Industrial Engineering from the University of
+    Louisville and spent six years on the faculty of Ahsanullah University of Science and
+    Technology in Dhaka, teaching the operations research and production systems core of an
+    industrial engineering curriculum.
+  - >-
+    His research develops two-stage stochastic programming models and exact decomposition
+    algorithms for systems that commit capacity before demand is known, with outpatient
+    appointment scheduling as the principal application. The same methods carry into practice:
+    a stochastic evaluation framework for air cargo network planning at Atlas Air, production
+    planning pipelines at the P&amp;G Digital Accelerator, and predictive models for
+    semiconductor process control.
+
+interests:
+  methodology:
+    - Two-stage and multi-stage stochastic programming
+    - Integer L-shaped and Benders decomposition
+    - Multi-objective and set-valued optimization
+    - Mixed-integer linear programming
+    - Optimization under uncertainty
+  applications:
+    - Healthcare operations and appointment scheduling
+    - Airline network planning and transportation systems
+    - Semiconductor manufacturing process control
+    - Supply chain analytics
+
+# Numbers shown in the "at a glance" strip on the home page.
+glance:
+  - value: "7"
+    label: Publications
+    url: /publications/
+  - value: "7"
+    label: Talks and posters
+    url: /talks/
+  - value: "16"
+    label: Courses taught
+    url: /teaching/
+  - value: "6 yrs"
+    label: Faculty experience
+    url: /cv/

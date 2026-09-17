@@ -1,0 +1,40 @@
+research:
+  - role: Graduate Research Assistant
+    org: University of Cincinnati
+    unit: Department of Mechanical, Materials, and Industrial Engineering
+    location: Cincinnati, OH, USA
+    start: Aug 2023
+    end: Present
+    bullets:
+      - Developing two-stage stochastic programming models for outpatient appointment scheduling with overbooking, open access, and walk-in patients, solved with an integer L-shaped decomposition algorithm implemented in Gurobi and Python.
+      - Extending the formulation to a multi-objective two-stage stochastic model within a stochastic set-optimization framework to characterize the Pareto frontier across competing operational objectives.
+      - Developed a dynamic virtual metrology model based on a dual linear Kalman filter for material removal rate prediction in chemical mechanical planarization, attaining the lowest MSE (7.98) against MLR, EWMA, and Bayesian ARX benchmarks.
+  - role: Graduate Research Assistant
+    org: University of Louisville
+    unit: Logistics and Distribution Institute (LoDI)
+    location: Louisville, KY, USA
+    start: Aug 2021
+    end: Jul 2023
+    bullets:
+      - Developed a multi-task Cox proportional hazards model to quantify transplantation center-level factors affecting one-year post-heart-transplant survivability, treating each center as a separate learning task over a shared representation.
+      - Integrated UNOS donor and recipient records with county- and tract-level area deprivation data within a 200-mile radius of each center; benchmarked against CoxPH and non-linear CoxPH models by concordance index.
+      - Authored five instructional modules (IT Basics, Network Foundation, Network Security, Risk Analysis, Capstone Project) for the NSF-funded Cybersecurity in Logistics Systems workforce training program.
+
+industry:
+  - role: Data Scientist Intern (Optimization), Network Planning
+    org: Atlas Air, Inc.
+    location: Erlanger, KY, USA
+    start: Jun 2026
+    end: Aug 2026
+    bullets:
+      - Built a stochastic evaluation framework with MILP recourse (Pyomo, HiGHS, Gurobi) for cargo network planning under operational uncertainty, assessing fleet flow, capacity utilization, and routing.
+      - Quantified network disruption cost through scenario-based Monte Carlo evaluation of the recourse value function.
+      - Calibrated stochastic parameters from operational data on Azure Databricks and represented the airline route network on Amazon Neptune for connectivity and reachability queries feeding the optimization model.
+  - role: Research Assistant
+    org: Procter & Gamble Digital Accelerator, University of Cincinnati
+    location: Cincinnati, OH, USA
+    start: Jun 2024
+    end: May 2025
+    bullets:
+      - Built scalable Azure Databricks pipelines (Python, SQL) translating SAP planning volumes into production-line recipe rates for Personal Care products, reducing annual manual effort by approximately 550 hours (50%).
+      - Automated data integration from Databricks to Tableau through KNIME and deployed dashboards tracking key performance indicators.
