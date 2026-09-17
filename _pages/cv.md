@@ -14,9 +14,9 @@ nav_order: 4
 - **Ph.D., Industrial Engineering**, University of Cincinnati, expected 2027
   Dissertation: *Stochastic optimization and decomposition algorithms for large-scale scheduling systems under uncertainty*. Advisor: Dr. Tommaso Giovannelli
 - **M.S., Industrial Engineering**, University of Louisville, 2023
-  Research: institutional variability and correlated multi-level factors in post-heart-transplant survivability. Advisor: Dr. Monica Gentili
+  Research: institutional variability and correlated multi-level factors in post-heart-transplant survivability.
 - **M.S., Industrial and Production Engineering**, Bangladesh University of Engineering and Technology, 2020
-  Research: supply chain performance prediction using a grey-based neural network. Advisor: Dr. Syed Mithun Ali
+  Research: supply chain performance prediction using a grey-based neural network.
 - **B.S., Industrial and Production Engineering**, Ahsanullah University of Science and Technology, 2014
 
 ## Academic appointments
@@ -28,7 +28,7 @@ nav_order: 4
 
 ## Industry
 
-- **Data Scientist Intern, Network Planning**, Atlas Air, Summer 2026
+- **Data Scientist Intern (Optimization), Network Planning**, Atlas Air, Summer 2026
   Stochastic evaluation framework with mixed-integer recourse for cargo network planning; Monte Carlo evaluation of the recourse value function; Azure Databricks calibration workflow
 - **Graduate Research Assistant**, P&G Digital Accelerator at the University of Cincinnati, 2024 to 2025
   Azure Databricks pipelines translating SAP planning volumes into production-line recipe rates, reducing annual manual effort by approximately 550 hours; KNIME and Tableau KPI dashboards
