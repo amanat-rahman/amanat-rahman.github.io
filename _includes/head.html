@@ -41,7 +41,6 @@
   "name": "{{ site.data.profile.name }}",
   "jobTitle": "{{ site.data.profile.title }}",
   "affiliation": { "@type": "Organization", "name": "{{ site.data.profile.institution }}" },
-  "email": "mailto:{{ site.data.profile.email }}",
   "url": "{{ site.url }}",
   "image": "{{ site.data.profile.photo | absolute_url }}",
   "sameAs": [{% for l in site.data.profile.links %}{% unless l.icon == "mail" %}"{{ l.url }}"{% unless forloop.last %},{% endunless %}{% endunless %}{% endfor %}]

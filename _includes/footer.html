@@ -5,8 +5,11 @@
       <p class="site-footer__meta">{{ site.data.profile.department }}<br>{{ site.data.profile.institution }}, {{ site.data.profile.location }}</p>
     </div>
     <ul class="site-footer__links">
+      {%- for e in site.data.profile.contact.emails -%}
+      <li>{% include icon.html name="mail" %} {% include email.html email=e %}</li>
+      {%- endfor -%}
       {%- for l in site.data.profile.links -%}
-      <li><a href="{{ l.url }}"{% unless l.icon == "mail" %} target="_blank" rel="noopener"{% endunless %}>{% include icon.html name=l.icon %}<span>{{ l.label }}</span></a></li>
+      <li><a href="{{ l.url }}" target="_blank" rel="noopener">{% include icon.html name=l.icon %}<span>{{ l.label }}</span></a></li>
       {%- endfor -%}
       <li><a href="{{ site.data.profile.cv_pdf | relative_url }}" target="_blank" rel="noopener">{% include icon.html name="file" %}<span>CV (PDF)</span></a></li>
     </ul>

@@ -1,0 +1,7 @@
+{%- comment -%}
+Renders an obfuscated email address. The HTML carries the address reversed, split
+across two data attributes; assets/js/site.js reassembles it into a mailto link in
+the browser. Without JavaScript the reader still sees a readable address.
+{%- endcomment -%}
+{%- assign e = include.email -%}
+<span class="email" data-u="{{ e.user_reversed }}" data-d="{{ e.domain_reversed }}">{{ e.user_reversed | split: "" | reverse | join: "" }} [at] {{ e.domain_reversed | split: "" | reverse | join: "" | replace: ".", " [dot] " }}</span>

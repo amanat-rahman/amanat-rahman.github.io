@@ -2,23 +2,23 @@
 layout: default
 title: Research
 slug: research
-description: Stochastic optimization and exact decomposition algorithms for scheduling and planning under uncertainty. Projects and research directions of Amanat Ur Rahman.
+description: Research on stochastic optimization and exact decomposition for scheduling under uncertainty, and applied optimization and data engineering projects.
 ---
 {%- assign r = site.data.research -%}
 <header class="page-head">
-  <p class="eyebrow">Research</p>
+  <p class="eyebrow">Research and projects</p>
   <h1>Optimization under uncertainty</h1>
   <p class="lede">{{ r.intro }}</p>
 </header>
 
 <section class="section">
-  {% include section-heading.html eyebrow="Projects" title="Current and completed projects" %}
+  {% include section-heading.html eyebrow="Scholarly work" title="Research" %}
   <div class="projects">
-    {%- for pr in r.projects -%}
+    {%- for pr in r.research -%}
     <article class="project">
       <header class="project__head">
         <h3 class="project__title">{{ pr.title }}</h3>
-        <p class="project__meta">{% if pr.collaborators %}{{ pr.collaborators }} · {% endif %}<span class="project__status">{{ pr.status }}</span></p>
+        <p class="project__meta">{% if pr.period %}<span class="project__period">{{ pr.period }}</span> · {% endif %}{% if pr.collaborators %}{{ pr.collaborators }} · {% endif %}<span class="project__status">{{ pr.status }}</span></p>
         {%- if pr.tags -%}
         <ul class="chips chips--small">{%- for t in pr.tags -%}<li class="chip">{{ t }}</li>{%- endfor -%}</ul>
         {%- endif -%}
@@ -28,24 +28,14 @@ description: Stochastic optimization and exact decomposition algorithms for sche
         <div class="kv__row"><dt>{{ row.label }}</dt><dd>{{ row.text }}</dd></div>
         {%- endfor -%}
       </dl>
-      {%- if pr.links -%}
-      <p class="project__links">
-        {%- for l in pr.links -%}
-        {%- if l.url contains "http" -%}
-        <a class="chip chip--link" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }} {% include icon.html name="external" %}</a>
-        {%- else -%}
-        <a class="chip chip--link" href="{{ l.url | relative_url }}">{{ l.label }} {% include icon.html name="arrow" %}</a>
-        {%- endif -%}
-        {%- endfor -%}
-      </p>
-      {%- endif -%}
     </article>
     {%- endfor -%}
   </div>
+  <p class="more"><a href="{{ '/publications/' | relative_url }}">Publications and talks {% include icon.html name="arrow" %}</a></p>
 </section>
 
 <section class="section">
-  {% include section-heading.html eyebrow="Agenda" title="Research directions" lede="Three directions that bring exact stochastic optimization to the scale at which health systems operate, and make patient-level access a criterion the models optimize rather than report." %}
+  {% include section-heading.html eyebrow="Agenda" title="Research directions" %}
   <div class="cards">
     {%- for d in r.directions -%}
     <article class="card">
@@ -55,4 +45,23 @@ description: Stochastic optimization and exact decomposition algorithms for sche
     </article>
     {%- endfor -%}
   </div>
+</section>
+
+<section class="section">
+  {% include section-heading.html eyebrow="Applied work" title="Projects" %}
+  <ul class="entries">
+    {%- for pj in r.projects -%}
+    <li class="entry">
+      <div class="entry__when">{{ pj.period }}</div>
+      <div class="entry__body">
+        <p class="entry__title">{{ pj.title }}</p>
+        <p class="entry__org">{{ pj.org }}</p>
+        <p class="entry__note">{{ pj.text }}</p>
+        {%- if pj.tags -%}
+        <ul class="chips chips--small">{%- for t in pj.tags -%}<li class="chip">{{ t }}</li>{%- endfor -%}</ul>
+        {%- endif -%}
+      </div>
+    </li>
+    {%- endfor -%}
+  </ul>
 </section>

@@ -7,7 +7,6 @@ department: Department of Mechanical, Materials, and Industrial Engineering
 institution: University of Cincinnati
 institution_url: https://ceas.uc.edu/academics/departments/mechanical-materials-engineering.html
 location: Cincinnati, Ohio
-email: rahmanah@mail.uc.edu
 photo: /assets/img/pic_medium_AR.jpg
 cv_pdf: /assets/pdf/Amanat_Ur_Rahman_CV.pdf
 advisor:
@@ -15,9 +14,6 @@ advisor:
   url: https://sites.google.com/view/tommasogiovannelli
 
 links:
-  - label: Email
-    url: mailto:rahmanah@mail.uc.edu
-    icon: mail
   - label: Google Scholar
     url: https://scholar.google.com/citations?user=2l4fFy4AAAAJ
     icon: scholar
@@ -64,5 +60,8 @@ contact:
     - University of Cincinnati
     - 2851 Woodside Drive, Cincinnati, OH 45221-0072
   # office: Rhodes Hall 000      # uncomment and set once an office is assigned
+  # Written reversed on purpose. The page reverses it in the browser to build a
+  # clickable link, so the plain address never appears in the HTML source.
   emails:
-    - rahmanah@mail.uc.edu
+    - user_reversed: hanamhar
+      domain_reversed: ude.cu.liam

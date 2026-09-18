@@ -11,6 +11,17 @@
       try { localStorage.setItem('theme', next); } catch (e) {}
     });
   }
+  // Reassemble obfuscated email addresses into real mailto links.
+  document.querySelectorAll('.email[data-u][data-d]').forEach(function (el) {
+    var rev = function (x) { return x.split('').reverse().join(''); };
+    var addr = rev(el.getAttribute('data-u')) + String.fromCharCode(64) + rev(el.getAttribute('data-d'));
+    var a = document.createElement('a');
+    a.className = 'email';
+    a.href = 'mailto:' + addr;
+    a.textContent = addr;
+    el.replaceWith(a);
+  });
+
   var navToggle = document.querySelector('.nav-toggle');
   var nav = document.getElementById('site-nav');
   if (navToggle && nav) {

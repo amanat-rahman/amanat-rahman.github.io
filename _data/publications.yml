@@ -1,68 +1,81 @@
-# Author names: write exactly as they should appear. "A. U. Rahman" is bolded automatically.
-- category: Manuscripts under review and in preparation
-  key: manuscripts
-  entries:
-    - id: rahman2026outpatient
-      title: Using stochastic programming to mitigate patient no-shows and short-notice cancellations in outpatient clinics through overbooking and walk-ins
-      authors: A. U. Rahman, T. Giovannelli, K. S. Shehadeh, and J. Shi
-      venue: In final co-author review prior to submission
-      year: "2026"
-      status: Under review
-      selected: true
-      abstract: >-
-        A two-stage stochastic program with an integer first stage that jointly determines
-        overbooking levels and appointment slot assignments under uncertain no-shows,
-        short-notice cancellations, and walk-in arrivals. The recourse problem is itself a
-        mixed-integer program; the model is solved by an enhanced integer L-shaped
-        decomposition embedded in a single-tree branch-and-cut framework.
-    - id: rahman2026pao
-      title: "Allocating open-access appointment slots in a single-provider session: A two-stage stochastic multi-objective program with an integer first stage"
-      authors: A. U. Rahman and T. Giovannelli
-      venue: In preparation
-      year: "2026"
-      status: In preparation
-      selected: true
-      abstract: >-
-        A multi-objective extension of the outpatient scheduling problem cast within a
-        stochastic set-optimization framework, characterizing the set of efficient
-        open-access allocations across patient waiting time, session completion time, and
-        unmet same-day demand.
+# Publications. Rendered together with _data/talks.yml on one page, newest first.
+# type: journal | proceedings | working
+# sort: YYYYMM, used only for ordering within a year.
+# Write your name as "A. U. Rahman" and it is bolded automatically.
 
-- category: Refereed journal articles
-  key: journal
-  entries:
-    - id: ali2024ai
-      title: "Artificial intelligence approach to predict supply chain performance: Implications for sustainability"
-      authors: S. M. Ali, A. U. Rahman, G. Kabir, and S. K. Paul
-      venue: Sustainability 16(6), 2373
-      year: "2024"
-      doi: 10.3390/su16062373
-      selected: true
-    - id: rahman2018grey
-      title: A grey approach for the prediction of supply chain demand
-      authors: A. U. Rahman and M. T. Zahura
-      venue: American Journal of Industrial Engineering 5(1), 25 to 30
-      year: "2018"
+- id: rahman2026outpatient
+  type: working
+  title: Using stochastic programming to mitigate patient no-shows and short-notice cancellations in outpatient clinics through overbooking and walk-ins
+  authors: A. U. Rahman, T. Giovannelli, K. S. Shehadeh, and J. Shi
+  venue: In final co-author review prior to submission
+  year: "2026"
+  sort: "202610"
+  status: Under review
+  abstract: >-
+    A two-stage stochastic program with an integer first stage that jointly determines
+    overbooking levels and appointment slot assignments under uncertain no-shows,
+    short-notice cancellations, and walk-in arrivals. The recourse problem is itself a
+    mixed-integer program; the model is solved by an enhanced integer L-shaped
+    decomposition embedded in a single-tree branch-and-cut framework.
 
-- category: Refereed conference proceedings
-  key: conference
-  entries:
-    - id: rahman2024cmp
-      title: Enhanced data-driven virtual metrology on chemical mechanical planarization process using dual linear Kalman filter
-      authors: A. U. Rahman, X. Han, and X. Jia
-      venue: Proceedings of the ASME 2024 19th International Manufacturing Science and Engineering Conference (MSEC), Knoxville, TN, USA
-      year: "2024"
-      doi: 10.1115/MSEC2024-125308
-      selected: true
-    - id: bhuiyan2024grey
-      title: An enhanced hybrid grey-neural network model for demand forecasting
-      authors: M. R. Bhuiyan, S. Begum, M. A. Sikder, B. M. T. U. Islam, M. Salehin, and A. U. Rahman
-      venue: Proceedings of the International Conference on Industrial Engineering and Operations Management, Tokyo, Japan
-      year: "2024"
-      doi: 10.46254/AP05.20240168
-    - id: rahman2014sprinkler
-      title: "Simplified design and fabrication of water sprinkler system: A survey based analysis"
-      authors: A. U. Rahman, M. T. Zahura, and A. Rezwan
-      venue: Procedia Engineering 90, 692 to 697
-      year: "2014"
-      doi: 10.1016/j.proeng.2014.11.797
+- id: rahman2026pao
+  type: working
+  title: "Allocating open-access appointment slots in a single-provider session: A two-stage stochastic multi-objective program with an integer first stage"
+  authors: A. U. Rahman and T. Giovannelli
+  venue: Manuscript in preparation
+  year: "2026"
+  sort: "202609"
+  status: In preparation
+  abstract: >-
+    A multi-objective extension of the outpatient scheduling problem cast within a
+    stochastic set-optimization framework, characterizing the set of efficient
+    open-access allocations across patient waiting time, session completion time, and
+    unmet same-day demand.
+
+- id: bhuiyan2024grey
+  type: proceedings
+  title: An enhanced hybrid grey-neural network model for demand forecasting
+  authors: M. R. Bhuiyan, S. Begum, M. A. Sikder, B. M. T. U. Islam, M. Salehin, and A. U. Rahman
+  venue: Proceedings of the International Conference on Industrial Engineering and Operations Management, Tokyo, Japan
+  year: "2024"
+  sort: "202409"
+  doi: 10.46254/AP05.20240168
+
+- id: rahman2024cmp
+  type: proceedings
+  title: Enhanced data-driven virtual metrology on chemical mechanical planarization process using dual linear Kalman filter
+  authors: A. U. Rahman, X. Han, and X. Jia
+  venue: Proceedings of the ASME 2024 19th International Manufacturing Science and Engineering Conference (MSEC), Knoxville, TN, USA
+  year: "2024"
+  sort: "202406"
+  doi: 10.1115/MSEC2024-125308
+  abstract: >-
+    A dual linear Kalman filter for material removal rate prediction in chemical
+    mechanical planarization, attaining the lowest mean squared error against multiple
+    linear regression, EWMA, and Bayesian ARX benchmarks.
+
+- id: ali2024ai
+  type: journal
+  title: "Artificial intelligence approach to predict supply chain performance: Implications for sustainability"
+  authors: S. M. Ali, A. U. Rahman, G. Kabir, and S. K. Paul
+  venue: Sustainability 16(6), 2373
+  year: "2024"
+  sort: "202403"
+  doi: 10.3390/su16062373
+
+- id: rahman2018grey
+  type: journal
+  title: A grey approach for the prediction of supply chain demand
+  authors: A. U. Rahman and M. T. Zahura
+  venue: American Journal of Industrial Engineering 5(1), 25 to 30
+  year: "2018"
+  sort: "201801"
+
+- id: rahman2014sprinkler
+  type: proceedings
+  title: "Simplified design and fabrication of water sprinkler system: A survey based analysis"
+  authors: A. U. Rahman, M. T. Zahura, and A. Rezwan
+  venue: Procedia Engineering 90, 692 to 697
+  year: "2014"
+  sort: "201412"
+  doi: 10.1016/j.proeng.2014.11.797

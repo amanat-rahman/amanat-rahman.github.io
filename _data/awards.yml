@@ -1,15 +1,21 @@
-- year: "2026"
-  title: Research Travel Grant
-  detail: Graduate Student Government, University of Cincinnati, for the 2026 INFORMS Annual Meeting
-- year: "2022"
-  title: Third Place, Poster Competition
-  detail: Research!Louisville, University of Louisville
-- year: "2022"
-  title: Runner-up, Graduate Student Research Competition
-  detail: Department of Industrial Engineering, University of Louisville
-- year: "2014"
-  title: Dean's Award
-  detail: Ahsanullah University of Science and Technology
-- year: "2014"
-  title: First Position in Graduating Class
-  detail: Ranked first among 65 graduating students, B.S. in Industrial and Production Engineering, Ahsanullah University of Science and Technology
+awards:
+  - year: "2026"
+    title: Research Travel Grant
+    org: Graduate Student Government, University of Cincinnati
+    detail: Awarded for the 2026 INFORMS Annual Meeting, San Francisco.
+  - year: "2022"
+    title: Third Place, Poster Competition
+    org: Research!Louisville, University of Louisville
+    detail: For work on institutional variability in post-heart-transplant survivability.
+  - year: "2022"
+    title: Runner-up, Graduate Student Research Competition
+    org: Department of Industrial Engineering, University of Louisville
+    detail: Second place among Ph.D. students in the Fall 2022 competition.
+  - year: "2014"
+    title: Dean's Award
+    org: Ahsanullah University of Science and Technology
+    detail: Awarded for academic standing across the B.S. program.
+  - year: "2014"
+    title: First Position in Graduating Class
+    org: Ahsanullah University of Science and Technology
+    detail: Ranked first among 65 graduating students, B.S. in Industrial and Production Engineering.

@@ -15,12 +15,6 @@ description: Amanat Ur Rahman, Ph.D. student in Industrial Engineering at the Un
       <p>{{ para }}</p>
       {%- endfor -%}
     </div>
-    <div class="btn-row">
-      <a class="btn btn--primary" href="{{ p.cv_pdf | relative_url }}" target="_blank" rel="noopener">{% include icon.html name="download" %} Curriculum vitae</a>
-      {%- for l in p.links -%}
-      <a class="btn" href="{{ l.url }}"{% unless l.icon == "mail" %} target="_blank" rel="noopener"{% endunless %}>{% include icon.html name=l.icon %} {{ l.label }}</a>
-      {%- endfor -%}
-    </div>
   </div>
   <figure class="hero__photo">
     <div class="hero__frame">
@@ -31,6 +25,11 @@ description: Amanat Ur Rahman, Ph.D. student in Industrial Engineering at the Un
       <span>{{ p.institution }}, {{ p.location }}</span>
     </figcaption>
   </figure>
+</section>
+
+<section class="section" id="contact">
+  {% include section-heading.html eyebrow="Get in touch" title="Contact" %}
+  {% include contact.html %}
 </section>
 
 <section class="section">
@@ -64,36 +63,3 @@ description: Amanat Ur Rahman, Ph.D. student in Industrial Engineering at the Un
   </ol>
 </section>
 
-<section class="section" id="contact">
-  {% include section-heading.html eyebrow="Get in touch" title="Contact" %}
-  <div class="contact">
-    <div class="contact__col">
-      <h3 class="contact__title">Work address</h3>
-      <address>
-        {%- for line in p.contact.address -%}
-        <span>{{ line }}</span>
-        {%- endfor -%}
-        {%- if p.contact.office %}<span>Office: {{ p.contact.office }}</span>{% endif -%}
-      </address>
-    </div>
-    <div class="contact__col">
-      <h3 class="contact__title">Email</h3>
-      <ul class="contact__list">
-        {%- for e in p.contact.emails -%}
-        <li><a href="mailto:{{ e }}">{{ e }}</a></li>
-        {%- endfor -%}
-      </ul>
-    </div>
-    <div class="contact__col">
-      <h3 class="contact__title">Links</h3>
-      <ul class="contact__list">
-        {%- for l in p.links -%}
-        {%- unless l.icon == "mail" -%}
-        <li><a href="{{ l.url }}" target="_blank" rel="noopener">{% include icon.html name=l.icon %} {{ l.label }}</a></li>
-        {%- endunless -%}
-        {%- endfor -%}
-        <li><a href="{{ p.cv_pdf | relative_url }}" target="_blank" rel="noopener">{% include icon.html name="file" %} Curriculum vitae (PDF)</a></li>
-      </ul>
-    </div>
-  </div>
-</section>

@@ -15,24 +15,37 @@ folder are templates that read those files. To change what the site says, edit
 | Name, title, tagline, bio, links, research interests, contact block | `_data/profile.yml` |
 | Degrees, theses, advisors, coursework | `_data/education.yml` |
 | Research and industry positions with bullets | `_data/experience.yml` |
-| Publications, grouped by category | `_data/publications.yml` |
+| Publications | `_data/publications.yml` |
 | Talks, posters, seminars | `_data/talks.yml` |
 | Courses taught, prepared-to-teach list, curriculum work, mentoring | `_data/teaching.yml` |
-| Research page: intro, projects, directions | `_data/research.yml` |
-| Awards | `_data/awards.yml` |
+| Research page: intro, research, directions, projects | `_data/research.yml` |
+| Awards and honors | `_data/awards.yml` |
 | Skills | `_data/skills.yml` |
 | Reviewing, service, memberships | `_data/service.yml` |
+| Work address and email (stored reversed) | `contact:` in `_data/profile.yml` |
 | News items on the home page | `_data/news.yml` |
 | Photo | replace `assets/img/pic_medium_AR.jpg`, keep the filename |
 | CV PDF behind the download buttons | replace `assets/pdf/Amanat_Ur_Rahman_CV.pdf`, keep the filename |
 | Navigation bar order, site title, description | `_config.yml` |
 | Colors, fonts, spacing | `assets/css/style.css` (tokens are at the top) |
 
-The home page is, in order: intro and photo, research interests, news, contact.
+The home page is, in order: intro and photo, contact, research interests, news.
 
-Pages: `index.html` (home), `research.html`, `publications.html`, `talks.html`,
-`teaching.html`, `cv.html`, `404.html`. Shared pieces are in `_includes/`; the
-page frame is `_layouts/default.html`.
+Pages: `index.html` (home), `research.html`, `publications.html`,
+`teaching.html`, `awards.html`, `cv.html`, `404.html`. Shared pieces are in
+`_includes/`; the page frame is `_layouts/default.html`.
+
+**Publications and talks share one page.** `_data/publications.yml` and
+`_data/talks.yml` are merged, sorted by the `sort` field (`YYYYMM`), and grouped
+by year. Each entry carries a `type` that becomes its tag: `journal`,
+`proceedings`, `working`, `talk`, `poster`, or `seminar`.
+
+**The email address is obfuscated.** `_data/profile.yml` stores it reversed and
+split, `_includes/email.html` renders it as readable text, and
+`assets/js/site.js` reassembles it into a `mailto:` link in the browser. The
+plain address never appears in the HTML source. To change it, reverse the new
+address by hand: the local part goes in `user_reversed`, the domain in
+`domain_reversed`, both written backwards.
 
 ## Editing cycle
 
@@ -63,34 +76,36 @@ most recent by date):
   text: Paper accepted at Operations Research.
 ```
 
-**Add a publication** (inside the right category in `_data/publications.yml`;
-write your name as `A. U. Rahman`, which is bolded automatically):
+**Add a publication** (`_data/publications.yml`; write your name as
+`A. U. Rahman`, which is bolded automatically):
 
 ```yaml
-    - id: rahman2027example
-      title: Title of the paper
-      authors: A. U. Rahman and T. Giovannelli
-      venue: Operations Research 75(2), 100 to 120
-      year: "2027"
-      doi: 10.1287/opre.2027.0001
-      selected: true
+- id: rahman2027example
+  type: journal          # journal | proceedings | working
+  title: Title of the paper
+  authors: A. U. Rahman and T. Giovannelli
+  venue: Operations Research 75(2), 100 to 120
+  year: "2027"
+  sort: "202703"         # YYYYMM, orders entries within the year
+  doi: 10.1287/opre.2027.0001
 ```
 
-`selected: true` also lists it on the home page. When a manuscript is
-accepted, edit its existing entry: move it to the journal category, remove
-`status`, and fill in `venue` and `doi`.
+When a manuscript is accepted, edit its existing entry: change `type` from
+`working` to `journal`, delete the `status` line, and fill in the real `venue`
+and `doi`.
 
-**Add a talk** (top of `_data/talks.yml`; entries are grouped by `year`):
+**Add a talk** (`_data/talks.yml`):
 
 ```yaml
-- kind: Conference presentation
-  venue: 2027 INFORMS Annual Meeting
-  location: Atlanta, GA, USA
-  date: October 2027
-  year: "2027"
+- type: talk             # talk | poster | seminar
   title: Title of the talk
   authors: A. U. Rahman and T. Giovannelli
+  venue: 2027 INFORMS Annual Meeting, Atlanta, GA, USA
+  date: October 2027
+  year: "2027"
+  sort: "202710"
   presenter: A. U. Rahman
+  award: Best paper award      # optional
 ```
 
 **Add a course** under the right institution and group in `_data/teaching.yml`:

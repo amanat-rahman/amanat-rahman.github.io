@@ -1,59 +1,69 @@
-- kind: Conference presentation
-  venue: 2026 INFORMS Annual Meeting
-  location: San Francisco, CA, USA
+# Talks, posters, and seminars. Rendered together with _data/publications.yml.
+# type: talk | poster | seminar
+# sort: YYYYMM, used only for ordering within a year.
+
+- type: talk
+  title: Using stochastic programming to mitigate patient no-shows and short-notice cancellations in outpatient clinics through overbooking and walk-ins
+  authors: A. U. Rahman, T. Giovannelli, K. S. Shehadeh, and J. Shi
+  venue: 2026 INFORMS Annual Meeting, San Francisco, CA, USA
   date: November 2026
   year: "2026"
+  sort: "202611"
+  presenter: A. U. Rahman
+  status: Forthcoming
+
+- type: talk
   title: Using stochastic programming to mitigate patient no-shows and short-notice cancellations in outpatient clinics through overbooking and walk-ins
   authors: A. U. Rahman, T. Giovannelli, K. S. Shehadeh, and J. Shi
-  presenter: A. U. Rahman
-  note: Forthcoming
-- kind: Conference presentation
-  venue: MOPTA 2026, Modeling and Optimization Theory and Applications
-  location: Lehigh University, Bethlehem, PA, USA
+  venue: MOPTA 2026, Modeling and Optimization Theory and Applications, Lehigh University, Bethlehem, PA, USA
   date: August 2026
   year: "2026"
+  sort: "202608"
+  presenter: T. Giovannelli
+
+- type: talk
   title: Using stochastic programming to mitigate patient no-shows and short-notice cancellations in outpatient clinics through overbooking and walk-ins
   authors: A. U. Rahman, T. Giovannelli, K. S. Shehadeh, and J. Shi
-  presenter: T. Giovannelli
-- kind: Conference presentation
-  venue: IISE Annual Conference &amp; Expo 2026
-  location: Arlington, TX, USA
+  venue: IISE Annual Conference and Expo 2026, Arlington, TX, USA
   date: May 2026
   year: "2026"
-  title: Using stochastic programming to mitigate patient no-shows and short-notice cancellations in outpatient clinics through overbooking and walk-ins
-  authors: A. U. Rahman, T. Giovannelli, K. S. Shehadeh, and J. Shi
+  sort: "202605"
   presenter: T. Giovannelli
-- kind: Conference presentation
-  venue: ASME 2024 International Manufacturing Science and Engineering Conference (MSEC)
-  location: Knoxville, TN, USA
-  date: June 2024
-  year: "2024"
+
+- type: talk
   title: Enhanced data-driven virtual metrology on chemical mechanical planarization process using dual linear Kalman filter
   authors: A. U. Rahman, X. Han, and X. Jia
+  venue: ASME 2024 International Manufacturing Science and Engineering Conference (MSEC), Knoxville, TN, USA
+  date: June 2024
+  year: "2024"
+  sort: "202405"
   presenter: X. Jia
-- kind: Conference presentation
-  venue: 2022 INFORMS Annual Meeting
-  location: Indianapolis, IN, USA
-  date: October 2022
-  year: "2022"
-  title: Impact of institutional variability and correlated multi-level factors on post-heart-transplant survivability
-  authors: A. U. Rahman, X. Chen, M. Gentili, and J. Trivedi
-  presenter: A. U. Rahman
-- kind: Poster
-  venue: Research!Louisville
-  location: University of Louisville, Louisville, KY, USA
-  date: September 2022
-  year: "2022"
-  title: Quantification of contributing factors affecting post-heart-transplant survivability using multitask Cox model
-  authors: A. U. Rahman, X. Chen, M. Gentili, and J. Trivedi
-  presenter: A. U. Rahman
-  award: Third place, poster competition
-- kind: Departmental seminar
-  venue: Graduate Student Research Competition, Department of Industrial Engineering
-  location: University of Louisville, Louisville, KY, USA
-  date: Fall 2022
-  year: "2022"
+
+- type: seminar
   title: Quantification of contributing factors affecting post-heart-transplant survivability using multitask Cox model
   authors: A. U. Rahman
+  venue: Graduate Student Research Competition, Department of Industrial Engineering, University of Louisville, KY, USA
+  date: Fall 2022
+  year: "2022"
+  sort: "202211"
   presenter: A. U. Rahman
   award: Second place
+
+- type: talk
+  title: Impact of institutional variability and correlated multi-level factors on post-heart-transplant survivability
+  authors: A. U. Rahman, X. Chen, M. Gentili, and J. Trivedi
+  venue: 2022 INFORMS Annual Meeting, Indianapolis, IN, USA
+  date: October 2022
+  year: "2022"
+  sort: "202210"
+  presenter: A. U. Rahman
+
+- type: poster
+  title: Quantification of contributing factors affecting post-heart-transplant survivability using multitask Cox model
+  authors: A. U. Rahman, X. Chen, M. Gentili, and J. Trivedi
+  venue: Research!Louisville, University of Louisville, Louisville, KY, USA
+  date: September 2022
+  year: "2022"
+  sort: "202209"
+  presenter: A. U. Rahman
+  award: Third place, poster competition

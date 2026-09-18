@@ -1,0 +1,62 @@
+---
+layout: default
+title: Awards
+slug: awards
+description: Awards, honors, professional service, and affiliations of Amanat Ur Rahman.
+---
+<header class="page-head">
+  <p class="eyebrow">Recognition</p>
+  <h1>Awards and service</h1>
+</header>
+
+<section class="section">
+  {% include section-heading.html title="Awards and honors" %}
+  <ul class="entries">
+    {%- for a in site.data.awards.awards -%}
+    <li class="entry">
+      <div class="entry__when">{{ a.year }}</div>
+      <div class="entry__body">
+        <p class="entry__title">{{ a.title }}</p>
+        <p class="entry__org">{{ a.org }}</p>
+        {%- if a.detail %}<p class="entry__note">{{ a.detail }}</p>{% endif -%}
+      </div>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>
+
+<section class="section">
+  {% include section-heading.html title="Professional service" %}
+  <ul class="entries">
+    <li class="entry">
+      <div class="entry__when">{{ site.data.service.reviewing.period }}</div>
+      <div class="entry__body">
+        <p class="entry__title">Journal reviewer</p>
+        <ul class="entry__list">
+          {%- for j in site.data.service.reviewing.journals -%}<li>{{ j }}</li>{%- endfor -%}
+        </ul>
+      </div>
+    </li>
+    {%- for o in site.data.service.other -%}
+    <li class="entry">
+      <div class="entry__when">{{ o.period }}</div>
+      <div class="entry__body">
+        <p class="entry__title">{{ o.title }}</p>
+        <p class="entry__note">{{ o.text }}</p>
+      </div>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>
+
+<section class="section">
+  {% include section-heading.html title="Affiliations" %}
+  <ul class="entries entries--compact">
+    {%- for a in site.data.service.affiliations -%}
+    <li class="entry">
+      <div class="entry__when">{{ a.period }}</div>
+      <div class="entry__body"><p class="entry__title">{{ a.name }}</p></div>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>

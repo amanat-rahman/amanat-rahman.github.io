@@ -5,21 +5,10 @@ slug: teaching
 description: Courses taught by Amanat Ur Rahman in operations research, production systems, and quantitative methods, and courses he is prepared to teach.
 ---
 {%- assign t = site.data.teaching -%}
-<header class="page-head">
-  <p class="eyebrow">Teaching</p>
-  <h1>Courses taught and prepared</h1>
-  <p class="lede">Six years as full-time faculty in Bangladesh and recitation instruction at two U.S. universities, centered on the operations research and production systems core of an industrial engineering curriculum.</p>
-</header>
-
-<section class="section">
-  {% include section-heading.html eyebrow="Readiness" title="Prepared to teach" %}
-  <ul class="chips chips--large">
-    {%- for c in t.prepared_to_teach -%}<li class="chip">{{ c }}</li>{%- endfor -%}
-  </ul>
-</section>
+<h1 class="sr-only">Teaching</h1>
 
 {%- for inst in t.institutions -%}
-<section class="section inst">
+<section class="section section--first inst">
   <div class="inst__head">
     <p class="eyebrow">{{ inst.period }}</p>
     <h2 id="{{ inst.name | slugify }}">{{ inst.name }}</h2>

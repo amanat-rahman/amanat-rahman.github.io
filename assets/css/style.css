@@ -86,8 +86,8 @@ img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: .18em; text-decoration-thickness: 1px; transition: text-decoration-color .15s ease, color .15s ease; }
 a:hover { text-decoration-color: var(--accent); color: var(--accent); }
 h1, h2, h3, h4 { margin: 0; line-height: 1.15; font-weight: 500; letter-spacing: -.01em; }
-h1 { font-family: var(--font-serif); font-size: clamp(2.1rem, 4.2vw, 3rem); }
-h2 { font-family: var(--font-serif); font-size: clamp(1.6rem, 2.6vw, 2rem); }
+h1 { font-family: var(--font-serif); font-size: clamp(1.7rem, 2.8vw, 2.15rem); }
+h2 { font-family: var(--font-serif); font-size: clamp(1.25rem, 1.9vw, 1.5rem); }
 h3 { font-family: var(--font-sans); font-size: 1.05rem; font-weight: 600; letter-spacing: 0; }
 p { margin: 0; }
 ul, ol { margin: 0; padding: 0; list-style: none; }
@@ -96,6 +96,7 @@ em { font-style: italic; }
 .wrap { width: min(var(--wrap), 100% - 2.5rem); margin-inline: auto; }
 .skip { position: absolute; left: -999px; top: 0; background: var(--ink); color: var(--bg); padding: .5rem .8rem; z-index: 100; }
 .skip:focus { left: 1rem; top: 1rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 .icon { width: 1em; height: 1em; fill: currentColor; vertical-align: -.15em; flex: none; }
 
 /* Header ----------------------------------------------------------------- */
@@ -136,7 +137,7 @@ em { font-style: italic; }
 .eyebrow a:hover { border-bottom-color: currentColor; }
 .display { font-family: var(--font-serif); font-size: clamp(2rem, 4.6vw, 3.5rem); line-height: 1.05; letter-spacing: -.02em; font-weight: 400; white-space: nowrap; }
 .display__first { font-weight: 600; }
-.lede { font-family: var(--font-serif); font-size: clamp(1.15rem, 1.8vw, 1.4rem); line-height: 1.45; color: var(--ink-2); max-width: 44ch; margin-top: 1rem; }
+.lede { font-family: var(--font-serif); font-size: clamp(1.05rem, 1.5vw, 1.2rem); line-height: 1.5; color: var(--ink-2); max-width: 44ch; margin-top: 1rem; }
 .prose p + p { margin-top: .9rem; }
 .label { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-right: .35rem; }
 .label--code { color: var(--accent); }
@@ -149,11 +150,12 @@ em { font-style: italic; }
 main { padding-block: 2.5rem 4rem; }
 .section { padding-top: 3.25rem; }
 .section--tight { padding-top: 2rem; }
-.section-heading { margin-bottom: 1.4rem; display: grid; gap: .3rem; }
+.section-heading { margin-bottom: 1.1rem; display: grid; gap: .3rem; }
 .section-heading h2 { padding-bottom: .55rem; border-bottom: 1px solid var(--line); }
 .section-heading__lede { color: var(--ink-2); max-width: 64ch; margin-top: .5rem; }
 .page-head { padding-top: .5rem; padding-bottom: .5rem; max-width: 70ch; }
 .page-head h1 { margin-bottom: .2rem; }
+.page-head + .section, .section--first { padding-top: 2rem; }
 .page-head .lede { max-width: 62ch; }
 .page-head--cv { max-width: none; display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
 
@@ -193,26 +195,37 @@ main { padding-block: 2.5rem 4rem; }
 .contact__list { display: grid; gap: .35rem; font-size: .95rem; }
 .contact__list a { display: inline-flex; align-items: center; gap: .45rem; color: var(--ink-2); }
 .contact__list a:hover { color: var(--accent); }
+.email { color: var(--ink-2); }
+a.email { text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: .18em; }
+a.email:hover { color: var(--accent); }
 
 /* Interests -------------------------------------------------------------- */
 .interest-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
 .interest-col__title { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: .7rem; }
 
-/* Publications ----------------------------------------------------------- */
-.pub-list { display: grid; }
-.pub { display: grid; grid-template-columns: 5.5rem 1fr; gap: 1rem; padding: 1.1rem 0; border-bottom: 1px solid var(--line); }
-.pub:first-child { border-top: 1px solid var(--line); }
-.pub__year { font-family: var(--font-mono); font-size: .82rem; color: var(--muted); padding-top: .25rem; }
-.pub__title { font-family: var(--font-serif); font-size: 1.22rem; line-height: 1.3; font-weight: 500; }
-.pub__authors { margin-top: .3rem; color: var(--ink-2); font-size: .95rem; }
-.pub__authors strong { color: var(--ink); }
-.pub__venue { margin-top: .2rem; font-size: .9rem; color: var(--muted); font-style: italic; }
-.pub__venue .chip { font-style: normal; }
-.pub__actions { display: flex; flex-wrap: wrap; align-items: flex-start; gap: .45rem; margin-top: .7rem; }
-.pub__abstract summary { list-style: none; }
-.pub__abstract summary::-webkit-details-marker { display: none; }
-.pub__abstract[open] summary { border-color: var(--accent); color: var(--accent); }
-.pub__abstract p { margin-top: .7rem; padding: .9rem 1rem; background: var(--surface-2); border-radius: var(--radius-sm); font-size: .93rem; color: var(--ink-2); max-width: 70ch; }
+/* Publications and talks (one merged stream) ----------------------------- */
+.work-list { display: grid; }
+.work { display: grid; grid-template-columns: 9.5rem 1fr; gap: 1rem; padding: .95rem 0; border-bottom: 1px solid var(--line); }
+.work:first-child { border-top: 1px solid var(--line); }
+.work__kind { padding-top: .2rem; }
+.tag { display: inline-block; padding: .2rem .55rem; border-radius: 5px; font-family: var(--font-mono); font-size: .66rem; letter-spacing: .06em; text-transform: uppercase; border: 1px solid; white-space: nowrap; }
+.tag.is-journal { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 40%, transparent); background: var(--accent-soft); }
+.tag.is-paper { color: var(--ink-2); border-color: var(--line-strong); background: var(--surface-2); }
+.tag.is-working { color: var(--muted); border-color: var(--line-strong); background: transparent; }
+.tag.is-talk { color: var(--award); border-color: color-mix(in srgb, var(--award) 40%, transparent); background: var(--award-soft); }
+.tag.is-poster { color: var(--award); border-color: color-mix(in srgb, var(--award) 40%, transparent); background: transparent; }
+.work__title { font-family: var(--font-serif); font-size: 1.1rem; line-height: 1.35; font-weight: 500; }
+.work__date { font-family: var(--font-mono); font-size: .8rem; color: var(--muted); font-weight: 400; }
+.work__paper { margin-top: .25rem; font-size: .95rem; color: var(--ink-2); font-style: italic; }
+.work__authors { margin-top: .25rem; color: var(--ink-2); font-size: .92rem; }
+.work__authors strong { color: var(--ink); }
+.work__venue { margin-top: .15rem; font-size: .88rem; color: var(--muted); font-style: italic; }
+.work__chips { margin-top: .55rem; display: flex; flex-wrap: wrap; align-items: flex-start; gap: .4rem; }
+.work__abstract summary { list-style: none; }
+.work__abstract summary::-webkit-details-marker { display: none; }
+.work__abstract[open] summary { border-color: var(--accent); color: var(--accent); }
+.work__abstract p { margin-top: .6rem; padding: .85rem 1rem; background: var(--surface-2); border-radius: var(--radius-sm); font-size: .92rem; color: var(--ink-2); max-width: 70ch; font-style: normal; }
+.work__abstract-wrap { flex-basis: 100%; }
 
 /* News ------------------------------------------------------------------- */
 .news { display: grid; position: relative; padding-left: 1.4rem; border-left: 1px solid var(--line); }
@@ -225,9 +238,10 @@ main { padding-block: 2.5rem 4rem; }
 .projects { display: grid; gap: 1.25rem; }
 .project { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem 1.6rem 1.4rem; box-shadow: var(--shadow); position: relative; overflow: hidden; }
 .project::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--accent); }
-.project__title { font-family: var(--font-serif); font-size: 1.45rem; font-weight: 500; line-height: 1.25; }
+.project__title { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 500; line-height: 1.25; }
 .project__meta { margin-top: .35rem; color: var(--muted); font-size: .92rem; }
 .project__status { color: var(--ink-2); font-weight: 500; }
+.project__period { font-family: var(--font-mono); font-size: .8rem; }
 .kv { margin: 1.1rem 0 0; display: grid; gap: .55rem; }
 .kv__row { display: grid; grid-template-columns: 6.5rem 1fr; gap: 1rem; }
 .kv dt { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); padding-top: .3rem; }
@@ -238,20 +252,12 @@ main { padding-block: 2.5rem 4rem; }
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.35rem 1.4rem 1.4rem; display: grid; gap: .5rem; align-content: start; }
 .card__index { font-family: var(--font-serif); font-size: 2.2rem; line-height: 1; color: var(--line-strong); font-style: italic; }
-.card__title { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 500; line-height: 1.25; }
+.card__title { font-family: var(--font-serif); font-size: 1.12rem; font-weight: 500; line-height: 1.25; }
 .card p { color: var(--ink-2); font-size: .95rem; }
 
 /* Talks ------------------------------------------------------------------ */
 .year-mark { font-family: var(--font-serif); font-size: 1.1rem; color: var(--muted); font-weight: 500; letter-spacing: .02em; margin-bottom: .6rem; display: flex; align-items: center; gap: .8rem; }
 .year-mark::after { content: ""; flex: 1; height: 1px; background: var(--line); }
-.talk-list { display: grid; }
-.talk { display: grid; grid-template-columns: 8rem 1fr; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--line); }
-.talk__date { font-family: var(--font-mono); font-size: .8rem; color: var(--muted); padding-top: .25rem; display: block; }
-.talk__venue { font-weight: 600; }
-.talk__meta { font-size: .88rem; color: var(--muted); }
-.talk__title { margin-top: .4rem; font-family: var(--font-serif); font-size: 1.12rem; line-height: 1.35; font-style: italic; color: var(--ink-2); }
-.talk__authors { margin-top: .25rem; font-size: .92rem; color: var(--ink-2); }
-.talk__chips { margin-top: .6rem; display: flex; flex-wrap: wrap; gap: .4rem; }
 
 /* Teaching --------------------------------------------------------------- */
 .inst__head { padding-bottom: .9rem; border-bottom: 1px solid var(--line); margin-bottom: 1.1rem; }
@@ -318,8 +324,8 @@ main { padding-block: 2.5rem 4rem; }
   .interest-grid { grid-template-columns: 1fr; gap: 1.4rem; }
   .contact { grid-template-columns: 1fr; padding: 1.3rem 1.4rem; }
   .courses { grid-template-columns: 1fr; }
-  .pub, .talk, .entry, .news__item { grid-template-columns: 1fr; gap: .25rem; }
-  .pub__year, .talk__date, .entry__when, .news__date { padding-top: 0; }
+  .work, .entry, .news__item { grid-template-columns: 1fr; gap: .3rem; }
+  .work__kind, .entry__when, .news__date { padding-top: 0; }
   .kv__row { grid-template-columns: 1fr; gap: .15rem; }
   .site-footer__inner { grid-template-columns: 1fr; }
   .page-head--cv .btn { width: 100%; justify-content: center; }

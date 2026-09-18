@@ -1,29 +1,29 @@
 intro: >-
-  The research develops exact optimization methods for service and logistics systems in which
-  capacity is committed before demand and attendance are realized. The methodological core is
-  two-stage stochastic programming with mixed-integer recourse, solved by decomposition within
+  Exact optimization methods for service and logistics systems in which capacity is
+  committed before demand and attendance are realized. The methodological core is two-stage
+  stochastic programming with mixed-integer recourse, solved by decomposition within
   branch-and-cut, and its extension to problems with several conflicting criteria.
 
-projects:
+# Scholarly research: dissertation threads and earlier research programs.
+research:
   - title: Stochastic appointment scheduling with overbooking and walk-ins
-    status: Manuscript in final co-author review
+    status: Dissertation, manuscript in final co-author review
     collaborators: with T. Giovannelli, K. S. Shehadeh, and J. Shi
+    period: 2023 to present
     tags: [Stochastic programming, Integer L-shaped method, Branch-and-cut, Healthcare]
     rows:
       - label: Problem
         text: A multi-provider clinic session in which scheduled patients may not attend, may cancel on short notice, or may arrive unscheduled as walk-ins. The first stage assigns patients to providers and slots and designates double-booked and open-access slots; the second stage admits walk-ins after uncertainty is realized.
       - label: Method
-        text: An enhanced integer L-shaped decomposition in single-tree branch-and-cut, with scenario-wise integer optimality cuts, no-good feasibility cuts, McCormick envelopes for the bilinear recourse, and symmetry-breaking inequalities over identical providers and exchangeable patients.
+        text: An enhanced integer L-shaped decomposition in single-tree branch-and-cut, with scenario-wise integer optimality cuts, no-good feasibility cuts, McCormick envelopes for the bilinear recourse, and symmetry-breaking inequalities over identical providers and exchangeable patients. Implemented in Gurobi and Python.
       - label: Result
         text: Every instance of the flexible walk-in model with up to 300 scenarios solved to optimality. Once demand exceeds nominal capacity, optimal schedules rely entirely on double-booking and reserve no open-access capacity; flexible cross-provider reassignment of walk-ins is the more effective access mechanism.
-    links:
-      - label: Talks
-        url: /talks/
 
   - title: Set-valued formulation of open-access allocation
-    status: In preparation
+    status: Dissertation, manuscript in preparation
     collaborators: with T. Giovannelli
-    tags: [Multi-objective optimization, Set optimization, Stochastic programming]
+    period: 2025 to present
+    tags: [Multi-objective optimization, Set optimization, Aumann integral]
     rows:
       - label: Problem
         text: Clinics have no reliable basis for pricing a minute of patient waiting against a minute of provider time or unmet same-day demand, yet single-objective models require exactly that. The setting is a single-provider session on a fixed slot grid where a binary first stage selects which slots are held open.
@@ -32,39 +32,44 @@ projects:
       - label: Result
         text: The full set of efficient open-access allocations, rather than one schedule per assumed weight vector.
 
-  - title: Stochastic evaluation for air cargo network planning
-    status: Atlas Air, Network Planning, Summer 2026
-    tags: [MILP recourse, Monte Carlo, Network planning, Azure Databricks]
+  - title: Virtual metrology for chemical mechanical planarization
+    status: Published, ASME MSEC 2024
+    collaborators: with X. Han and X. Jia
+    period: 2023 to 2024
+    tags: [State-space filtering, Semiconductor manufacturing, Predictive modeling]
     rows:
       - label: Problem
-        text: Evaluate cargo network plans under operational uncertainty across fleet flow, capacity utilization, routing, capacity spill, and cascading delay.
+        text: Material removal rate in chemical mechanical planarization cannot be measured on every wafer, so it must be inferred from process signals.
       - label: Method
-        text: A scenario-based evaluation framework with mixed-integer recourse in Pyomo, HiGHS, and Gurobi; stochastic parameters calibrated from operational data on Azure Databricks; the route network represented on Amazon Neptune for connectivity and reachability queries.
+        text: A dynamic virtual metrology model built on a dual linear Kalman filter, developed at the Lab for Intelligent Metrology Systems.
       - label: Result
-        text: Network disruption cost quantified through Monte Carlo evaluation of the recourse value function.
-
-  - title: Virtual metrology for chemical mechanical planarization
-    status: ASME MSEC 2024
-    collaborators: with X. Han and X. Jia
-    tags: [State-space filtering, Semiconductor manufacturing]
-    rows:
-      - label: Method
-        text: A dynamic virtual metrology model based on a dual linear Kalman filter for material removal rate prediction.
-      - label: Result
-        text: Lowest mean squared error (7.98) against multiple linear regression, EWMA, and Bayesian ARX benchmarks.
-    links:
-      - label: Paper
-        url: https://doi.org/10.1115/MSEC2024-125308
+        text: Lowest mean squared error (7.98) against multiple linear regression, EWMA, and Bayesian ARX benchmarks. The model underpins follow-on semiconductor work funded by NIST and member industries.
 
   - title: Multi-task survival modeling of post-heart-transplant outcomes
-    status: INFORMS 2022, Research!Louisville 2022
+    status: M.S. research, University of Louisville
     collaborators: with X. Chen, M. Gentili, and J. Trivedi
+    period: 2021 to 2023
     tags: [Survival analysis, Multi-task learning, Health services]
     rows:
+      - label: Problem
+        text: One-year survival after heart transplantation varies across transplantation centers for reasons that pooled models cannot separate from patient-level risk.
       - label: Method
-        text: A multi-task Cox proportional hazards model treating each transplantation center as a separate learning task over a shared representation, with UNOS records integrated with county- and tract-level deprivation data within a 200-mile radius of each center.
+        text: A multi-task Cox proportional hazards model treating each center as a separate learning task over a shared representation, with UNOS donor and recipient records integrated with county- and tract-level deprivation measures (population density, poverty index, stroke mortality) within a 200-mile radius of each center.
       - label: Result
-        text: Center-level effects on one-year survival quantified and benchmarked against CoxPH and non-linear CoxPH by concordance index.
+        text: Center-level effects quantified and benchmarked against CoxPH and non-linear CoxPH by concordance index. Presented at INFORMS 2022 and awarded third place at Research!Louisville.
+
+  - title: Grey-based neural networks for supply chain prediction
+    status: M.S. research, BUET; three resulting publications
+    collaborators: with S. M. Ali, G. Kabir, S. K. Paul, and M. T. Zahura
+    period: 2018 to 2024
+    tags: [Forecasting, Neural networks, Grey systems, Supply chain]
+    rows:
+      - label: Problem
+        text: Supply chain demand and performance must be predicted from short, noisy histories where classical statistical forecasting is unreliable.
+      - label: Method
+        text: Grey system models coupled with neural networks, developed from the M.S. thesis at BUET and extended in later collaborations.
+      - label: Result
+        text: Published in Sustainability (2024), the American Journal of Industrial Engineering (2018), and the IEOM conference proceedings (2024).
 
 directions:
   - title: Clinic networks with shared providers
@@ -73,3 +78,56 @@ directions:
     text: Optimality cuts strengthened through the structure of the scheduling polytope, cut aggregation across scenario subsets, warm-starting branch-and-cut from heuristic policies such as iterated local search, and parallel scenario evaluation. Results apply to two-stage programs with mixed-integer recourse generally.
   - title: Patient-level access as an explicit criterion
     text: Expected delay is an average, and a schedule can minimize it while placing the same patients late every session. Formulating max-min access, dispersion across patient classes, and chance constraints on per-class delay yields the cost-access trade-off surface rather than one point on it.
+
+# Applied and engineering projects, distinct from the scholarly work above.
+projects:
+  - title: Stochastic evaluation framework for air cargo network planning
+    org: Atlas Air, Network Planning
+    period: Summer 2026
+    tags: [Pyomo, HiGHS, Gurobi, Monte Carlo, Azure Databricks, Amazon Neptune]
+    text: >-
+      A scenario-based evaluation framework with mixed-integer recourse for cargo network
+      planning under operational uncertainty, assessing fleet flow, capacity utilization,
+      routing, capacity spill, and cascading delay. Network disruption cost was quantified
+      through Monte Carlo evaluation of the recourse value function. Stochastic parameters
+      were calibrated from operational data through a parameterized Azure Databricks
+      workflow with automated input validation and end-to-end run provenance, and the
+      airline route network was represented on Amazon Neptune for the connectivity and
+      reachability queries feeding the optimization model.
+
+  - title: Production planning automation for Personal Care manufacturing
+    org: P&G Digital Accelerator, University of Cincinnati
+    period: 2024 to 2025
+    tags: [Azure Databricks, Python, SQL, KNIME, Tableau, SAP]
+    text: >-
+      Scalable Azure Databricks pipelines translating SAP planning volumes into
+      production-line recipe rates, reducing annual manual effort by approximately 550
+      hours, roughly half of the prior workload. Data integration from Databricks to
+      Tableau was automated through KNIME, with deployed dashboards tracking key
+      performance indicators for the production planning team.
+
+  - title: Cybersecurity in Logistics Systems workforce training
+    org: Logistics and Distribution Institute, University of Louisville (NSF-funded)
+    period: 2021 to 2023
+    tags: [Curriculum development, Logistics, Cybersecurity]
+    text: >-
+      Authored five instructional modules for an NSF-funded workforce training program:
+      IT Basics, Network Foundation, Network Security, Risk Analysis, and a Capstone
+      Project.
+
+  - title: Supply chain performance analysis, GlaxoSmithKline Bangladesh
+    org: Ahsanullah University of Science and Technology
+    period: "2014"
+    tags: [Supply chain analysis, Pharmaceutical operations]
+    text: >-
+      Undergraduate thesis analyzing the supply chain performance of GlaxoSmithKline
+      Bangladesh Limited and developing recommendations for its distribution and
+      inventory practices.
+
+  - title: Water sprinkler system design and fabrication
+    org: Ahsanullah University of Science and Technology
+    period: "2014"
+    tags: [Product design, Fabrication, Survey analysis]
+    text: >-
+      Design and fabrication of a simplified automated water sprinkler system, with a
+      survey-based analysis of user requirements. Published in Procedia Engineering.

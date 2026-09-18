@@ -1,0 +1,36 @@
+{%- assign w = include.item -%}
+{%- assign authors = w.authors | replace: "A. U. Rahman", "<strong>A. U. Rahman</strong>" -%}
+{%- case w.type -%}
+{%- when "journal" -%}{%- assign kind = "Journal article" -%}{%- assign klass = "is-journal" -%}{%- assign spoken = false -%}
+{%- when "proceedings" -%}{%- assign kind = "Conference paper" -%}{%- assign klass = "is-paper" -%}{%- assign spoken = false -%}
+{%- when "working" -%}{%- assign kind = "Working paper" -%}{%- assign klass = "is-working" -%}{%- assign spoken = false -%}
+{%- when "talk" -%}{%- assign kind = "Conference talk" -%}{%- assign klass = "is-talk" -%}{%- assign spoken = true -%}
+{%- when "poster" -%}{%- assign kind = "Poster" -%}{%- assign klass = "is-poster" -%}{%- assign spoken = true -%}
+{%- when "seminar" -%}{%- assign kind = "Seminar" -%}{%- assign klass = "is-talk" -%}{%- assign spoken = true -%}
+{%- endcase -%}
+<li class="work"{% if w.id %} id="{{ w.id }}"{% endif %}>
+  <div class="work__kind"><span class="tag {{ klass }}">{{ kind }}</span></div>
+  <div class="work__body">
+    {%- if spoken -%}
+    <p class="work__title">{{ w.venue }}{% if w.date %} <span class="work__date">· {{ w.date }}</span>{% endif %}</p>
+    <p class="work__paper">{{ w.title }}</p>
+    {%- else -%}
+    <p class="work__title">{{ w.title }}</p>
+    {%- endif -%}
+    <p class="work__authors">{{ authors }}</p>
+    {%- unless spoken -%}
+    <p class="work__venue">{{ w.venue }}</p>
+    {%- endunless -%}
+    <p class="work__chips">
+      {%- if w.status %}<span class="chip chip--status">{{ w.status }}</span>{% endif -%}
+      {%- if w.presenter %}<span class="chip chip--muted">Presented by {{ w.presenter }}</span>{% endif -%}
+      {%- if w.award %}<span class="chip chip--award">{{ w.award }}</span>{% endif -%}
+      {%- if w.doi -%}
+      <a class="chip chip--link" href="https://doi.org/{{ w.doi }}" target="_blank" rel="noopener">DOI {% include icon.html name="external" %}</a>
+      {%- endif -%}
+      {%- if w.abstract -%}
+      <span class="work__abstract-wrap"><details class="work__abstract"><summary class="chip chip--link">Abstract</summary><p>{{ w.abstract }}</p></details></span>
+      {%- endif -%}
+    </p>
+  </div>
+</li>
