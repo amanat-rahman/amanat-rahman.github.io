@@ -13,39 +13,25 @@ description: Publications, conference talks, posters, and seminars by Amanat Ur 
 
 <section class="section">
   {% include section-heading.html title="Publications" %}
-
-  {%- assign working = site.data.publications | where: "type", "working" | sort: "sort" | reverse -%}
-  {%- if working.size > 0 -%}
-  <h3 class="group-title">Manuscripts under review and in preparation</h3>
+  {%- assign pubs = site.data.publications | sort: "sort" | reverse -%}
+  {%- assign pub_years = pubs | map: "year" | uniq -%}
+  {%- for y in pub_years -%}
+  <h3 class="year-mark">{{ y }}</h3>
   <ol class="work-list">
-    {%- for w in working -%}{% include work-entry.html item=w %}{%- endfor -%}
+    {%- for w in pubs -%}
+    {%- if w.year == y -%}{% include work-entry.html item=w %}{%- endif -%}
+    {%- endfor -%}
   </ol>
-  {%- endif -%}
-
-  {%- assign journal = site.data.publications | where: "type", "journal" | sort: "sort" | reverse -%}
-  {%- if journal.size > 0 -%}
-  <h3 class="group-title">Refereed journal articles</h3>
-  <ol class="work-list">
-    {%- for w in journal -%}{% include work-entry.html item=w %}{%- endfor -%}
-  </ol>
-  {%- endif -%}
-
-  {%- assign proceedings = site.data.publications | where: "type", "proceedings" | sort: "sort" | reverse -%}
-  {%- if proceedings.size > 0 -%}
-  <h3 class="group-title">Refereed conference proceedings</h3>
-  <ol class="work-list">
-    {%- for w in proceedings -%}{% include work-entry.html item=w %}{%- endfor -%}
-  </ol>
-  {%- endif -%}
+  {%- endfor -%}
 </section>
 
 <section class="section">
   {% include section-heading.html title="Talks and posters" %}
   {%- assign talks = site.data.talks | sort: "sort" | reverse -%}
-  {%- assign years = talks | map: "year" | uniq -%}
-  {%- for y in years -%}
+  {%- assign talk_years = talks | map: "year" | uniq -%}
+  {%- for y in talk_years -%}
   <h3 class="year-mark">{{ y }}</h3>
-  <ol class="work-list work-list--year">
+  <ol class="work-list">
     {%- for w in talks -%}
     {%- if w.year == y -%}{% include work-entry.html item=w %}{%- endif -%}
     {%- endfor -%}
