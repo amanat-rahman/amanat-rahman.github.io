@@ -5,47 +5,47 @@ intro: >-
 # Scholarly research. Keep rows short: the Outcome line should say what a decision
 # maker gets, not how hard the instance was to solve.
 research:
-  - title: Stochastic appointment scheduling with overbooking and walk-ins
-    status: Dissertation, manuscript in final co-author review
+  - title: Two-stage stochastic optimization for outpatient clinic scheduling system under uncertainty
+    status: Ph.D. dissertation, manuscript in final co-author review
     collaborators: with T. Giovannelli, K. S. Shehadeh, and J. Shi
     period: 2023 to present
-    tags: [Stochastic programming, Integer L-shaped method, Branch-and-cut, Healthcare]
+    tags: [Stochastic programming, enhanced integer L-shaped method, Branch-and-cut, Healthcare]
     rows:
       - label: Question
         text: How should a clinic book a session when a sizeable share of patients will not attend as scheduled, some cancel at short notice, and others arrive without an appointment?
       - label: Approach
-        text: A two-stage stochastic program with an integer first stage, solved exactly by an enhanced integer L-shaped decomposition inside branch-and-cut.
+        text: A two-stage stochastic program with an integer first stage, solved exactly by an enhanced integer L-shaped decomposition inside a branch-and-cut algorithm.
       - label: Outcome
-        text: Booking policies a clinic can act on directly, covering how far to overbook, whether to hold slots open for same-day demand, and how to route walk-ins across providers. Once a session is busy, double-booking outperforms reserving open-access slots, and most of the same-day access comes from letting walk-ins move between providers.
+        text: Booking policies a clinic can act on directly, covering how far to overbook, whether to hold slots open for same-day demand, and how to route walk-ins across providers. Results show that once a session is busy, double-booking outperforms reserving open-access slots, and most of the same-day access comes from letting walk-ins move between providers.
 
-  - title: Set-valued formulation of open-access allocation
-    status: Dissertation, manuscript in preparation
+  - title: Optimal allocating open-access appointment slots in an outpatient clinic: a two-stage stochastic multi-objective program with an integer first stage
+    status: Ph.D. dissertation, manuscript in preparation
     collaborators: with T. Giovannelli
-    period: 2025 to present
-    tags: [Multi-objective optimization, Set optimization, Aumann integral]
+    period: 2023 to present
+    tags: [Multi-objective optimization, Set-valued optimization, Aumann integral, Healthcare]
     rows:
       - label: Question
-        text: Clinics cannot credibly price a minute of patient waiting against a minute of provider time, yet single-objective schedulers force exactly that judgment before any schedule is produced.
+        text: Clinics cannot credibly trade off patient waiting time against provider time, yet a single‑objective scheduling model fixes that trade‑off through predetermined weights before any schedule is produced.
       - label: Approach
         text: The nondominated set of a multi-objective recourse problem is treated as a random closed set and minimized in the set-valued sense, over a binary first stage.
       - label: Outcome
         text: The full set of efficient open-access allocations, so a manager chooses a schedule by the trade-off they are willing to accept rather than by weights they had to invent.
 
   - title: Virtual metrology for chemical mechanical planarization
-    status: Published, ASME MSEC 2024
+    status: Research project, Published, ASME MSEC 2024
     collaborators: with X. Han and X. Jia
     period: 2023 to 2024
-    tags: [State-space filtering, Semiconductor manufacturing]
+    tags: [State-space filtering, Semiconductor manufacturing, Predictive modeling]
     rows:
       - label: Question
         text: Material removal rate cannot be measured on every wafer, so process drift goes unseen between physical measurements.
       - label: Approach
         text: A dual linear Kalman filter that infers removal rate from in-process signals, developed at the Lab for Intelligent Metrology Systems.
       - label: Outcome
-        text: Wafer-level estimates accurate enough to act on, outperforming multiple linear regression, EWMA, and Bayesian ARX benchmarks, and now the basis for follow-on work funded by NIST and member industries.
+        text: Wafer-level estimates accurate enough to act on, outperforming multiple linear regression, EWMA, and Bayesian ARX benchmarks.
 
   - title: Multi-task survival modeling of post-heart-transplant outcomes
-    status: M.S. research, University of Louisville
+    status: Research project, Presented, INFORMS 2022, Research! Louisville 2022
     collaborators: with X. Chen, M. Gentili, and J. Trivedi
     period: 2021 to 2023
     tags: [Survival analysis, Multi-task learning, Health services]
@@ -57,18 +57,18 @@ research:
       - label: Outcome
         text: Center-level effects isolated from patient-level risk, identifying where system-level intervention, rather than case selection, would change outcomes.
 
-  - title: Grey-based neural networks for supply chain prediction
-    status: M.S. research, BUET; three resulting publications
-    collaborators: with S. M. Ali, G. Kabir, S. K. Paul, and M. T. Zahura
+  - title: Predive modeling using limited, uncertatain data: A grey-based neural networks for supply chain performance prediction
+    status: Published, Sustainability 2024
+    collaborators: with S. M. Ali, G. Kabir, and S. K. Paul
     period: 2018 to 2024
-    tags: [Forecasting, Neural networks, Grey systems]
+    tags: [Forecasting, Neural networks, Grey systems theory]
     rows:
       - label: Question
         text: Supply chain demand and performance must often be predicted from short, noisy histories where classical statistical forecasting is unreliable.
       - label: Approach
-        text: Grey system models coupled with neural networks, developed in the M.S. thesis and extended in later collaborations.
+        text: Grey‑system models coupled with neural networks, developed in the M.S. thesis and extended into a GM(1,1)‑based grey neural network architecture.
       - label: Outcome
-        text: Forecasts usable for planning where conventional methods have too little data to fit, published across three venues.
+        text: Forecasts usable for planning where conventional methods have too little data to fit. Forecasts with sharply reduced mean relative error across key performance indicators, producing usable predictions in settings where conventional methods cannot fit the data.
 
 directions_intro: >-
   Three directions I intend to pursue, extending the methods above toward the scale and the

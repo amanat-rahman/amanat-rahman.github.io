@@ -1,8 +1,8 @@
 name: Amanat Ur Rahman
 first_name: Amanat
 last_name: Rahman
-title: Ph.D. Student, Industrial &amp; Systems Engineering
-tagline: Two-stage stochastic optimization and decomposition algorithmss for large-scale scheduling systems under uncertainty.
+title: Ph.D. Student, ISE
+tagline: Two-stage stochastic optimization and decomposition algorithms for large-scale scheduling systems under uncertainty.
 department: Department of Mechanical, Materials, and Industrial Engineering (MMIE)
 institution: University of Cincinnati (UC)
 institution_url: https://ceas.uc.edu/academics/departments/mechanical-materials-engineering.html
@@ -26,14 +26,14 @@ links:
 
 bio:
   - >-
-    I am a Ph.D. student in Industrial and Systems Engineering at the University of
-    Cincinnati, advised by <a href="https://sites.google.com/view/tommasogiovannelli">Dr.
+    I am a Ph.D. student in Industrial and Systems Engineering (ISE) at the University of
+    Cincinnati (UC), advised by <a href="https://sites.google.com/view/tommasogiovannelli">Dr.
     Tommaso Giovannelli</a>. I hold an M.S. in Industrial Engineering from the University
     of Louisville, and earlier an M.S. from Bangladesh University of Engineering and
     Technology and a B.S. from Ahsanullah University of Science and Technology, both in
     Industrial and Production Engineering. Before moving to the United States, I spent six
     years as a full-time faculty member at Ahsanullah University of Science and Technology
-    in Dhaka.
+    in Dhaka, Bangladesh.
   - >-
     My research develops two-stage stochastic programming models and exact decomposition
     algorithms for systems that commit capacity before demand is known, with outpatient
@@ -45,12 +45,11 @@ bio:
 interests:
   methodology:
     - Two-stage stochastic programming
-    - Integer L-shaped and Benders decomposition
     - Multi-objective and set-valued optimization
-    - Mixed-integer linear programming
+    - Integer L-shaped decomposition method
     - Optimization under uncertainty
   applications:
-    - Healthcare operations and appointment scheduling
+    - Healthcare operations management
     - Airline network planning and transportation systems
     - Semiconductor manufacturing process control
     - Supply chain analytics
@@ -58,10 +57,10 @@ interests:
 # Contact block at the bottom of the home page.
 contact:
   address:
-    - Department of Mechanical, Materials, and Industrial Engineering
-    - University of Cincinnati
+    - Department of Mechanical, Materials, and Industrial Engineering (MMIE)
+    - University of Cincinnati (UC)
     - 2851 Woodside Drive, Cincinnati, OH 45221-0072
-  # office: Rhodes Hall 000      # uncomment and set once an office is assigned
+  office: Rhodes Hall 635      # uncomment and set once an office is assigned
   # Written reversed on purpose. The page reverses it in the browser to build a
   # clickable link, so the plain address never appears in the HTML source.
   emails:
