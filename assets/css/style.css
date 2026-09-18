@@ -323,7 +323,8 @@ a.email:hover { color: var(--accent); }
 .entries--compact .entry { padding: .75rem 0; }
 .entry__when { font-family: var(--font-mono); font-size: .8rem; color: var(--muted); padding-top: .25rem; }
 .entry__title { font-weight: 600; font-size: 1.02rem; }
-.entry__track { font-weight: 400; color: var(--ink-2); }
+.entry__title--degree { font-weight: 400; }
+.entry__title--degree strong { font-weight: 600; }
 .entry__org { color: var(--ink-2); font-size: .95rem; margin-top: .1rem; }
 .entry__note { color: var(--ink-2); font-size: .95rem; margin-top: .25rem; max-width: 80ch; }
 .entry__list { margin-top: .55rem; display: grid; gap: .35rem; color: var(--ink-2); font-size: .95rem; max-width: 80ch; }

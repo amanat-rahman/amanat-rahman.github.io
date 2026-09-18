@@ -31,7 +31,7 @@ description: Curriculum vitae of Amanat Ur Rahman. Education, research and indus
     <li class="entry">
       <div class="entry__when">{{ e.date }}</div>
       <div class="entry__body">
-        <p class="entry__title">{{ e.degree }}{% if e.track %} <span class="entry__track">({{ e.track }})</span>{% endif %}</p>
+        <p class="entry__title entry__title--degree">{{ e.degree }}{% if e.track %} (<strong>{{ e.track }}</strong> track){% endif %}</p>
         <p class="entry__org">{{ e.institution }} · {{ e.location }}</p>
         <ul class="entry__list">
           <li><span class="label">{{ e.thesis_label }}</span> <em>{{ e.thesis }}</em></li>
