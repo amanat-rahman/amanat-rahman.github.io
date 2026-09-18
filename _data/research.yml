@@ -18,7 +18,7 @@ research:
       - label: Outcome
         text: Booking policies a clinic can act on directly, covering how far to overbook, whether to hold slots open for same-day demand, and how to route walk-ins across providers. Results show that once a session is busy, double-booking outperforms reserving open-access slots, and most of the same-day access comes from letting walk-ins move between providers.
 
-  - title: Optimal allocating open-access appointment slots in an outpatient clinic: a two-stage stochastic multi-objective program with an integer first stage
+  - title: "Optimal allocation of open-access appointment slots in an outpatient clinic: a two-stage stochastic multi-objective program with an integer first stage"
     status: Ph.D. dissertation, manuscript in preparation
     collaborators: with T. Giovannelli
     period: 2023 to present
@@ -57,7 +57,7 @@ research:
       - label: Outcome
         text: Center-level effects isolated from patient-level risk, identifying where system-level intervention, rather than case selection, would change outcomes.
 
-  - title: Predive modeling using limited, uncertatain data: A grey-based neural networks for supply chain performance prediction
+  - title: "Predictive modeling using limited, uncertain data: grey-based neural networks for supply chain performance prediction"
     status: Published, Sustainability 2024
     collaborators: with S. M. Ali, G. Kabir, and S. K. Paul
     period: 2018 to 2024
