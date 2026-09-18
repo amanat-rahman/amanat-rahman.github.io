@@ -3,20 +3,17 @@
 - date: 2026-11-01
   text: Presenting the outpatient scheduling work at the 2026 INFORMS Annual Meeting in San Francisco, November 1 to 4.
 
-- date: 2026-09-01
-  text: Dissertation proposal defended at the University of Cincinnati.
-
 - date: 2026-08-20
   text: Awarded a Research Travel Grant by the Graduate Student Government at the University of Cincinnati to attend the 2026 INFORMS Annual Meeting.
 
 - date: 2026-08-15
-  text: Completed a summer internship with the Network Planning group at Atlas Air, building a scenario-based evaluation framework with mixed-integer recourse for cargo network planning.
+  text: Completed a summer internship with the Network Planning group at Atlas Air, built a two-stage stochastic optimization model framework for a scenario-based simulation of Atlas Air's network flow planning.
 
 - date: 2026-08-05
-  text: The outpatient scheduling work was presented at MOPTA 2026 at Lehigh University by T. Giovannelli.
+  text: My Ph.D. dissertation work outpatient scheduling work was presented at MOPTA 2026 at Lehigh University by T. Giovannelli.
 
 - date: 2026-06-01
-  text: Joined Atlas Air as a Data Scientist Intern in Network Planning for the summer, working on optimization under operational uncertainty.
+  text: Joined Atlas Air as a Data Scientist Intern in Network Planning for the summer, working on stochastic optimization modeling under operational uncertainty.
 
 - date: 2026-05-20
   text: The outpatient scheduling work was presented at the IISE Annual Conference and Expo 2026 in Arlington, TX by T. Giovannelli.
@@ -38,9 +35,6 @@
 
 - date: 2024-03-15
   text: "Journal article published in Sustainability: an artificial intelligence approach to predicting supply chain performance."
-
-- date: 2023-09-01
-  text: Began reviewing for Operations Research Forum, IEEE Transactions on Industrial Informatics, and the Journal of Process Control.
 
 - date: 2023-08-15
   text: Started the Ph.D. in Industrial Engineering at the University of Cincinnati, advised by Dr. Tommaso Giovannelli.
