@@ -331,6 +331,8 @@ a.email:hover { color: var(--accent); }
 .cv-toc { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1.4rem; }
 .cv-toc a { font-size: .82rem; font-weight: 500; text-decoration: none; padding: .35rem .75rem; border-radius: 999px; border: 1px solid var(--line); color: var(--ink-2); background: var(--surface); }
 .cv-toc a:hover { border-color: var(--accent); color: var(--accent); }
+.cv-link { font-family: var(--font-mono); font-size: .9rem; }
+.cv-link a { color: var(--accent); text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent); }
 .cv-prepared { color: var(--ink-2); font-size: .95rem; margin-bottom: .6rem; max-width: 80ch; }
 
 /* Footer ----------------------------------------------------------------- */
