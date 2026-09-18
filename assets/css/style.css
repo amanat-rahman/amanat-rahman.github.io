@@ -274,6 +274,7 @@ a.email:hover { color: var(--accent); }
 .proj__period { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
 .proj__title { font-family: var(--font-serif); font-size: 1.12rem; font-weight: 500; line-height: 1.3; }
 .proj__org { color: var(--muted); font-size: .88rem; }
+.proj__text { margin-top: .5rem; color: var(--ink-2); font-size: .92rem; line-height: 1.6; text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
 .proj__list { margin-top: .5rem; display: grid; gap: .35rem; color: var(--ink-2); font-size: .92rem; line-height: 1.55; }
 .proj__list li { padding-left: 1rem; position: relative; }
 .proj__list li::before { content: ""; position: absolute; left: 0; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--line-strong); }
@@ -357,7 +358,8 @@ a.email:hover { color: var(--accent); }
 }
 @media (max-width: 760px) {
   .hero__bio p, .kv dd, .card p, .proj__list li, .entry__note, .entry__list li,
-  .work__abstract p, .inst__summary, .news__text, .course__topics, .group-note { text-align: left; }
+  .work__abstract p, .inst__summary, .news__text, .course__topics, .group-note,
+  .proj__text { text-align: left; }
   .nav-toggle { display: flex; }
   .site-nav { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--bg); border-bottom: 1px solid var(--line); padding: .6rem 1.25rem 1rem; flex-direction: column; align-items: stretch; }
   .site-nav.is-open { display: flex; }

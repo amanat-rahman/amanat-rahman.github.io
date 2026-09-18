@@ -44,18 +44,14 @@ description: Courses taught by Amanat Ur Rahman in operations research, producti
 
 <section class="section">
   {% include section-heading.html eyebrow="Beyond the classroom" title="Curriculum development and mentoring" %}
-  <ul class="entries">
-    {%- for c in t.curriculum -%}
-    <li class="entry">
-      <div class="entry__when">{{ c.period }}</div>
-      <div class="entry__body"><p class="entry__title">{{ c.title }}</p><p>{{ c.text }}</p></div>
-    </li>
+  {%- assign beyond = t.curriculum | concat: t.mentoring -%}
+  <div class="proj-grid">
+    {%- for b in beyond -%}
+    <article class="proj">
+      <h3 class="proj__title">{{ b.title }}</h3>
+      {%- if b.context %}<p class="proj__org">{{ b.context }}</p>{% endif -%}
+      <p class="proj__text">{{ b.text }}</p>
+    </article>
     {%- endfor -%}
-    {%- for m in t.mentoring -%}
-    <li class="entry">
-      <div class="entry__when">{{ m.period }}</div>
-      <div class="entry__body"><p class="entry__title">{{ m.title }}</p><p>{{ m.text }}</p></div>
-    </li>
-    {%- endfor -%}
-  </ul>
+  </div>
 </section>
