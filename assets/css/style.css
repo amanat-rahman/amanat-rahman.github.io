@@ -226,6 +226,8 @@ a.email:hover { color: var(--accent); }
 
 /* Publications and talks (one merged stream) ----------------------------- */
 .work-list { display: grid; }
+.work-list + .group-title, .work-list + .year-mark { margin-top: 1.8rem; }
+.group-title + .work-list, .year-mark + .work-list { margin-top: .2rem; }
 .work { display: grid; grid-template-columns: 9.5rem 1fr; gap: 1rem; padding: .95rem 0; border-bottom: 1px solid var(--line); }
 .work:first-child { border-top: 1px solid var(--line); }
 .work__kind { padding-top: .2rem; }

@@ -2,26 +2,53 @@
 layout: default
 title: Publications & Talks
 slug: publications
-description: Publications, conference talks, posters, and seminars by Amanat Ur Rahman, listed by year.
+description: Publications, conference talks, posters, and seminars by Amanat Ur Rahman.
 ---
 {%- assign scholar = site.data.profile.links | where: "icon", "scholar" | first -%}
 <header class="page-head">
   <p class="eyebrow">Scholarly record</p>
   <h1>Publications and Talks</h1>
-  <p class="page-head__note">Citation counts are on <a href="{{ scholar.url }}" target="_blank" rel="noopener">Google Scholar</a>.</p>
+  <p class="page-head__note">The publication list is also available on <a href="{{ scholar.url }}" target="_blank" rel="noopener">Google Scholar</a>.</p>
 </header>
 
-{%- assign work = site.data.publications | concat: site.data.talks | sort: "sort" | reverse -%}
-{%- assign years = work | map: "year" | uniq -%}
-{%- for y in years -%}
-<section class="section section--tight">
-  <h2 class="year-mark">{{ y }}</h2>
+<section class="section">
+  {% include section-heading.html title="Publications" %}
+
+  {%- assign working = site.data.publications | where: "type", "working" | sort: "sort" | reverse -%}
+  {%- if working.size > 0 -%}
+  <h3 class="group-title">Manuscripts under review and in preparation</h3>
   <ol class="work-list">
-    {%- for w in work -%}
-    {%- if w.year == y -%}
-    {% include work-entry.html item=w %}
-    {%- endif -%}
+    {%- for w in working -%}{% include work-entry.html item=w %}{%- endfor -%}
+  </ol>
+  {%- endif -%}
+
+  {%- assign journal = site.data.publications | where: "type", "journal" | sort: "sort" | reverse -%}
+  {%- if journal.size > 0 -%}
+  <h3 class="group-title">Refereed journal articles</h3>
+  <ol class="work-list">
+    {%- for w in journal -%}{% include work-entry.html item=w %}{%- endfor -%}
+  </ol>
+  {%- endif -%}
+
+  {%- assign proceedings = site.data.publications | where: "type", "proceedings" | sort: "sort" | reverse -%}
+  {%- if proceedings.size > 0 -%}
+  <h3 class="group-title">Refereed conference proceedings</h3>
+  <ol class="work-list">
+    {%- for w in proceedings -%}{% include work-entry.html item=w %}{%- endfor -%}
+  </ol>
+  {%- endif -%}
+</section>
+
+<section class="section">
+  {% include section-heading.html title="Talks and posters" %}
+  {%- assign talks = site.data.talks | sort: "sort" | reverse -%}
+  {%- assign years = talks | map: "year" | uniq -%}
+  {%- for y in years -%}
+  <h3 class="year-mark">{{ y }}</h3>
+  <ol class="work-list work-list--year">
+    {%- for w in talks -%}
+    {%- if w.year == y -%}{% include work-entry.html item=w %}{%- endif -%}
     {%- endfor -%}
   </ol>
+  {%- endfor -%}
 </section>
-{%- endfor -%}
