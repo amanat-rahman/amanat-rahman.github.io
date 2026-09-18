@@ -35,7 +35,7 @@ description: Research on stochastic optimization and exact decomposition for sch
 </section>
 
 <section class="section">
-  {% include section-heading.html eyebrow="Agenda" title="Research directions" %}
+  {% include section-heading.html eyebrow="Agenda" title="Research directions" lede=r.directions_intro %}
   <div class="cards">
     {%- for d in r.directions -%}
     <article class="card">
@@ -49,19 +49,19 @@ description: Research on stochastic optimization and exact decomposition for sch
 
 <section class="section">
   {% include section-heading.html eyebrow="Applied work" title="Projects" %}
-  <ul class="entries">
+  <div class="proj-grid">
     {%- for pj in r.projects -%}
-    <li class="entry">
-      <div class="entry__when">{{ pj.period }}</div>
-      <div class="entry__body">
-        <p class="entry__title">{{ pj.title }}</p>
-        <p class="entry__org">{{ pj.org }}</p>
-        <p class="entry__note">{{ pj.text }}</p>
-        {%- if pj.tags -%}
-        <ul class="chips chips--small">{%- for t in pj.tags -%}<li class="chip">{{ t }}</li>{%- endfor -%}</ul>
-        {%- endif -%}
-      </div>
-    </li>
+    <article class="proj">
+      <p class="proj__period">{{ pj.period }}</p>
+      <h3 class="proj__title">{{ pj.title }}</h3>
+      <p class="proj__org">{{ pj.org }}</p>
+      <ul class="proj__list">
+        {%- for b in pj.bullets -%}<li>{{ b }}</li>{%- endfor -%}
+      </ul>
+      {%- if pj.tags -%}
+      <ul class="chips chips--small proj__tags">{%- for t in pj.tags -%}<li class="chip">{{ t }}</li>{%- endfor -%}</ul>
+      {%- endif -%}
+    </article>
     {%- endfor -%}
-  </ul>
+  </div>
 </section>

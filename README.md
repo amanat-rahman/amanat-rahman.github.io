@@ -35,6 +35,11 @@ Pages: `index.html` (home), `research.html`, `publications.html`,
 `teaching.html`, `awards.html`, `cv.html`, `404.html`. Shared pieces are in
 `_includes/`; the page frame is `_layouts/default.html`.
 
+**Research page wording.** Each research entry uses Question, Approach, Outcome.
+Keep the Outcome line about what a decision maker gets from the work, not about
+how hard the instance was to solve. Projects use short bullets, never
+paragraphs.
+
 **Publications and talks share one page.** `_data/publications.yml` and
 `_data/talks.yml` are merged, sorted by the `sort` field (`YYYYMM`), and grouped
 by year. Each entry carries a `type` that becomes its tag: `journal`,

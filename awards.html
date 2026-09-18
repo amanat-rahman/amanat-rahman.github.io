@@ -51,12 +51,9 @@ description: Awards, honors, professional service, and affiliations of Amanat Ur
 
 <section class="section">
   {% include section-heading.html title="Affiliations" %}
-  <ul class="entries entries--compact">
+  <ul class="inline-list">
     {%- for a in site.data.service.affiliations -%}
-    <li class="entry">
-      <div class="entry__when">{{ a.period }}</div>
-      <div class="entry__body"><p class="entry__title">{{ a.name }}</p></div>
-    </li>
+    <li><span class="inline-list__name">{{ a.name }}</span> <span class="inline-list__meta">{{ a.period }}</span></li>
     {%- endfor -%}
   </ul>
 </section>
