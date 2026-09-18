@@ -8,7 +8,7 @@ description: Amanat Ur Rahman, Ph.D. student in Industrial Engineering at the Un
 <section class="hero">
   <div class="hero__text">
     <p class="eyebrow">{{ p.title }} · <a href="{{ p.institution_url }}" target="_blank" rel="noopener">{{ p.institution }}</a></p>
-    <h1 class="display">{{ p.first_name }} <span class="display__last">Ur {{ p.last_name }}</span></h1>
+    <h1 class="display"><span class="display__first">{{ p.first_name }}</span> Ur {{ p.last_name }}</h1>
     <p class="lede">{{ p.tagline }}</p>
     <div class="prose hero__bio">
       {%- for para in p.bio -%}
@@ -29,18 +29,8 @@ description: Amanat Ur Rahman, Ph.D. student in Industrial Engineering at the Un
     <figcaption>
       <span>{{ p.department }}</span>
       <span>{{ p.institution }}, {{ p.location }}</span>
-      <a href="mailto:{{ p.email }}">{{ p.email }}</a>
     </figcaption>
   </figure>
-</section>
-
-<section class="glance" aria-label="At a glance">
-  {%- for g in p.glance -%}
-  <a class="glance__item" href="{{ g.url | relative_url }}">
-    <span class="glance__value">{{ g.value }}</span>
-    <span class="glance__label">{{ g.label }}</span>
-  </a>
-  {%- endfor -%}
 </section>
 
 <section class="section">
@@ -62,20 +52,6 @@ description: Amanat Ur Rahman, Ph.D. student in Industrial Engineering at the Un
 </section>
 
 <section class="section">
-  {% include section-heading.html eyebrow="Selected work" title="Selected publications" %}
-  <ol class="pub-list">
-    {%- for cat in site.data.publications -%}
-    {%- for pub in cat.entries -%}
-    {%- if pub.selected -%}
-    {% include pub-entry.html pub=pub %}
-    {%- endif -%}
-    {%- endfor -%}
-    {%- endfor -%}
-  </ol>
-  <p class="more"><a href="{{ '/publications/' | relative_url }}">All publications {% include icon.html name="arrow" %}</a></p>
-</section>
-
-<section class="section">
   {% include section-heading.html eyebrow="Updates" title="News" %}
   <ol class="news">
     {%- assign items = site.data.news | sort: "date" | reverse -%}
@@ -86,4 +62,38 @@ description: Amanat Ur Rahman, Ph.D. student in Industrial Engineering at the Un
     </li>
     {%- endfor -%}
   </ol>
+</section>
+
+<section class="section" id="contact">
+  {% include section-heading.html eyebrow="Get in touch" title="Contact" %}
+  <div class="contact">
+    <div class="contact__col">
+      <h3 class="contact__title">Work address</h3>
+      <address>
+        {%- for line in p.contact.address -%}
+        <span>{{ line }}</span>
+        {%- endfor -%}
+        {%- if p.contact.office %}<span>Office: {{ p.contact.office }}</span>{% endif -%}
+      </address>
+    </div>
+    <div class="contact__col">
+      <h3 class="contact__title">Email</h3>
+      <ul class="contact__list">
+        {%- for e in p.contact.emails -%}
+        <li><a href="mailto:{{ e }}">{{ e }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    <div class="contact__col">
+      <h3 class="contact__title">Links</h3>
+      <ul class="contact__list">
+        {%- for l in p.links -%}
+        {%- unless l.icon == "mail" -%}
+        <li><a href="{{ l.url }}" target="_blank" rel="noopener">{% include icon.html name=l.icon %} {{ l.label }}</a></li>
+        {%- endunless -%}
+        {%- endfor -%}
+        <li><a href="{{ p.cv_pdf | relative_url }}" target="_blank" rel="noopener">{% include icon.html name="file" %} Curriculum vitae (PDF)</a></li>
+      </ul>
+    </div>
+  </div>
 </section>

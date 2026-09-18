@@ -12,7 +12,7 @@ folder are templates that read those files. To change what the site says, edit
 
 | To change | Edit |
 |---|---|
-| Name, title, tagline, bio, links, research interests, the four "at a glance" numbers | `_data/profile.yml` |
+| Name, title, tagline, bio, links, research interests, contact block | `_data/profile.yml` |
 | Degrees, theses, advisors, coursework | `_data/education.yml` |
 | Research and industry positions with bullets | `_data/experience.yml` |
 | Publications, grouped by category | `_data/publications.yml` |
@@ -27,6 +27,8 @@ folder are templates that read those files. To change what the site says, edit
 | CV PDF behind the download buttons | replace `assets/pdf/Amanat_Ur_Rahman_CV.pdf`, keep the filename |
 | Navigation bar order, site title, description | `_config.yml` |
 | Colors, fonts, spacing | `assets/css/style.css` (tokens are at the top) |
+
+The home page is, in order: intro and photo, research interests, news, contact.
 
 Pages: `index.html` (home), `research.html`, `publications.html`, `talks.html`,
 `teaching.html`, `cv.html`, `404.html`. Shared pieces are in `_includes/`; the

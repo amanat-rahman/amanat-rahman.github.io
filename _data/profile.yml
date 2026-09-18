@@ -57,17 +57,12 @@ interests:
     - Semiconductor manufacturing process control
     - Supply chain analytics
 
-# Numbers shown in the "at a glance" strip on the home page.
-glance:
-  - value: "7"
-    label: Publications
-    url: /publications/
-  - value: "7"
-    label: Talks and posters
-    url: /talks/
-  - value: "16"
-    label: Courses taught
-    url: /teaching/
-  - value: "6 yrs"
-    label: Faculty experience
-    url: /cv/
+# Contact block at the bottom of the home page.
+contact:
+  address:
+    - Department of Mechanical, Materials, and Industrial Engineering
+    - University of Cincinnati
+    - 2851 Woodside Drive, Cincinnati, OH 45221-0072
+  # office: Rhodes Hall 000      # uncomment and set once an office is assigned
+  emails:
+    - rahmanah@mail.uc.edu

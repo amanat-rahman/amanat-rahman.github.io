@@ -134,8 +134,8 @@ em { font-style: italic; }
 .eyebrow { font-family: var(--font-mono); font-size: .72rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: .6rem; }
 .eyebrow a { text-decoration: none; color: inherit; border-bottom: 1px solid transparent; }
 .eyebrow a:hover { border-bottom-color: currentColor; }
-.display { font-family: var(--font-serif); font-size: clamp(2.8rem, 6.4vw, 4.6rem); line-height: 1.02; letter-spacing: -.02em; font-weight: 500; }
-.display__last { font-style: italic; font-weight: 400; color: var(--ink-2); }
+.display { font-family: var(--font-serif); font-size: clamp(2rem, 4.6vw, 3.5rem); line-height: 1.05; letter-spacing: -.02em; font-weight: 400; white-space: nowrap; }
+.display__first { font-weight: 600; }
 .lede { font-family: var(--font-serif); font-size: clamp(1.15rem, 1.8vw, 1.4rem); line-height: 1.45; color: var(--ink-2); max-width: 44ch; margin-top: 1rem; }
 .prose p + p { margin-top: .9rem; }
 .label { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-right: .35rem; }
@@ -185,13 +185,14 @@ main { padding-block: 2.5rem 4rem; }
 .hero__photo figcaption { margin-top: 1.1rem; display: grid; gap: .1rem; font-size: .88rem; color: var(--muted); line-height: 1.45; }
 .hero__photo figcaption a { color: var(--ink-2); text-decoration-color: var(--line-strong); }
 
-/* Glance strip ----------------------------------------------------------- */
-.glance { margin-top: 3rem; display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--surface); }
-.glance__item { display: grid; gap: .1rem; padding: 1.1rem 1.3rem; text-decoration: none; border-right: 1px solid var(--line); transition: background .15s ease; }
-.glance__item:last-child { border-right: 0; }
-.glance__item:hover { background: var(--surface-2); color: inherit; }
-.glance__value { font-family: var(--font-serif); font-size: 2rem; line-height: 1; letter-spacing: -.02em; }
-.glance__label { font-size: .8rem; color: var(--muted); font-weight: 500; }
+/* Contact ---------------------------------------------------------------- */
+.contact { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem 2.5rem; padding: 1.6rem 1.75rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.contact__col { display: grid; gap: .55rem; align-content: start; }
+.contact__title { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.contact address { font-style: normal; display: grid; gap: .2rem; color: var(--ink-2); font-size: .95rem; line-height: 1.5; }
+.contact__list { display: grid; gap: .35rem; font-size: .95rem; }
+.contact__list a { display: inline-flex; align-items: center; gap: .45rem; color: var(--ink-2); }
+.contact__list a:hover { color: var(--accent); }
 
 /* Interests -------------------------------------------------------------- */
 .interest-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
@@ -304,9 +305,7 @@ main { padding-block: 2.5rem 4rem; }
 @media (max-width: 960px) {
   .hero { grid-template-columns: 1fr; gap: 2.25rem; }
   .hero__photo { max-width: 420px; order: -1; }
-  .glance { grid-template-columns: repeat(2, 1fr); }
-  .glance__item:nth-child(2) { border-right: 0; }
-  .glance__item:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .contact { grid-template-columns: 1fr 1fr; }
   .cards { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
@@ -317,6 +316,7 @@ main { padding-block: 2.5rem 4rem; }
   .site-nav a { display: block; padding: .6rem .8rem; border-radius: 10px; }
   .theme-toggle { margin: .5rem 0 0; }
   .interest-grid { grid-template-columns: 1fr; gap: 1.4rem; }
+  .contact { grid-template-columns: 1fr; padding: 1.3rem 1.4rem; }
   .courses { grid-template-columns: 1fr; }
   .pub, .talk, .entry, .news__item { grid-template-columns: 1fr; gap: .25rem; }
   .pub__year, .talk__date, .entry__when, .news__date { padding-top: 0; }
@@ -325,7 +325,7 @@ main { padding-block: 2.5rem 4rem; }
   .page-head--cv .btn { width: 100%; justify-content: center; }
 }
 @media (max-width: 480px) {
-  .glance { grid-template-columns: 1fr 1fr; }
+  .display { white-space: normal; }
   .btn { padding: .5rem .8rem; font-size: .86rem; }
 }
 
