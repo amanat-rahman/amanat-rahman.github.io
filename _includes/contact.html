@@ -13,7 +13,7 @@
     <h3 class="contact__title">Email</h3>
     <ul class="contact__list">
       {%- for e in p.contact.emails -%}
-      <li>{% include email.html email=e %}</li>
+      <li class="contact__list-item">{% include icon.html name="mail" %} {% include email.html email=e %}</li>
       {%- endfor -%}
     </ul>
   </div>
