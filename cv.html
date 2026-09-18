@@ -99,7 +99,7 @@ description: Curriculum vitae of Amanat Ur Rahman. Education, research and indus
         {%- if inst.summary %}<p class="entry__note">{{ inst.summary }}</p>{% endif -%}
         <ul class="entry__list">
           {%- for g in inst.groups -%}{%- for c in g.courses -%}
-          <li><span class="label label--code">{{ c.code }}</span> {{ c.title }}{% if c.lab %} (laboratory){% endif %}{% if c.audience %}, for {{ c.audience }} students{% endif %}{% if c.term %}, {{ c.term }}{% endif %}</li>
+          <li><span class="label label--code">{{ c.code }}</span> {{ c.title }}{% if c.lab %} (laboratory){% endif %}{% if c.audience %}, for {{ c.audience }} students{% endif %}</li>
           {%- endfor -%}{%- endfor -%}
         </ul>
       </div>
