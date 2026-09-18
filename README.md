@@ -26,6 +26,14 @@ folder are templates that read those files. To change what the site says, edit
 | News items (home page shows six, `/news/` lists all) | `_data/news.yml` |
 | Photo | replace `assets/img/pic_medium_AR.jpg`, keep the filename |
 | CV PDF behind the download buttons | replace `assets/pdf/Amanat_Ur_Rahman_CV.pdf`, keep the filename |
+
+**Rebuilding the CV PDF.** The web copy is not the CV you submit: it drops the
+phone number and GPA and obfuscates the email. After any change to
+`cv_AR_cowork/academic_cv/cv_academic_AR.tex`, run `python3 tools/build-web-cv.py`
+to regenerate `assets/pdf/Amanat_Ur_Rahman_CV.pdf`, then commit. The script
+patches a temporary copy, never your master source, and refuses to write the PDF
+if the phone, email or GPA survive.
+
 | Navigation bar order, site title, description | `_config.yml` |
 | Colors, fonts, spacing | `assets/css/style.css` (tokens are at the top) |
 
