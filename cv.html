@@ -123,10 +123,14 @@ description: Curriculum vitae of Amanat Ur Rahman. Education, research and indus
 <section class="section cv-section">
   {% include section-heading.html title="Awards and honors" %}
   <ul class="entries entries--compact">
-    {%- for a in site.data.awards -%}
+    {%- for a in site.data.awards.awards -%}
     <li class="entry">
       <div class="entry__when">{{ a.year }}</div>
-      <div class="entry__body"><p class="entry__title">{{ a.title }}</p><p class="entry__note">{{ a.detail }}</p></div>
+      <div class="entry__body">
+        <p class="entry__title">{{ a.title }}</p>
+        <p class="entry__org">{{ a.org }}</p>
+        {%- if a.detail %}<p class="entry__note">{{ a.detail }}</p>{% endif -%}
+      </div>
     </li>
     {%- endfor -%}
   </ul>
@@ -134,9 +138,14 @@ description: Curriculum vitae of Amanat Ur Rahman. Education, research and indus
 
 <section class="section cv-section">
   {% include section-heading.html title="Technical competencies" %}
-  <ul class="entry__list entry__list--flat">
-    {%- for s in site.data.skills -%}
-    <li><span class="label">{{ s.group }}</span> {{ s.items | join: ", " }}</li>
+  <ul class="entries entries--compact">
+    {%- for sk in site.data.skills -%}
+    <li class="entry">
+      <div class="entry__when">{{ sk.group }}</div>
+      <div class="entry__body">
+        <ul class="chips chips--small">{%- for i in sk.items -%}<li class="chip">{{ i }}</li>{%- endfor -%}</ul>
+      </div>
+    </li>
     {%- endfor -%}
   </ul>
 </section>
@@ -148,20 +157,24 @@ description: Curriculum vitae of Amanat Ur Rahman. Education, research and indus
       <div class="entry__when">{{ site.data.service.reviewing.period }}</div>
       <div class="entry__body">
         <p class="entry__title">Journal reviewer</p>
-        <p class="entry__note">{{ site.data.service.reviewing.journals | join: "; " }}</p>
+        <ul class="entry__list">
+          {%- for j in site.data.service.reviewing.journals -%}<li>{{ j }}</li>{%- endfor -%}
+        </ul>
       </div>
     </li>
     {%- for o in site.data.service.other -%}
     <li class="entry">
       <div class="entry__when">{{ o.period }}</div>
-      <div class="entry__body"><p class="entry__note">{{ o.text }}</p></div>
+      <div class="entry__body">
+        <p class="entry__title">{{ o.title }}</p>
+        <p class="entry__note">{{ o.text }}</p>
+      </div>
     </li>
     {%- endfor -%}
+  </ul>
+  <ul class="inline-list">
     {%- for a in site.data.service.affiliations -%}
-    <li class="entry">
-      <div class="entry__when">{{ a.period }}</div>
-      <div class="entry__body"><p class="entry__title">Member, {{ a.name }}</p></div>
-    </li>
+    <li><span class="inline-list__name">Member, {{ a.name }}</span> <span class="inline-list__meta">{{ a.period }}</span></li>
     {%- endfor -%}
   </ul>
 </section>

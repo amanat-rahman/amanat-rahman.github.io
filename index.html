@@ -54,12 +54,13 @@ description: Amanat Ur Rahman, Ph.D. student in Industrial Engineering at the Un
   {% include section-heading.html eyebrow="Updates" title="News" %}
   <ol class="news">
     {%- assign items = site.data.news | sort: "date" | reverse -%}
-    {%- for n in items limit: 5 -%}
+    {%- for n in items limit: 6 -%}
     <li class="news__item">
       <time class="news__date" datetime="{{ n.date }}">{{ n.date | date: "%b %Y" }}</time>
       <p class="news__text">{{ n.text }}</p>
     </li>
     {%- endfor -%}
   </ol>
+  <p class="more"><a href="{{ '/news/' | relative_url }}">All news {% include icon.html name="arrow" %}</a></p>
 </section>
 

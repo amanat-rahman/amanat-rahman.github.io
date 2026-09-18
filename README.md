@@ -23,7 +23,7 @@ folder are templates that read those files. To change what the site says, edit
 | Skills | `_data/skills.yml` |
 | Reviewing, service, memberships | `_data/service.yml` |
 | Work address and email (stored reversed) | `contact:` in `_data/profile.yml` |
-| News items on the home page | `_data/news.yml` |
+| News items (home page shows six, `/news/` lists all) | `_data/news.yml` |
 | Photo | replace `assets/img/pic_medium_AR.jpg`, keep the filename |
 | CV PDF behind the download buttons | replace `assets/pdf/Amanat_Ur_Rahman_CV.pdf`, keep the filename |
 | Navigation bar order, site title, description | `_config.yml` |
@@ -32,8 +32,14 @@ folder are templates that read those files. To change what the site says, edit
 The home page is, in order: intro and photo, contact, research interests, news.
 
 Pages: `index.html` (home), `research.html`, `publications.html`,
-`teaching.html`, `awards.html`, `cv.html`, `404.html`. Shared pieces are in
+`teaching.html`, `awards.html`, `cv.html`, `news.html`, `404.html`. The news
+page is not in the navigation bar; the home page links to it. Shared pieces are in
 `_includes/`; the page frame is `_layouts/default.html`.
+
+**Body prose is justified** (`text-align: justify` with automatic hyphenation),
+left-aligned again below 760px where the column is too narrow for it. The rule
+lives at the top of `assets/css/style.css`; add a selector there if you add a
+new prose block.
 
 **Research page wording.** Each research entry uses Question, Approach, Outcome.
 Keep the Outcome line about what a decision maker gets from the work, not about

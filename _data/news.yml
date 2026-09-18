@@ -1,12 +1,73 @@
+# Newest first is not required; entries are sorted by date. The home page shows the
+# most recent few and links to /news/, which lists everything grouped by year.
 - date: 2026-11-01
   text: Presenting the outpatient scheduling work at the 2026 INFORMS Annual Meeting in San Francisco, November 1 to 4.
+
 - date: 2026-09-01
   text: Dissertation proposal defended at the University of Cincinnati.
+
+- date: 2026-08-20
+  text: Awarded a Research Travel Grant by the Graduate Student Government at the University of Cincinnati to attend the 2026 INFORMS Annual Meeting.
+
 - date: 2026-08-15
   text: Completed a summer internship with the Network Planning group at Atlas Air, building a scenario-based evaluation framework with mixed-integer recourse for cargo network planning.
-- date: 2026-08-01
-  text: The outpatient scheduling work was presented at MOPTA 2026 at Lehigh University.
+
+- date: 2026-08-05
+  text: The outpatient scheduling work was presented at MOPTA 2026 at Lehigh University by T. Giovannelli.
+
+- date: 2026-06-01
+  text: Joined Atlas Air as a Data Scientist Intern in Network Planning for the summer, working on optimization under operational uncertainty.
+
 - date: 2026-05-20
-  text: The outpatient scheduling work was presented at the IISE Annual Conference &amp; Expo 2026 in Arlington, TX.
+  text: The outpatient scheduling work was presented at the IISE Annual Conference and Expo 2026 in Arlington, TX by T. Giovannelli.
+
 - date: 2026-04-01
-  text: Served as recitation instructor for ISE 3011, Deterministic Systems Models, at the University of Cincinnati.
+  text: Served as recitation instructor for ISE 3011, Deterministic Systems Models, the undergraduate operations research course at the University of Cincinnati.
+
+- date: 2025-05-15
+  text: Concluded the assistantship at the P&G Digital Accelerator, where the production planning pipelines cut roughly 550 hours of manual effort each year.
+
+- date: 2024-09-15
+  text: "Conference paper published: An enhanced hybrid grey-neural network model for demand forecasting, IEOM Tokyo."
+
+- date: 2024-06-20
+  text: "Conference paper published and presented at ASME MSEC 2024 in Knoxville, TN: a dual linear Kalman filter for virtual metrology in chemical mechanical planarization."
+
+- date: 2024-06-01
+  text: Joined the P&G Digital Accelerator at the University of Cincinnati as a Research Assistant, building production planning pipelines on Azure Databricks.
+
+- date: 2024-03-15
+  text: "Journal article published in Sustainability: an artificial intelligence approach to predicting supply chain performance."
+
+- date: 2023-09-01
+  text: Began reviewing for Operations Research Forum, IEEE Transactions on Industrial Informatics, and the Journal of Process Control.
+
+- date: 2023-08-15
+  text: Started the Ph.D. in Industrial Engineering at the University of Cincinnati, advised by Dr. Tommaso Giovannelli.
+
+- date: 2023-08-01
+  text: Completed the M.S. in Industrial Engineering at the University of Louisville.
+
+- date: 2022-11-15
+  text: Second place among Ph.D. students at the Graduate Student Research Competition, Department of Industrial Engineering, University of Louisville.
+
+- date: 2022-10-15
+  text: Presented work on institutional variability in post-heart-transplant survivability at the 2022 INFORMS Annual Meeting in Indianapolis.
+
+- date: 2022-09-15
+  text: Third place in the poster competition at Research!Louisville for the multi-task Cox model of post-heart-transplant survival.
+
+- date: 2021-08-15
+  text: Joined the Logistics and Distribution Institute at the University of Louisville as a Graduate Research Assistant.
+
+- date: 2020-09-15
+  text: Completed the M.S. in Industrial and Production Engineering at Bangladesh University of Engineering and Technology.
+
+- date: 2018-12-01
+  text: Promoted to Assistant Professor in the Department of Mechanical and Production Engineering at Ahsanullah University of Science and Technology.
+
+- date: 2015-06-01
+  text: Joined Ahsanullah University of Science and Technology as a Lecturer in the Industrial and Production Engineering discipline.
+
+- date: 2014-12-15
+  text: Graduated first among 65 students in the B.S. in Industrial and Production Engineering at Ahsanullah University of Science and Technology, with the Dean's Award.

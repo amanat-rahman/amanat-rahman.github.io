@@ -131,6 +131,24 @@ em { font-style: italic; }
 .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
+/* Justified prose -------------------------------------------------------- */
+.hero__bio p,
+.kv dd,
+.card p,
+.proj__list li,
+.entry__note,
+.entry__list li,
+.work__abstract p,
+.inst__summary,
+.news__text,
+.course__topics,
+.group-note {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  hyphenate-limit-chars: 7 3 3;
+}
+
 /* Typography helpers ----------------------------------------------------- */
 .eyebrow { font-family: var(--font-mono); font-size: .72rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: .6rem; }
 .eyebrow a { text-decoration: none; color: inherit; border-bottom: 1px solid transparent; }
@@ -267,7 +285,7 @@ a.email:hover { color: var(--accent); }
 .card p { color: var(--ink-2); font-size: .93rem; }
 
 /* Inline list ------------------------------------------------------------ */
-.inline-list { display: grid; gap: .45rem; }
+.inline-list { display: grid; gap: .45rem; margin-top: .9rem; }
 .inline-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: .6rem; padding: .55rem 0; border-bottom: 1px solid var(--line); }
 .inline-list li:first-child { border-top: 1px solid var(--line); }
 .inline-list__name { font-weight: 600; }
@@ -334,6 +352,8 @@ a.email:hover { color: var(--accent); }
   .proj-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
+  .hero__bio p, .kv dd, .card p, .proj__list li, .entry__note, .entry__list li,
+  .work__abstract p, .inst__summary, .news__text, .course__topics, .group-note { text-align: left; }
   .nav-toggle { display: flex; }
   .site-nav { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--bg); border-bottom: 1px solid var(--line); padding: .6rem 1.25rem 1rem; flex-direction: column; align-items: stretch; }
   .site-nav.is-open { display: flex; }
