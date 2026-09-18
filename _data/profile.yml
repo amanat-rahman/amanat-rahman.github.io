@@ -60,7 +60,7 @@ contact:
     - Department of Mechanical, Materials, and Industrial Engineering
     - University of Cincinnati
     - 2851 Woodside Drive, Cincinnati, OH 45221-0072
-  office: Rhodes Hall 635      # uncomment and set once an office is assigned
+  office: Rhodes Hall 630      # uncomment and set once an office is assigned
   # Written reversed on purpose. The page reverses it in the browser to build a
   # clickable link, so the plain address never appears in the HTML source.
   emails:
