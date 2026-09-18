@@ -28,26 +28,6 @@
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0f1317;
-    --surface: #151a20;
-    --surface-2: #1b2129;
-    --surface-3: #232b34;
-    --ink: #ebe8e1;
-    --ink-2: #c8c4bb;
-    --muted: #8f98a3;
-    --line: #262e37;
-    --line-strong: #3a444f;
-    --accent: #e3835e;
-    --accent-ink: #14100d;
-    --accent-soft: #2c1f19;
-    --award: #d9bd63;
-    --award-soft: #2a2412;
-    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 14px 36px -18px rgba(0, 0, 0, .8);
-    color-scheme: dark;
-  }
-}
 :root[data-theme="dark"] {
   --bg: #0f1317;
   --surface: #151a20;
@@ -121,10 +101,6 @@ em { font-style: italic; }
 .theme-toggle .icon-sun { display: none; }
 :root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
 :root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: block; }
-  :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
-}
 .nav-toggle { display: none; width: 40px; height: 40px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); cursor: pointer; padding: 0; flex-direction: column; justify-content: center; align-items: center; gap: 4px; }
 .nav-toggle span { display: block; width: 18px; height: 2px; background: var(--ink); border-radius: 2px; transition: transform .2s ease, opacity .2s ease; }
 .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
