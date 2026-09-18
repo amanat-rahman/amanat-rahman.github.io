@@ -4,9 +4,11 @@ title: Publications & Talks
 slug: publications
 description: Publications, conference talks, posters, and seminars by Amanat Ur Rahman, listed by year.
 ---
+{%- assign scholar = site.data.profile.links | where: "icon", "scholar" | first -%}
 <header class="page-head">
   <p class="eyebrow">Scholarly record</p>
-  <h1>Publications and talks</h1>
+  <h1>Publications and Talks</h1>
+  <p class="page-head__note">Citation counts are on <a href="{{ scholar.url }}" target="_blank" rel="noopener">Google Scholar</a>.</p>
 </header>
 
 {%- assign work = site.data.publications | concat: site.data.talks | sort: "sort" | reverse -%}

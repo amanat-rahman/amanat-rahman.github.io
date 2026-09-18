@@ -175,6 +175,7 @@ main { padding-block: 2.5rem 4rem; }
 .page-head h1 { margin-bottom: .2rem; }
 .page-head + .section, .section--first { padding-top: 2rem; }
 .page-head .lede { max-width: 78ch; }
+.page-head__note { margin-top: .5rem; color: var(--muted); font-size: .92rem; }
 .page-head--cv { max-width: none; display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
 
 /* Buttons and chips ------------------------------------------------------ */
