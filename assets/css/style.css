@@ -176,9 +176,7 @@ main { padding-block: 2.5rem 4rem; }
 .hero__bio { margin-top: 1.5rem; max-width: 62ch; color: var(--ink-2); }
 .hero__bio a { color: var(--ink); }
 .hero__photo { margin: 0; }
-.hero__frame { position: relative; }
-.hero__frame img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); object-fit: cover; aspect-ratio: 4 / 3.4; position: relative; }
-.hero__frame::before { content: ""; position: absolute; inset: 14px -14px -14px 14px; border-radius: var(--radius); border: 1px solid var(--line-strong); }
+.hero__frame img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); object-fit: cover; aspect-ratio: 4 / 3.4; }
 .hero__photo figcaption { margin-top: 1.1rem; display: grid; gap: .1rem; font-size: .88rem; color: var(--muted); line-height: 1.45; }
 .hero__photo figcaption a { color: var(--ink-2); text-decoration-color: var(--line-strong); }
 
