@@ -257,7 +257,7 @@ a.email:hover { color: var(--accent); }
 .proj__tags { margin-top: .7rem; }
 
 /* Cards ------------------------------------------------------------------ */
-.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.35rem 1.4rem 1.4rem; display: grid; gap: .5rem; align-content: start; }
 .card__index { font-family: var(--font-serif); font-size: 2.2rem; line-height: 1; color: var(--line-strong); font-style: italic; }
 .card__title { font-family: var(--font-serif); font-size: 1.12rem; font-weight: 500; line-height: 1.25; }

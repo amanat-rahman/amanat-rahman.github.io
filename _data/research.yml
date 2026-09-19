@@ -71,16 +71,18 @@ research:
         text: Forecasts usable for planning where conventional methods have too little data to fit. Forecasts with sharply reduced mean relative error across key performance indicators, producing usable predictions in settings where conventional methods cannot fit the data.
 
 directions_intro: >-
-  Three directions I intend to pursue, extending the methods above toward the scale and the
-  criteria that health systems actually operate under.
+  Four directions I intend to pursue. The questions are methodological; the settings I test
+  them in are outpatient care delivery, air cargo networks, and manufacturing operations.
 
 directions:
-  - title: Clinic networks with shared providers
-    text: Scheduling across sites that share providers, where routing a patient to another site changes what the decomposition can separate. The question is how much same-day access cross-site routing buys, and at what cost in patient travel.
-  - title: Scalability of exact decomposition
-    text: Stronger cuts, cut aggregation, warm starts from heuristic policies, and parallel scenario evaluation, so exact methods reach full-day instances. The gains apply to two-stage programs with mixed-integer recourse generally.
-  - title: Access as an explicit criterion
-    text: Expected delay is an average, and a schedule can minimize it while the same patients wait longest every session. Formulating access directly produces the cost-access trade-off surface instead of a single point on it.
+  - title: Networked capacity with shared resources
+    text: "Capacity allocation across sites that draw on one pool of resources: providers across a clinic network, aircraft and crew across a cargo network, production lines across plants. Routing demand between sites links the recourse subproblems that decomposition relies on separating. The work is to measure the service gain from cross-site routing against the added solve cost."
+  - title: Exact decomposition at operational scale
+    text: Stronger and aggregated cuts, warm starts from heuristic policies, and parallel scenario evaluation, so that exact methods handle instances the size of a full planning horizon. These techniques carry to any two-stage program with mixed-integer recourse.
+  - title: Trade-off surfaces instead of weighted objectives
+    text: Weights in a single objective fix a trade-off before any solution exists, whether the terms are patient waiting against provider time or service level against cost. Solving for the efficient set leaves the choice of operating point to the decision maker, and makes criteria such as access and equity, which expected-value objectives do not represent, part of the output.
+  - title: From model to decision support
+    text: Calibrating stochastic parameters from operational data, backtesting recourse-based policies against realized outcomes, and building models into tools that planners run themselves. Work in air cargo network planning and consumer goods manufacturing has set most of this agenda.
 
 # Applied and engineering projects. Short bullets, not paragraphs.
 projects:
