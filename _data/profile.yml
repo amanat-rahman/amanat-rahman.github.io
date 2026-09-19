@@ -35,12 +35,8 @@ bio:
     years as a full-time faculty member at Ahsanullah University of Science and Technology
     in Dhaka, Bangladesh.
   - >-
-    My research develops two-stage stochastic programming models and exact decomposition
-    algorithms for systems that commit capacity before demand is known, with outpatient
-    appointment scheduling as the principal application. Outside academia, I have built
-    decision-support tools in industry settings: a scenario-based evaluation framework for
-    cargo network planning at Atlas Air, and production planning pipelines on Azure
-    Databricks at the P&amp;G Digital Accelerator.
+    My research develops two-stage stochastic programming models and exact decomposition algorithms for systems that commit capacity before demand is known, with outpatient
+    appointment scheduling as the principal application. Beyond academia, I have applied these advanced analytical methodologies to drive impact across global industries. As a Data Scientist at Atlas Air, a world leader in air cargo logistics, I developed a stochastic optimization framework for complex network planning under operational uncertainty. Additionally, at Procter & Gamble, a global consumer goods enterprise, I developed advanced machine learning architectures and scalable data pipelines to automate the translation of high-level supply chain planning into precise manufacturing operations
 
 interests:
   methodology:
