@@ -46,13 +46,16 @@ interests:
   methodology:
     - Two-stage stochastic programming
     - Multi-objective and set-valued optimization
-    - Integer L-shaped decomposition method
+    - Mixed integer linear program
+    - Integer L-shaped decomposition methodologies
     - Optimization under uncertainty
+    - Monte Carlo simulation
   applications:
     - Healthcare operations management
     - Airline network planning and transportation systems
     - Semiconductor manufacturing process control
-    - Supply chain analytics
+    - Supply chain network design
+    - Decision analytics
 
 # Contact block at the bottom of the home page.
 contact:
