@@ -9,7 +9,7 @@ research:
     status: Ph.D. dissertation, manuscript in final co-author review
     collaborators: with T. Giovannelli, K. S. Shehadeh, and J. Shi
     period: 2023 to present
-    tags: [Stochastic programming, enhanced integer L-shaped method, Branch-and-cut, Healthcare]
+    tags: [Stochastic programming, Enhanced integer L-shaped method, Branch-and-cut, Healthcare]
     rows:
       - label: Question
         text: How should a clinic book a session when a sizeable share of patients will not attend as scheduled, some cancel at short notice, and others arrive without an appointment?
@@ -48,7 +48,7 @@ research:
     status: Research project, Presented, INFORMS 2022, Research! Louisville 2022
     collaborators: with X. Chen, M. Gentili, and J. Trivedi
     period: 2021 to 2023
-    tags: [Time-to-event analysis, Multi-task learning, Health services]
+    tags: [Time-to-event analysis, Multi-task learning, Proportional hazard model, Health services]
     rows:
       - label: Question
         text: One-year survival after heart transplantation differs across centers, but pooled models cannot separate the center's contribution from the risk profile of its patients.
@@ -61,7 +61,7 @@ research:
     status: Published, Sustainability 2024
     collaborators: with S. M. Ali, G. Kabir, and S. K. Paul
     period: 2018 to 2020
-    tags: [Forecasting, Neural networks, Grey systems theory]
+    tags: [Supply chain, Forecasting, Neural networks, Grey systems theory]
     rows:
       - label: Question
         text: Supply chain demand and performance must often be predicted from short, noisy histories where classical statistical forecasting is unreliable.
@@ -71,18 +71,17 @@ research:
         text: Forecasts usable for planning where conventional methods have too little data to fit. Forecasts with sharply reduced mean relative error across key performance indicators, producing usable predictions in settings where conventional methods cannot fit the data.
 
 directions_intro: >-
-  Four directions I intend to pursue. The questions are methodological; the settings I test
-  them in are outpatient care delivery, air cargo networks, and manufacturing operations.
+  I intend to pursue four research directions, each centered on methodological questions that I investigate within outpatient care delivery, air cargo networks, and manufacturing operations.
 
 directions:
   - title: Networked capacity with shared resources
-    text: "Capacity allocation across sites that draw on one pool of resources: providers across a clinic network, aircraft and crew across a cargo network, production lines across plants. Routing demand between sites links the recourse subproblems that decomposition relies on separating. The work is to measure the service gain from cross-site routing against the added solve cost."
+    text: I want to understand how to allocate capacity across sites that draw on a shared resource pool, such as providers in a clinic network, aircraft and crew in a cargo network, or production lines across plants. Routing demand between sites links the recourse subproblems that decomposition normally separates, so the methodological question is how much service improvement cross site routing actually delivers relative to the extra solve cost it creates.
   - title: Exact decomposition at operational scale
-    text: Stronger and aggregated cuts, warm starts from heuristic policies, and parallel scenario evaluation, so that exact methods handle instances the size of a full planning horizon. These techniques carry to any two-stage program with mixed-integer recourse.
-  - title: Trade-off surfaces instead of weighted objectives
-    text: Weights in a single objective fix a trade-off before any solution exists, whether the terms are patient waiting against provider time or service level against cost. Solving for the efficient set leaves the choice of operating point to the decision maker, and makes criteria such as access and equity, which expected-value objectives do not represent, part of the output.
+    text: I am interested in how far exact methods can be pushed when the instances reflect an entire planning horizon. The research question is which combinations of stronger and aggregated cuts, warm starts from heuristic policies, and parallel scenario evaluation make integer L shaped and related approaches viable at operational scale. The aim is to identify techniques that generalize to any two stage program with mixed integer recourse.
+  - title: Efficient sets for multi‑criteria decisions
+    text: I am interested in developing methods that replace fixed weights with explicit trade off surfaces. A weighted objective forces a trade off before any solution exists, whether the terms are patient waiting versus provider time or service level versus cost. The question I want to investigate is how to compute the efficient set directly, so the operating point is chosen afterward, and criteria like access and equity, which expected value objectives cannot represent, appear in the output rather than being pushed into weights.
   - title: From model to decision support
-    text: Calibrating stochastic parameters from operational data, backtesting recourse-based policies against realized outcomes, and building models into tools that planners run themselves. Work in air cargo network planning and consumer goods manufacturing has set most of this agenda.
+    text: I am interested in how to move from a model to a tool that planners can actually use. The questions include how to calibrate stochastic parameters from operational data, how to backtest recourse based policies against realized outcomes, and how to embed these models in decision support systems that practitioners run themselves. My applied work in air cargo network planning and consumer goods manufacturing has shaped this agenda.
 
 # Applied and engineering projects. Short bullets, not paragraphs.
 projects:
