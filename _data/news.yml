@@ -19,22 +19,22 @@
   text: My Ph.D. dissertation work on outpatient scheduling optimization was presented at the IISE Annual Conference and Expo 2026 in Arlington, TX by T. Giovannelli.
 
 - date: 2026-04-01
-  text: Served as recitation instructor for ISE 3011, Deterministic Systems Models, the undergraduate operations research course at the University of Cincinnati.
+  text: Served as recitation instructor for ISE 3011, Deterministic Systems Models, the undergraduate  Deterministic Systems Models (ISE 3011) course at the University of Cincinnati.
 
 - date: 2025-05-15
-  text: Concluded the assistantship at the P&G Digital Accelerator, where the production planning pipelines cut roughly 550 hours of manual effort each year.
+  text: Concluded the research assistantship at the P&G Digital Accelerator. The production planning automation project translated SAP planning volumes into production-line recipe rates for Personal Care products, reducing annual manual effort by approximately 550 hours.
 
 - date: 2024-09-15
   text: "Conference paper published: An enhanced hybrid grey-neural network model for demand forecasting, IEOM Tokyo."
 
 - date: 2024-06-20
-  text: "Conference paper published and presented at ASME MSEC 2024 in Knoxville, TN: a dual linear Kalman filter for virtual metrology in chemical mechanical planarization."
+  text: "Conference paper published (presented at ASME MSEC 2024 in Knoxville, TN): Enhanced Data-Driven Virtual Metrology on Chemical Mechanical Planarization Process Using Dual Linear Kalman Filter."
 
 - date: 2024-06-01
   text: Joined the P&G Digital Accelerator at the University of Cincinnati as a Research Assistant, building production planning pipelines on Azure Databricks.
 
 - date: 2024-03-15
-  text: "Journal article published in Sustainability: an artificial intelligence approach to predicting supply chain performance."
+  text: "Journal article published: Artificial Intelligence Approach to Predict Supply Chain Performance: Implications for Sustainability."
 
 - date: 2023-08-15
   text: Started the Ph.D. in Industrial & Systems Engineering at the University of Cincinnati.
