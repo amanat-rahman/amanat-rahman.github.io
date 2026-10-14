@@ -51,7 +51,7 @@ institutions:
       - heading: Operations research and production systems
         courses:
           - code: IPE 3107
-            title: Operation Research
+            title: Operations Research
             topics: Linear programming and the simplex method, duality and sensitivity analysis, transportation and assignment models, game theory, integer and dynamic programming, queuing models
           - code: IPE 3205
             title: Production Planning and Control
