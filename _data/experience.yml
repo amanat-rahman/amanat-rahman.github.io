@@ -18,7 +18,7 @@ research:
     bullets:
       - Developed a multi-task Cox proportional hazards model to quantify transplantation center-level factors affecting one-year post-heart-transplant survivability, treating each center as a separate learning task over a shared representation.
       - Integrated UNOS donor and recipient records with county- and tract-level area deprivation data within a 200-mile radius of each center; benchmarked against CoxPH and non-linear CoxPH models by concordance index.
-      - Authored five instructional modules (IT Basics, Network Foundation, Network Security, Risk Analysis, Capstone Project) for the NSF-funded Cybersecurity in Logistics Systems workforce training program.
+      - Authored five online, self-paced instructional modules (IT Basics, Network Foundations, Network Security, Risk Analysis, and Capstone) for a federally funded cybersecurity workforce training program for the logistics industry.
 
 industry:
   - role: Data Scientist Intern (Optimization), Network Planning
@@ -30,7 +30,7 @@ industry:
       - Built a stochastic evaluation framework with MILP recourse (Pyomo, HiGHS, Gurobi) for cargo network planning under operational uncertainty, assessing fleet flow, capacity utilization, and routing.
       - Quantified network disruption cost through scenario-based Monte Carlo evaluation of the recourse value function.
       - Calibrated stochastic parameters from operational data on Azure Databricks and represented the airline route network on Amazon Neptune for connectivity and reachability queries feeding the optimization model.
-  - role: Research Assistant
+  - role: Graduate Research Assistant
     org: Procter & Gamble Digital Accelerator, University of Cincinnati
     location: Cincinnati, OH, USA
     start: Jun 2024

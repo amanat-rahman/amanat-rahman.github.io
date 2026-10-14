@@ -6,7 +6,7 @@ intro: >-
 # maker gets, not how hard the instance was to solve.
 research:
   - title: Two-stage stochastic optimization for outpatient clinic scheduling system under uncertainty
-    status: Ph.D. dissertation, manuscript in final co-author review
+    status: Ph.D. dissertation, manuscript in final co-author revision
     collaborators: with T. Giovannelli, K. S. Shehadeh, and J. Shi
     period: 2023 to present
     tags: [Stochastic programming, Enhanced integer L-shaped method, Branch-and-cut, Healthcare]
@@ -104,12 +104,12 @@ projects:
       - Roughly 550 hours of annual manual effort removed, about half the prior workload.
       - Databricks-to-Tableau integration automated through KNIME, with deployed KPI dashboards.
 
-  - title: Cybersecurity in Logistics Systems workforce training
+  - title: Cybersecurity workforce training for the logistics industry
     org: Logistics and Distribution Institute, University of Louisville
     period: "2023"
-    tags: [NSF-funded, Curriculum development, Logistics]
+    tags: [Federally funded, Curriculum development, Logistics]
     bullets:
-      - "Authored five instructional modules: IT Basics, Network Foundation, Network Security, Risk Analysis, and a Capstone Project."
+      - "Authored five online, self-paced instructional modules: IT Basics, Network Foundations, Network Security, Risk Analysis, and Capstone."
 
   - title: Supply chain performance analysis, GlaxoSmithKline Bangladesh
     org: Ahsanullah University of Science and Technology
