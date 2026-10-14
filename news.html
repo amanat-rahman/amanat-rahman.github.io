@@ -25,7 +25,15 @@ description: Milestones, publications, talks, and appointments of Amanat Ur Rahm
     {%- if ny == y -%}
     <li class="news__item">
       <time class="news__date" datetime="{{ n.date }}">{{ n.date | date: "%b %Y" }}</time>
-      <p class="news__text">{{ n.text }}</p>
+      <div class="news__body">
+        <p class="news__text">{{ n.text }}</p>
+        {%- if n.image %}
+        <figure class="news__figure">
+          <img src="{{ n.image | relative_url }}" alt="{{ n.image_alt }}" width="1400" height="933" loading="lazy" decoding="async">
+          {%- if n.image_caption %}<figcaption>{{ n.image_caption }}</figcaption>{% endif %}
+        </figure>
+        {%- endif %}
+      </div>
     </li>
     {%- endif -%}
     {%- endfor -%}

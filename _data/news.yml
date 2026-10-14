@@ -1,5 +1,11 @@
 # Newest first is not required; entries are sorted by date. The home page shows the
 # most recent few and links to /news/, which lists everything grouped by year.
+- date: 2026-10-14
+  text: 'Presented my Ph.D. dissertation work, "Two-stage stochastic optimization of outpatient scheduling with overbooking and walk-in patients under no-shows and short-notice cancellations," at the MMIE Coffee Talks, a seminar series of the Department of Mechanical, Materials, and Industrial Engineering at the University of Cincinnati.'
+  image: /assets/img/news/coffee-talk-2026-10.jpg
+  image_alt: Amanat Ur Rahman at the lectern beside the title slide of his talk on two-stage stochastic optimization of outpatient scheduling.
+  image_caption: MMIE Coffee Talks, University of Cincinnati, October 14, 2026.
+
 - date: 2026-11-01
   text: Presenting my Ph.D. dissertation work on outpatient scheduling optimization at the 2026 INFORMS Annual Meeting in San Francisco, November 1 to 4.
 

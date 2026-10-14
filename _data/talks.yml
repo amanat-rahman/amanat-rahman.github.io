@@ -12,6 +12,15 @@
   presenter: A. U. Rahman
   status: Forthcoming
 
+- type: seminar
+  title: Two-stage stochastic optimization of outpatient scheduling with overbooking and walk-in patients under no-shows and short-notice cancellations
+  authors: A. U. Rahman, T. Giovannelli, K. S. Shehadeh, and J. Shi
+  venue: MMIE Coffee Talks, Department of Mechanical, Materials, and Industrial Engineering, University of Cincinnati, Cincinnati, OH, USA
+  date: October 2026
+  year: "2026"
+  sort: "202610"
+  presenter: A. U. Rahman
+
 - type: talk
   title: Using stochastic programming to mitigate patient no-shows and short-notice cancellations in outpatient clinics through overbooking and walk-ins
   authors: A. U. Rahman, T. Giovannelli, K. S. Shehadeh, and J. Shi

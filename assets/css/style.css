@@ -229,6 +229,9 @@ a.email:hover { color: var(--accent); }
 .news__item::before { content: ""; position: absolute; left: calc(-1.4rem - 4px); top: 1.05rem; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
 .news__date { font-family: var(--font-mono); font-size: .78rem; color: var(--muted); padding-top: .25rem; }
 .news__text { color: var(--ink-2); max-width: 80ch; }
+.news__figure { margin: .8rem 0 .4rem; max-width: 34rem; }
+.news__figure img { width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--line); }
+.news__figure figcaption { margin-top: .45rem; font-size: .82rem; color: var(--muted); }
 
 /* Research projects ------------------------------------------------------ */
 .projects { display: grid; gap: 1.25rem; }
