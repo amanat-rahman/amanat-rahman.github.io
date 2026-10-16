@@ -45,3 +45,7 @@
   "sameAs": [{% for l in site.data.profile.links %}{% unless l.icon == "mail" %}"{{ l.url }}"{% unless forloop.last %},{% endunless %}{% endunless %}{% endfor %}]
 }
 </script>
+{%- if jekyll.environment == "production" %}
+<!-- GoatCounter visitor statistics. Dashboard (private): https://amanat-rahman.goatcounter.com -->
+<script data-goatcounter="https://amanat-rahman.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+{%- endif %}
