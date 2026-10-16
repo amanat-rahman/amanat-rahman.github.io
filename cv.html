@@ -11,7 +11,7 @@ description: Curriculum vitae of Amanat Ur Rahman. Education, research and indus
     <h1>{{ p.name }}</h1>
     <p class="lede">{{ p.title }} · {{ p.department }}, {{ p.institution }}</p>
   </div>
-  <a class="btn btn--primary" href="{{ p.cv_pdf | relative_url }}" target="_blank" rel="noopener">{% include icon.html name="download" %} Download PDF</a>
+  <a class="btn btn--primary" href="{{ p.cv_pdf | relative_url }}" target="_blank" rel="noopener" data-goatcounter-click="cv-pdf" data-goatcounter-title="CV PDF (CV page)">{% include icon.html name="download" %} Download PDF</a>
 </header>
 
 <nav class="cv-toc" aria-label="CV sections">
