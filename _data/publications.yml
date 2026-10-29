@@ -5,12 +5,12 @@
 
 - id: rahman2026outpatient
   type: working
-  title: Using stochastic programming to mitigate patient no-shows and short-notice cancellations in outpatient clinics through overbooking and walk-ins
+  title: Two-stage stochastic optimization of outpatient scheduling with overbooking and walk-in patients under no-shows and short-notice cancellations
   authors: A. U. Rahman, T. Giovannelli, K. S. Shehadeh, and J. Shi
-  venue: In final co-author revision before journal submission
+  venue: In final co-author review before journal submission
   year: "2026"
   sort: "202610"
-  status: In final revision
+  status: In final review
   abstract: >-
     A two-stage stochastic program with an integer first stage that jointly determines
     overbooking levels and appointment slot assignments under uncertain no-shows,

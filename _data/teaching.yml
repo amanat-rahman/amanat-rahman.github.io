@@ -14,10 +14,16 @@ institutions:
     location: Cincinnati, OH, USA
     period: "2026"
     roles:
+      - title: Guest Instructor
+        period: October 2026
       - title: Recitation Instructor
         period: April 2026
     groups:
       - courses:
+          - code: MECH 6074
+            title: Quality Control (graduate)
+            term: October 2026
+            topics: Judged fourteen student-group presentations on quality tools, including Pareto analysis, process mapping, statistical process control, Six Sigma, Kaizen, House of Quality, and APQP, scoring each on content and delivery
           - code: ISE 3011
             title: Deterministic Systems Models
             term: April 2026
@@ -46,13 +52,13 @@ institutions:
         period: December 2018 to July 2021
       - title: Lecturer
         period: June 2015 to November 2018
-    summary: Full teaching load each semester, with theory sections of approximately 50 students. Taught courses fully online during the COVID-19 closure (2020 to 2021).
+    summary: Full teaching load each semester, with theory sections of approximately 50 students. Taught face-to-face, and online for IPE 3107, IPE 4103, and IPE 4206 during the COVID-19 closure (2020 to 2021).
     groups:
       - heading: Operations research and production systems
         courses:
           - code: IPE 3107
             title: Operations Research
-            topics: Linear programming and the simplex method, duality and sensitivity analysis, transportation and assignment models, game theory, integer and dynamic programming, queuing models
+            topics: Linear programming and the simplex method, duality and sensitivity analysis, transportation and assignment models, game theory, integer and dynamic programming, queuing models, Markov chains
           - code: IPE 3205
             title: Production Planning and Control
             topics: Forecasting techniques, purchase and production inventory models, scheduling with Gantt charts, line balancing, plant location and layout, break-even analysis, time and motion study
@@ -63,37 +69,37 @@ institutions:
             title: Operations and Project Management
             topics: Forecasting, capacity planning, inventory models, aggregate planning, MRP and ERP, just-in-time production, line balancing and scheduling, facility location and layout, CPM and PERT
           - code: IPE 4206
-            title: Industrial Simulation
+            title: Industrial Simulation Sessional
             lab: true
             topics: Discrete-event simulation modeling, input distribution fitting, verification and validation, output analysis, scenario comparison
       - heading: Quantitative methods and engineering economics
         courses:
           - code: MATH 2207
             title: Numerical Analysis and Statistics
-            topics: Root finding, numerical integration and differentiation, curve fitting and interpolation, probability distributions, estimation, hypothesis testing, regression
+            topics: Root finding, numerical integration and differentiation, curve fitting and interpolation, probability distributions, sampling distributions, confidence intervals, hypothesis testing, regression
           - code: HUM 2107
             title: Engineering Economy
             topics: Time value of money, equivalence, present and annual worth analysis, rate of return, replacement and depreciation analysis, benefit-cost evaluation
       - heading: Design, laboratory, and introductory instruction
         courses:
           - code: IPE 3104
-            title: Product Design and Development
+            title: Product Design and Development Sessional
             lab: true
           - code: IPE 2102
-            title: Manufacturing Processes
+            title: Manufacturing Processes Sessional
             lab: true
             manual: true
           - code: IPE 3210
             title: Metal Forming and Sheet Metal Work
             lab: true
           - code: IPE 1110 / 1210
-            title: Machine Shop Practice I and II
+            title: Machine Shop Practice-I and Practice-II
             lab: true
             manual: true
           - code: ME 1103
             title: Introduction to Mechanical and Industrial Engineering
       - heading: Service teaching for other departments
-        note: Core industrial engineering content (forecasting, capacity and production planning, inventory control, work study, break-even and investment analysis, organizational behavior) delivered to students outside the IPE major.
+        note: "Topics: management functions and organization, motivation and leadership, forecasting, capacity and production planning, inventory control, work study, and break-even and investment analysis."
         courses:
           - code: ME 403
             title: Production Planning and Control
@@ -109,14 +115,14 @@ curriculum:
   - title: Laboratory manuals
     period: 2015 to 2021
     context: Ahsanullah University of Science and Technology
-    text: Authored the laboratory manuals for IPE 4206 (Industrial Simulation), IPE 2102 (Manufacturing Processes), and IPE 1210 and IPE 1110 (Machine Shop Practice II and I). All four were adopted as the standing course materials for those laboratories and remained in use across subsequent cohorts.
-  - title: Program accreditation
+    text: Authored the laboratory manuals for IPE 4206 Industrial Simulation Sessional, IPE 2102 Manufacturing Processes Sessional, IPE 1210 Machine Shop Practice-II, and IPE 1110 Machine Shop Practice-I. All four were adopted as the standing course materials for those laboratories.
+  - title: Outcome assessment for accreditation (BAETE)
     period: 2015 to 2021
     context: Ahsanullah University of Science and Technology
-    text: Contributed to curriculum revision for the Industrial and Production Engineering program through outcome assessment and course mapping, in support of program accreditation.
+    text: For the BAETE accreditation of the Industrial and Production Engineering program, mapped course outcomes to program outcomes and exam and assignment questions to course outcomes, and computed outcome attainment from student results; attended an outcome-based education (OBE) curriculum workshop at AUST.
 
 mentoring:
   - title: Undergraduate thesis supervisor
     period: 2015 to 2021
     context: Ahsanullah University of Science and Technology
-    text: Supervised five final-year project and thesis groups from problem formulation through data collection, analysis, and defense; advised on research methodology, technical writing, and preparation of results.
+    text: Supervised five final-year project and thesis groups from problem formulation through data collection, analysis, and defense; advised on research methodology and technical writing.
