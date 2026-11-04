@@ -7,7 +7,17 @@
   image_caption: MMIE Coffee Talks, University of Cincinnati, October 14, 2026.
 
 - date: 2026-11-01
-  text: Presenting my Ph.D. dissertation work on outpatient scheduling optimization at the 2026 INFORMS Annual Meeting in San Francisco, November 1 to 4.
+  text: Presented my Ph.D. dissertation work on outpatient scheduling optimization at the 2026 INFORMS Annual Meeting in San Francisco.
+  images:
+    - src: /assets/img/news/informs-2026-talk-wide.jpg
+      w: 1200
+      h: 771
+      alt: Amanat Ur Rahman presenting the motivation slide of his outpatient scheduling talk at the 2026 INFORMS Annual Meeting.
+    - src: /assets/img/news/informs-2026-talk-close.jpg
+      w: 700
+      h: 820
+      alt: Amanat Ur Rahman speaking during his talk at the 2026 INFORMS Annual Meeting.
+  image_caption: 2026 INFORMS Annual Meeting, San Francisco, November 2026.
 
 - date: 2026-08-20
   text: Awarded a Research Travel Grant by the Graduate Student Government at the University of Cincinnati to attend the 2026 INFORMS Annual Meeting.

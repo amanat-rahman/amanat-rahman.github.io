@@ -10,7 +10,6 @@
   year: "2026"
   sort: "202611"
   presenter: A. U. Rahman
-  status: Forthcoming
 
 - type: seminar
   title: Two-stage stochastic optimization of outpatient scheduling with overbooking and walk-in patients under no-shows and short-notice cancellations
