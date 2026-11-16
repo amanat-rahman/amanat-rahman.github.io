@@ -3,7 +3,7 @@
 # sort: YYYYMM, used only for ordering within a year.
 
 - type: talk
-  title: Using stochastic programming to mitigate patient no-shows and short-notice cancellations in outpatient clinics through overbooking and walk-ins
+  title: Two-stage stochastic optimization of outpatient scheduling with overbooking and walk-in patients under no-shows and short-notice cancellations
   authors: A. U. Rahman, T. Giovannelli, K. S. Shehadeh, and J. Shi
   venue: 2026 INFORMS Annual Meeting, San Francisco, CA, USA
   date: November 2026

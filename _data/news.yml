@@ -5,8 +5,8 @@
 
 - date: 2026-11-01
   text: >-
-    I presented our work, <em>Using stochastic programming to mitigate patient no-shows and
-    short-notice cancellations in outpatient clinics through overbooking and walk-ins</em>, at the
+    I presented our work, <em>Two-stage stochastic optimization of outpatient scheduling with
+    overbooking and walk-in patients under no-shows and short-notice cancellations</em>, at the
     <a href="https://meetings.informs.org/wordpress/sanfrancisco2026/" target="_blank" rel="noopener">2026 INFORMS Annual Meeting</a>
     in San Francisco, CA. This is joint work with my advisor, Tommaso Giovannelli, and with
     Karmel Shehadeh and Jing Shi.
