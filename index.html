@@ -15,21 +15,32 @@ description: Amanat Ur Rahman, Ph.D. student in Industrial and Systems Engineeri
       <p>{{ para }}</p>
       {%- endfor -%}
     </div>
-  </div>
-  <figure class="hero__photo">
-    <div class="hero__frame">
-      <img src="{{ p.photo | relative_url }}" alt="Portrait of {{ p.name }}" width="800" height="636" loading="eager" fetchpriority="high">
-    </div>
-    <figcaption>
-      <span>{{ p.department }}</span>
-      <span>{{ p.institution }}, {{ p.location }}</span>
-    </figcaption>
-  </figure>
-</section>
 
-<section class="section" id="contact">
-  {% include section-heading.html eyebrow="Get in touch" title="Contact" %}
-  {% include contact.html %}
+    <div class="home-news">
+      {% include section-heading.html eyebrow="Updates" title="Recent news" %}
+      <ol class="news">
+        {%- assign items = site.data.news | sort: "date" | reverse -%}
+        {%- for n in items limit: 4 -%}
+        <li class="news__item">
+          <time class="news__date" datetime="{{ n.date }}">{{ n.date | date: "%b %Y" }}</time>
+          <p class="news__text">{{ n.text }}</p>
+        </li>
+        {%- endfor -%}
+      </ol>
+      <p class="more"><a href="{{ '/news/' | relative_url }}">All news {% include icon.html name="arrow" %}</a></p>
+    </div>
+  </div>
+
+  <aside class="hero__side">
+    <figure class="hero__photo">
+      <div class="hero__frame">
+        <img src="{{ p.photo | relative_url }}" alt="Portrait of {{ p.name }}" width="800" height="636" loading="eager" fetchpriority="high">
+      </div>
+    </figure>
+    <div class="hero__contact" id="contact">
+      {% include contact.html %}
+    </div>
+  </aside>
 </section>
 
 <section class="section">
@@ -50,18 +61,3 @@ description: Amanat Ur Rahman, Ph.D. student in Industrial and Systems Engineeri
     </div>
   </div>
 </section>
-
-<section class="section">
-  {% include section-heading.html eyebrow="Updates" title="News" %}
-  <ol class="news">
-    {%- assign items = site.data.news | sort: "date" | reverse -%}
-    {%- for n in items limit: 6 -%}
-    <li class="news__item">
-      <time class="news__date" datetime="{{ n.date }}">{{ n.date | date: "%b %Y" }}</time>
-      <p class="news__text">{{ n.text }}</p>
-    </li>
-    {%- endfor -%}
-  </ol>
-  <p class="more"><a href="{{ '/news/' | relative_url }}">All news {% include icon.html name="arrow" %}</a></p>
-</section>
-

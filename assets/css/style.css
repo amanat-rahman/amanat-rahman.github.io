@@ -173,7 +173,12 @@ main { padding-block: 2.5rem 4rem; }
 .chip--link:hover { border-color: var(--accent); color: var(--accent); }
 
 /* Hero ------------------------------------------------------------------- */
-.hero { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(280px, .9fr); gap: 3.5rem; align-items: start; padding-top: 1.5rem; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) 15.5rem; gap: 3rem; align-items: start; padding-top: 1.5rem; }
+.hero__side { display: grid; gap: 1.5rem; align-content: start; }
+.home-news { margin-top: 2.25rem; }
+.home-news .section-heading { margin-bottom: .6rem; }
+.hero__contact .contact { grid-template-columns: 1fr; gap: 1.1rem; padding: 0; background: none; border: 0; border-radius: 0; }
+.hero__contact .contact address, .hero__contact .contact__list { font-size: .88rem; }
 .hero .lede { max-width: 60ch; }
 .hero__bio { margin-top: 1.5rem; max-width: 62ch; color: var(--ink-2); }
 .hero__bio a { color: var(--ink); }
@@ -333,8 +338,11 @@ a.email:hover { color: var(--accent); }
 
 /* Responsive ------------------------------------------------------------- */
 @media (max-width: 960px) {
-  .hero { grid-template-columns: 1fr; gap: 2.25rem; }
-  .hero__photo { max-width: 420px; order: -1; }
+  .hero { grid-template-columns: 1fr; gap: 2rem; }
+  .hero__side { display: contents; }
+  .hero__photo { max-width: 15.5rem; order: -1; }
+  .hero__contact { order: 2; padding-top: .5rem; border-top: 1px solid var(--line); }
+  .hero__contact .contact { grid-template-columns: 1fr 1fr; }
   .contact { grid-template-columns: 1fr 1fr; }
   .cards { grid-template-columns: 1fr; }
   .proj-grid { grid-template-columns: 1fr; }
@@ -351,6 +359,7 @@ a.email:hover { color: var(--accent); }
   .theme-toggle { margin: .5rem 0 0; }
   .interest-grid { grid-template-columns: 1fr; gap: 1.4rem; }
   .contact { grid-template-columns: 1fr; padding: 1.3rem 1.4rem; }
+  .hero__contact .contact { grid-template-columns: 1fr; }
   .courses { grid-template-columns: 1fr; }
   .work, .entry, .news__item { grid-template-columns: 1fr; gap: .3rem; }
   .work__kind, .entry__when, .news__date { padding-top: 0; }
