@@ -63,17 +63,18 @@ research:
         text: During my M.S. studies at Bangladesh University of Engineering and Technology, I developed a grey-based neural network model that predicts supply chain performance from key performance indicators.
 
 directions_intro: >-
-  I intend to pursue four research directions, each centered on methodological questions that I investigate in outpatient care delivery and in capacity and production decisions beyond health care.
+  I intend to pursue four research directions. Each is a methodological question that I study
+  in healthcare operations, air cargo network planning, and manufacturing.
 
 directions:
   - title: Networked capacity with shared resources
-    text: I want to understand how to allocate capacity across sites that draw on a shared resource pool, such as providers in a clinic network or production lines across plants. Routing demand between sites links the recourse subproblems that decomposition normally separates, so the methodological question is how much service improvement cross-site routing actually delivers relative to the extra solve cost it creates.
+    text: When sites share a resource pool, such as providers in a clinic network, aircraft and crew in a cargo network, or production lines across plants, how much service does cross-site routing gain, and at what solve cost? Routing links the recourse subproblems that decomposition normally separates.
   - title: Exact decomposition at operational scale
-    text: I am interested in how far exact methods can be pushed when the instances reflect an entire planning horizon. The research question is which combinations of stronger and aggregated cuts, warm starts from heuristic policies, and parallel scenario evaluation make integer L-shaped and related approaches viable at operational scale. The aim is to identify techniques that generalize to any two-stage program with mixed-integer recourse.
+    text: Which combinations of stronger and aggregated cuts, warm starts from heuristic policies, and parallel scenario evaluation make integer L-shaped methods viable on instances that span a full planning horizon? The goal is techniques that carry to any two-stage program with mixed-integer recourse.
   - title: Efficient sets for multi-criteria decisions
-    text: I am interested in developing methods that replace fixed weights with explicit trade-off surfaces. A weighted objective forces a trade-off before any solution exists, whether the terms are patient waiting versus provider time or service level versus cost. The question I want to investigate is how to compute the efficient set directly, so the operating point is chosen afterward, and criteria like access and equity, which expected-value objectives cannot represent, appear in the output rather than being pushed into weights.
+    text: How can the efficient set be computed directly, so that the operating point is chosen after the trade-offs are known rather than fixed by weights in advance? Criteria such as access and equity, which expected-value objectives cannot represent, then appear in the output.
   - title: From model to decision support
-    text: I am interested in how to move from a model to a tool that planners can actually use. The questions include how to calibrate stochastic parameters from operational data, how to backtest recourse-based policies against realized outcomes, and how to embed these models in decision support systems that practitioners run themselves. My applied work in air cargo network planning and consumer goods manufacturing has shaped this agenda.
+    text: How should stochastic parameters be calibrated from operational data, recourse-based policies backtested against realized outcomes, and models built into tools that planners run themselves? My applied work in air cargo network planning and consumer goods manufacturing has shaped this agenda.
 
 # Applied and engineering projects. Short bullets, not paragraphs.
 projects:
