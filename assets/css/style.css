@@ -235,7 +235,7 @@ a.email:hover { color: var(--accent); }
 .news__figure figcaption { margin-top: .45rem; font-size: .82rem; color: var(--muted); }
 .news__figure--gallery { max-width: 26rem; }
 .news__gallery { display: grid; grid-auto-flow: column; gap: .5rem; align-items: start; }
-.news__gallery a { display: block; }
+.news__gallery img { display: block; }
 
 /* Research projects ------------------------------------------------------ */
 .projects { display: grid; gap: 1.25rem; }

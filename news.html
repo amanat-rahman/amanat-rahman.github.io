@@ -38,7 +38,7 @@ description: Milestones, publications, talks, and appointments of Amanat Ur Rahm
         <figure class="news__figure news__figure--gallery">
           <div class="news__gallery" style="grid-template-columns: {{ cols | strip }}">
             {%- for im in n.images %}
-            <a href="{{ im.src | relative_url }}" target="_blank" rel="noopener"><img src="{{ im.src | relative_url }}" alt="{{ im.alt }}" width="{{ im.w }}" height="{{ im.h }}" loading="lazy" decoding="async"></a>
+            <img src="{{ im.src | relative_url }}" alt="{{ im.alt }}" width="{{ im.w }}" height="{{ im.h }}" loading="lazy" decoding="async">
             {%- endfor %}
           </div>
           {%- if n.image_caption %}<figcaption>{{ n.image_caption }}</figcaption>{% endif %}
