@@ -34,7 +34,7 @@ description: Curriculum vitae of Amanat Ur Rahman. Education, research and indus
         <p class="entry__title entry__title--degree">{{ e.degree }}{% if e.track %} (<strong>{{ e.track }}</strong> track){% endif %}</p>
         <p class="entry__org">{{ e.institution }} · {{ e.location }}</p>
         <ul class="entry__list">
-          <li><span class="label">{{ e.thesis_label }}</span> <em>{{ e.thesis }}</em></li>
+          {%- if e.thesis %}<li><span class="label">{{ e.thesis_label }}</span> <em>{{ e.thesis }}</em></li>{% endif -%}
           {%- if e.advisor %}<li><span class="label">Advisor</span> {{ e.advisor }}</li>{% endif -%}
           {%- if e.note %}<li>{{ e.note }}</li>{% endif -%}
           {%- if e.coursework %}<li class="entry__coursework"><span class="label">Coursework</span> {{ e.coursework }}</li>{% endif -%}
@@ -48,6 +48,7 @@ description: Curriculum vitae of Amanat Ur Rahman. Education, research and indus
 <section class="section cv-section">
   {% include section-heading.html title="Research interests" %}
   <ul class="entry__list entry__list--flat">
+    {%- if p.interests.focus %}<li><span class="label">Focus</span> {{ p.interests.focus }}</li>{% endif %}
     <li><span class="label">Methodology</span> {{ p.interests.methodology | join: ", " }}</li>
     <li><span class="label">Applications</span> {{ p.interests.applications | join: ", " }}</li>
   </ul>

@@ -29,7 +29,7 @@ industry:
     bullets:
       - Built a stochastic evaluation framework with MILP recourse (Pyomo, HiGHS, Gurobi) for cargo network planning under operational uncertainty, assessing fleet flow, capacity utilization, and routing.
       - Quantified network disruption cost through scenario-based Monte Carlo evaluation of the recourse value function.
-      - Calibrated stochastic parameters from operational data on Azure Databricks and represented the airline route network on Amazon Neptune for connectivity and reachability queries feeding the optimization model.
+      - Calibrated stochastic parameters from operational data on Azure Databricks, with automated input validation, conditional task execution, and end-to-end run provenance.
   - role: Graduate Research Assistant
     org: Procter & Gamble Digital Accelerator, University of Cincinnati
     location: Cincinnati, OH, USA

@@ -7,10 +7,9 @@
   type: working
   title: Two-stage stochastic optimization of outpatient scheduling with overbooking and walk-in patients under no-shows and short-notice cancellations
   authors: A. U. Rahman, T. Giovannelli, K. S. Shehadeh, and J. Shi
-  venue: In final co-author review before journal submission
+  venue: To be submitted to Manufacturing & Service Operations Management
   year: "2026"
   sort: "202610"
-  status: In final review
   abstract: >-
     A two-stage stochastic program with an integer first stage that jointly determines
     overbooking levels and appointment slot assignments under uncertain no-shows,
@@ -22,15 +21,15 @@
   type: working
   title: "Allocating open-access appointment slots in a single-provider session: A two-stage stochastic multi-objective program with an integer first stage"
   authors: A. U. Rahman and T. Giovannelli
-  venue: Manuscript in preparation
-  year: "2026"
-  sort: "202609"
+  venue: In preparation for submission to Operations Research
+  year: "2027"
+  sort: "202701"
   status: In preparation
   abstract: >-
-    A multi-objective extension of the outpatient scheduling problem cast within a
-    stochastic set-optimization framework, characterizing the set of efficient
-    open-access allocations across patient waiting time, session completion time, and
-    unmet same-day demand.
+    A two-stage stochastic multi-objective program for allocating open-access appointment
+    slots in a single-provider session. A binary first stage selects the slots to hold open,
+    and a multi-objective linear recourse decides how much same-day demand to serve. The
+    work will compute the global Pareto set and the efficient allocations.
 
 - id: bhuiyan2024grey
   type: proceedings

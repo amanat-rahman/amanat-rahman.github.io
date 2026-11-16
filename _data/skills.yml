@@ -5,8 +5,7 @@
     - Mixed-integer linear programming
     - Multi-objective and set-valued optimization
     - Monte Carlo scenario generation
-    - Survival analysis
-    - State-space filtering
+    - Machine learning (artificial neural networks, Kalman filtering, survival analysis)
     - Design of experiments
 - group: Optimization
   items:
@@ -24,8 +23,6 @@
 - group: Platforms
   items:
     - Azure Databricks
-    - AWS
-    - Amazon Neptune
     - KNIME
     - Tableau
     - SAP

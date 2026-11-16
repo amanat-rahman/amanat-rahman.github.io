@@ -1,12 +1,14 @@
 prepared_to_teach:
-  - Deterministic and probabilistic operations research
-  - Optimization and mathematical programming
-  - Stochastic models
-  - Discrete-event simulation
-  - Engineering economy
+  - Operations research and optimization
+  - Stochastic models and simulation
+  - Operations and supply chain management
   - Production planning and control
-  - Supply chain management
-  - Engineering statistics and design of experiments
+  - Project management
+  - Business analytics and forecasting
+  - Healthcare operations
+  - Statistics and design of experiments
+  - Engineering economy
+  - Stochastic programming and decomposition methods (graduate elective)
 
 institutions:
   - name: University of Cincinnati
@@ -90,7 +92,7 @@ institutions:
             lab: true
             manual: true
           - code: IPE 3210
-            title: Metal Forming and Sheet Metal Work
+            title: Metal Forming and Sheet Metalworking Sessional
             lab: true
           - code: IPE 1110 / 1210
             title: Machine Shop Practice-I and Practice-II
@@ -98,7 +100,7 @@ institutions:
             manual: true
           - code: ME 1103
             title: Introduction to Mechanical and Industrial Engineering
-      - heading: Service teaching for other departments
+      - heading: Teaching for other departments
         note: "Topics: management functions and organization, motivation and leadership, forecasting, capacity and production planning, inventory control, work study, and break-even and investment analysis."
         courses:
           - code: ME 403

@@ -31,26 +31,26 @@ bio:
     Tommaso Giovannelli</a>. I hold an M.S. in Industrial Engineering from the University
     of Louisville, and earlier an M.S. from Bangladesh University of Engineering and
     Technology and a B.S. from Ahsanullah University of Science and Technology, both in
-    Industrial and Production Engineering. Before moving to the United States, I spent six
+    Industrial and Production Engineering. Before moving to the U.S., I spent six
     years as a full-time faculty member at Ahsanullah University of Science and Technology
     in Dhaka, Bangladesh.
   - >-
-    My research develops two-stage stochastic programming models and exact decomposition algorithms for systems that make operational decisions before demand is known, with outpatient appointment scheduling as the principal application. Beyond academia, I have applied these advanced analytical methodologies to drive impact across global industries. As a Data Scientist Intern at Atlas Air, a world leader in air cargo logistics, I developed a stochastic optimization framework for complex network planning under operational uncertainty. Additionally, at Procter & Gamble, a global consumer goods enterprise, I developed advanced machine learning architectures and scalable data pipelines to automate the translation of high-level supply chain planning into precise manufacturing operations.
+    My research develops two-stage stochastic programming models and exact decomposition algorithms for systems that make operational decisions before demand is known, with outpatient appointment scheduling as the principal application. Beyond academia, I have applied these advanced analytical methodologies to drive impact across global industries. As a Data Scientist Intern at Atlas Air, a world leader in air cargo logistics, I developed a stochastic evaluation framework with MILP recourse for cargo network planning under operational uncertainty. Additionally, at the Procter & Gamble (P&G) Digital Accelerator at the University of Cincinnati, I built scalable data pipelines to automate the translation of high-level supply chain planning into precise manufacturing operations.
 
 interests:
+  focus: Data-driven decision making under uncertainty.
   methodology:
+    - Stochastic optimization
     - Two-stage stochastic programming
-    - Multi-objective and set-valued optimization
+    - Decomposition algorithms
     - Mixed-integer linear programming
-    - Integer L-shaped decomposition methodologies
-    - Optimization under uncertainty
-    - Monte Carlo simulation
+    - Multi-objective and set-valued optimization
+    - Machine learning and AI for prediction
+    - Business analytics
   applications:
-    - Healthcare operations management
-    - Airline network planning and transportation systems
-    - Semiconductor manufacturing process control
-    - Supply chain network design
-    - Decision analytics
+    - Healthcare operations
+    - Outpatient appointment scheduling with overbooking and walk-in patients
+    - Capacity and production decisions beyond health care
 
 # Contact block at the bottom of the home page.
 contact:

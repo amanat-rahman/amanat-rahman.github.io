@@ -6,7 +6,7 @@ intro: >-
 # maker gets, not how hard the instance was to solve.
 research:
   - title: Two-stage stochastic optimization for outpatient clinic scheduling under uncertainty
-    status: Ph.D. dissertation, manuscript in final co-author review
+    status: Ph.D. dissertation, working paper to be submitted to Manufacturing & Service Operations Management
     collaborators: with T. Giovannelli, K. S. Shehadeh, and J. Shi
     period: 2023 to present
     tags: [Stochastic programming, Enhanced integer L-shaped method, Branch-and-cut, Healthcare]
@@ -16,20 +16,20 @@ research:
       - label: Approach
         text: A two-stage stochastic program with an integer first stage, solved exactly by an enhanced integer L-shaped decomposition inside a branch-and-cut algorithm.
       - label: Outcome
-        text: Booking policies a clinic can act on directly, covering how far to overbook, whether to hold slots open for same-day demand, and how to route walk-ins across providers. Results show that once a session is busy, double-booking outperforms reserving open-access slots, and most of the same-day access comes from letting walk-ins move between providers.
+        text: A booking plan that assigns scheduled patients to providers and appointment slots and sets which slots to overbook or hold for walk-in patients. The enhanced integer L-shaped method solves to optimality instances that Gurobi alone leaves unsolved within two hours.
 
   - title: "Allocating open-access appointment slots in a single-provider session: a two-stage stochastic multi-objective program with an integer first stage"
-    status: Ph.D. dissertation, manuscript in preparation
+    status: Ph.D. dissertation, in preparation for submission in 2027
     collaborators: with T. Giovannelli
     period: 2023 to present
-    tags: [Multi-objective optimization, Set-valued optimization, Aumann integral, Healthcare]
+    tags: [Multi-objective optimization, Set-valued optimization, Two-stage stochastic programming, Healthcare]
     rows:
       - label: Question
-        text: Clinics cannot credibly trade off patient waiting time against provider time, yet a single-objective scheduling model fixes that trade-off through predetermined weights before any schedule is produced.
+        text: Which slots in a single-provider session should be held open for same-day demand when several criteria compete and no weighting of them is fixed in advance?
       - label: Approach
-        text: The nondominated set of a multi-objective recourse problem is treated as a random closed set and minimized in the set-valued sense, over a binary first stage.
-      - label: Outcome
-        text: The full set of efficient open-access allocations, so a manager chooses a schedule by the trade-off they are willing to accept rather than by weights they had to invent.
+        text: A binary first stage selects the open-access slots, and a multi-objective linear recourse decides how much same-day demand to serve and in which slots. The first-stage objective is the expectation of the random nondominated set of the recourse, so the problem is set-valued.
+      - label: Next steps
+        text: The work will reformulate the model over a finite set of scenarios as a deterministic multi-objective mixed-integer program and compute the global Pareto set and the efficient allocations.
 
   - title: Virtual metrology for chemical mechanical planarization process in semiconductor manufacturing
     status: Published in the ASME MSEC 2024 proceedings
@@ -40,9 +40,9 @@ research:
       - label: Question
         text: Material removal rate cannot be measured on every wafer, so process drift goes unseen between physical measurements.
       - label: Approach
-        text: A dual linear Kalman filter that infers removal rate from in-process signals, developed at the Lab for Intelligent Metrology Systems.
+        text: A dual linear Kalman filter for material removal rate prediction, developed at the Lab for Intelligent Metrology Systems.
       - label: Outcome
-        text: Wafer-level estimates accurate enough to act on, outperforming multiple linear regression, EWMA, and Bayesian ARX benchmarks.
+        text: The lowest mean squared error (7.98) against multiple linear regression, EWMA, and Bayesian ARX benchmarks.
 
   - title: Multi-task learning for time-to-event modeling of post-heart-transplant outcomes
     status: Presented at INFORMS 2022 and Research!Louisville 2022
@@ -50,32 +50,24 @@ research:
     period: 2021 to 2023
     tags: [Time-to-event analysis, Multi-task learning, Proportional hazard model, Health services]
     rows:
-      - label: Question
-        text: One-year survival after heart transplantation differs across centers, but pooled models cannot separate the center's contribution from the risk profile of its patients.
-      - label: Approach
-        text: A multi-task Cox model treating each center as its own task over a shared representation, combining national registry records with neighborhood deprivation measures around each center.
-      - label: Outcome
-        text: Center-level effects isolated from patient-level risk, identifying where system-level intervention, rather than case selection, would change outcomes.
+      - label: Summary
+        text: As an M.S. student at the University of Louisville, I built a multi-task Cox proportional hazards model that treats each transplant center as its own task to quantify the center-level factors affecting one-year post-heart-transplant survival.
 
-  - title: "Predictive modeling from limited, uncertain, and imprecise data: grey-theory-based neural networks for supply chain performance prediction"
+  - title: Grey-based neural networks for supply chain performance prediction
     status: Published in Sustainability, 2024
     collaborators: with S. M. Ali, G. Kabir, and S. K. Paul
     period: 2018 to 2020
     tags: [Supply chain, Forecasting, Neural networks, Grey systems theory]
     rows:
-      - label: Question
-        text: Supply chain demand and performance must often be predicted from short, noisy histories where classical statistical forecasting is unreliable.
-      - label: Approach
-        text: Grey-system models coupled with neural networks, developed in the M.S. thesis and extended into a GM(1,1)-based grey neural network architecture.
-      - label: Outcome
-        text: Forecasts with sharply reduced mean relative error across key performance indicators, usable for planning where conventional methods have too little data to fit.
+      - label: Summary
+        text: During my M.S. studies at Bangladesh University of Engineering and Technology, I developed a grey-based neural network model that predicts supply chain performance from key performance indicators.
 
 directions_intro: >-
-  I intend to pursue four research directions, each centered on methodological questions that I investigate within outpatient care delivery, air cargo networks, and manufacturing operations.
+  I intend to pursue four research directions, each centered on methodological questions that I investigate in outpatient care delivery and in capacity and production decisions beyond health care.
 
 directions:
   - title: Networked capacity with shared resources
-    text: I want to understand how to allocate capacity across sites that draw on a shared resource pool, such as providers in a clinic network, aircraft and crew in a cargo network, or production lines across plants. Routing demand between sites links the recourse subproblems that decomposition normally separates, so the methodological question is how much service improvement cross-site routing actually delivers relative to the extra solve cost it creates.
+    text: I want to understand how to allocate capacity across sites that draw on a shared resource pool, such as providers in a clinic network or production lines across plants. Routing demand between sites links the recourse subproblems that decomposition normally separates, so the methodological question is how much service improvement cross-site routing actually delivers relative to the extra solve cost it creates.
   - title: Exact decomposition at operational scale
     text: I am interested in how far exact methods can be pushed when the instances reflect an entire planning horizon. The research question is which combinations of stronger and aggregated cuts, warm starts from heuristic policies, and parallel scenario evaluation make integer L-shaped and related approaches viable at operational scale. The aim is to identify techniques that generalize to any two-stage program with mixed-integer recourse.
   - title: Efficient sets for multi-criteria decisions
@@ -88,20 +80,18 @@ projects:
   - title: Stochastic evaluation framework for air cargo network planning
     org: Atlas Air, Network Planning
     period: Summer 2026
-    tags: [Pyomo, HiGHS, Gurobi, Monte Carlo, Azure Databricks, Amazon Neptune]
+    tags: [Pyomo, HiGHS, Gurobi, Monte Carlo, Azure Databricks]
     bullets:
-      - Scenario-based evaluation with mixed-integer recourse for planning under operational uncertainty, covering fleet flow, capacity utilization, routing, spill, and cascading delay.
+      - Stochastic evaluation framework with MILP recourse for cargo network planning under operational uncertainty, covering fleet flow, capacity utilization, routing, capacity spill, and cascading delay.
       - Disruption cost quantified through Monte Carlo evaluation of the recourse value function.
       - Stochastic parameters calibrated from operational data on Azure Databricks, with automated validation and end-to-end run provenance.
-      - Route network represented on Amazon Neptune for the connectivity queries feeding the model.
 
   - title: Production planning automation for Personal Care manufacturing
     org: P&G Digital Accelerator, University of Cincinnati
     period: 2024 to 2025
     tags: [Azure Databricks, Python, SQL, KNIME, Tableau, SAP]
     bullets:
-      - Databricks pipelines translating SAP planning volumes into production-line recipe rates.
-      - Roughly 550 hours of annual manual effort removed, about half the prior workload.
+      - Databricks pipelines translating SAP planning volumes into production-line recipe rates, reducing annual manual effort by about 550 hours (50%).
       - Databricks-to-Tableau integration automated through KNIME, with deployed KPI dashboards.
 
   - title: Cybersecurity workforce training for the logistics industry
@@ -116,12 +106,12 @@ projects:
     period: "2014"
     tags: [Supply chain analysis, Pharmaceutical operations]
     bullets:
-      - Undergraduate thesis on distribution and inventory performance, with recommendations for practice.
+      - Undergraduate research analyzing the supply chain performance of GlaxoSmithKline Bangladesh Limited, with suggestions for improvement.
 
   - title: Water sprinkler system design and fabrication
     org: Ahsanullah University of Science and Technology
     period: "2014"
     tags: [Product design, Fabrication]
     bullets:
-      - Simplified automated sprinkler system designed, fabricated, and validated against a survey of user requirements.
+      - Designed and fabricated a simplified automated water sprinkler system.
       - Published in Procedia Engineering.

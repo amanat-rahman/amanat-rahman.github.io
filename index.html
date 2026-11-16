@@ -34,6 +34,7 @@ description: Amanat Ur Rahman, Ph.D. student in Industrial and Systems Engineeri
 
 <section class="section">
   {% include section-heading.html eyebrow="Interests" title="Research interests" %}
+  {%- if p.interests.focus %}<p class="interest-focus"><span class="label">Focus</span> {{ p.interests.focus }}</p>{% endif %}
   <div class="interest-grid">
     <div class="interest-col">
       <h3 class="interest-col__title">Methodology</h3>

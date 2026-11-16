@@ -23,13 +23,13 @@
   text: Awarded a Research Travel Grant by the Graduate Student Government at the University of Cincinnati to attend the 2026 INFORMS Annual Meeting.
 
 - date: 2026-08-15
-  text: Completed a summer internship with the Network Planning group at Atlas Air, where I built a two-stage stochastic optimization framework for scenario-based simulation of Atlas Air's network flow planning.
+  text: Completed a summer internship with the Network Planning group at Atlas Air, where I built a stochastic evaluation framework with MILP recourse for cargo network planning under operational uncertainty.
 
 - date: 2026-08-05
   text: My Ph.D. dissertation work on outpatient scheduling optimization was presented at MOPTA 2026 at Lehigh University by T. Giovannelli.
 
 - date: 2026-06-01
-  text: Joined Atlas Air as a Data Scientist (Optimization) Intern in Network Planning for the summer, working on stochastic optimization modeling under operational uncertainty.
+  text: Joined Atlas Air as a Data Scientist (Optimization) Intern in Network Planning for the summer, working on the evaluation of cargo network plans under operational uncertainty.
 
 - date: 2026-05-20
   text: My Ph.D. dissertation work on outpatient scheduling optimization was presented at the IISE Annual Conference and Expo 2026 in Arlington, TX by T. Giovannelli.
@@ -39,9 +39,6 @@
 
 - date: 2025-05-15
   text: Concluded the research assistantship at the P&G Digital Accelerator. The production planning automation project translated SAP planning volumes into production-line recipe rates for Personal Care products, reducing annual manual effort by approximately 550 hours.
-
-- date: 2024-09-15
-  text: "Conference paper published: An enhanced hybrid grey-neural network model for demand forecasting, IEOM Tokyo."
 
 - date: 2024-06-20
   text: "Conference paper published (presented at ASME MSEC 2024 in Knoxville, TN): Enhanced Data-Driven Virtual Metrology on Chemical Mechanical Planarization Process Using Dual Linear Kalman Filter."
