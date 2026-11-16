@@ -10,6 +10,7 @@ the version not tied to any job posting. The website copy differs from it in:
   * no GPA or CGPA
   * no References section (referees' names and contact details stay private)
   * "Ph.D. Student" in the header until CANDIDATE below is set to True
+  * the 2026 INFORMS talk listed under the paper's current title
 
 cv_AR_cowork is read-only. Patches are applied to a temporary copy, compiled
 there, and only the resulting PDF is copied into this repository.
@@ -68,6 +69,15 @@ def patch(text):
 
     if not CANDIDATE:
         sub(r"Ph\.D\.\\ Candidate", lambda m: "Ph.D.\\ Student", "header title (Candidate)")
+
+    # The 2026 INFORMS talk was given under the paper's current title (Amanat, 16 Nov 2026).
+    # MOPTA and IISE 2026 keep the earlier title, under which T. Giovannelli presented.
+    old_title = ("Using stochastic programming to mitigate patient no-shows and short-notice "
+                 "cancellations in outpatient clinics through overbooking and walk-ins.")
+    new_title = ("Two-stage stochastic optimization of outpatient scheduling with overbooking and "
+                 "walk-in patients under no-shows and short-notice cancellations.")
+    pattern = r"\s+".join(map(re.escape, old_title.split())) + r"(\s+2026 INFORMS Annual Meeting)"
+    sub(pattern, lambda m: new_title + m.group(1), "INFORMS 2026 talk title")
 
     if missing:
         sys.exit("The CV source changed; these patches no longer match:\n  - "
