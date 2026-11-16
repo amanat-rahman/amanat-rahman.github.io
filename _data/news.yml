@@ -1,13 +1,15 @@
 # Newest first is not required; entries are sorted by date. The home page shows the
 # most recent few and links to /news/, which lists everything grouped by year.
-- date: 2026-10-14
-  text: 'Presented my Ph.D. dissertation work, "Two-stage stochastic optimization of outpatient scheduling with overbooking and walk-in patients under no-shows and short-notice cancellations," at the MMIE Coffee Talks, a seminar series of the Department of Mechanical, Materials, and Industrial Engineering at the University of Cincinnati.'
-  image: /assets/img/news/coffee-talk-2026-10.jpg
-  image_alt: Amanat Ur Rahman at the lectern beside the title slide of his talk on two-stage stochastic optimization of outpatient scheduling.
-  image_caption: MMIE Coffee Talks, University of Cincinnati, October 14, 2026.
+# text may contain HTML: <em> for titles, <a> for conference links. Use the >- block form
+# so colons and quotes in titles need no escaping.
 
 - date: 2026-11-01
-  text: Presented my Ph.D. dissertation work on outpatient scheduling optimization at the 2026 INFORMS Annual Meeting in San Francisco.
+  text: >-
+    I presented our work, <em>Using stochastic programming to mitigate patient no-shows and
+    short-notice cancellations in outpatient clinics through overbooking and walk-ins</em>, at the
+    <a href="https://meetings.informs.org/wordpress/sanfrancisco2026/" target="_blank" rel="noopener">2026 INFORMS Annual Meeting</a>
+    in San Francisco, CA. This is joint work with my advisor, Tommaso Giovannelli, and with
+    Karmel Shehadeh and Jing Shi.
   images:
     - src: /assets/img/news/informs-2026-talk-wide.jpg
       w: 1200
@@ -19,62 +21,126 @@
       alt: Amanat Ur Rahman speaking during his talk at the 2026 INFORMS Annual Meeting.
   image_caption: 2026 INFORMS Annual Meeting, San Francisco, November 2026.
 
+- date: 2026-10-14
+  text: >-
+    I presented our work, <em>Two-stage stochastic optimization of outpatient scheduling with
+    overbooking and walk-in patients under no-shows and short-notice cancellations</em>, at MMIE
+    Coffee Talks, a seminar series in the Department of Mechanical, Materials, and Industrial
+    Engineering at the University of Cincinnati. This is joint work with my advisor, Tommaso
+    Giovannelli, and with Karmel Shehadeh and Jing Shi.
+  image: /assets/img/news/coffee-talk-2026-10.jpg
+  image_alt: Amanat Ur Rahman at the lectern beside the title slide of his talk on two-stage stochastic optimization of outpatient scheduling.
+  image_caption: MMIE Coffee Talks, University of Cincinnati, October 14, 2026.
+
 - date: 2026-08-20
-  text: Awarded a Research Travel Grant by the Graduate Student Government at the University of Cincinnati to attend the 2026 INFORMS Annual Meeting.
+  text: >-
+    I received a Research Travel Grant from the Graduate Student Government at the University
+    of Cincinnati to present my work at the 2026 INFORMS Annual Meeting.
 
 - date: 2026-08-15
-  text: Completed a summer internship with the Network Planning group at Atlas Air, where I built a stochastic evaluation framework with MILP recourse for cargo network planning under operational uncertainty.
+  text: >-
+    I completed my summer internship as a Data Scientist Intern in Network Planning at Atlas
+    Air, where I built a stochastic evaluation framework with MILP recourse for cargo network
+    planning under operational uncertainty.
 
 - date: 2026-08-05
-  text: My Ph.D. dissertation work on outpatient scheduling optimization was presented at MOPTA 2026 at Lehigh University by T. Giovannelli.
+  text: >-
+    My advisor, Tommaso Giovannelli, presented our work, <em>Using stochastic programming to
+    mitigate patient no-shows and short-notice cancellations in outpatient clinics through
+    overbooking and walk-ins</em>, at
+    <a href="https://coral.ise.lehigh.edu/~mopta/" target="_blank" rel="noopener">MOPTA 2026</a>
+    (Modeling and Optimization: Theory and Applications) at Lehigh University in Bethlehem, PA.
+    This work is co-authored with Karmel Shehadeh and Jing Shi.
 
 - date: 2026-06-01
-  text: Joined Atlas Air as a Data Scientist (Optimization) Intern in Network Planning for the summer, working on the evaluation of cargo network plans under operational uncertainty.
+  text: >-
+    I joined Atlas Air as a Data Scientist Intern in Network Planning for the summer, working
+    on the evaluation of cargo network plans under operational uncertainty.
 
 - date: 2026-05-20
-  text: My Ph.D. dissertation work on outpatient scheduling optimization was presented at the IISE Annual Conference and Expo 2026 in Arlington, TX by T. Giovannelli.
+  text: >-
+    My advisor, Tommaso Giovannelli, presented our work, <em>Using stochastic programming to
+    mitigate patient no-shows and short-notice cancellations in outpatient clinics through
+    overbooking and walk-ins</em>, at the
+    <a href="https://www.iise.org/annual" target="_blank" rel="noopener">IISE Annual Conference &amp; Expo 2026</a>
+    in Arlington, TX. This work is co-authored with Karmel Shehadeh and Jing Shi.
 
 - date: 2026-04-01
-  text: Served as recitation instructor for ISE 3011, Deterministic Systems Models, an undergraduate course at the University of Cincinnati.
+  text: >-
+    I served as recitation instructor for ISE 3011, Deterministic Systems Models, an
+    undergraduate course at the University of Cincinnati.
 
 - date: 2025-05-15
-  text: Concluded the research assistantship at the P&G Digital Accelerator. The production planning automation project translated SAP planning volumes into production-line recipe rates for Personal Care products, reducing annual manual effort by approximately 550 hours.
+  text: >-
+    I concluded my graduate research assistantship at the P&amp;G Digital Accelerator. The Azure
+    Databricks pipelines I built translate SAP planning volumes into production-line recipe
+    rates for Personal Care products and reduced annual manual effort by about 550 hours (50%).
 
 - date: 2024-06-20
-  text: "Conference paper published (presented at ASME MSEC 2024 in Knoxville, TN): Enhanced Data-Driven Virtual Metrology on Chemical Mechanical Planarization Process Using Dual Linear Kalman Filter."
+  text: >-
+    Our paper, <em>Enhanced data-driven virtual metrology on chemical mechanical planarization
+    process using dual linear Kalman filter</em>, with X. Han and Xiaodong Jia, was published in
+    the proceedings of
+    <a href="https://event.asme.org/MSEC-2024" target="_blank" rel="noopener">ASME MSEC 2024</a>
+    and presented in Knoxville, TN.
 
 - date: 2024-06-01
-  text: Joined the P&G Digital Accelerator at the University of Cincinnati as a Graduate Research Assistant, building production planning pipelines on Azure Databricks.
+  text: >-
+    I joined the P&amp;G Digital Accelerator at the University of Cincinnati as a Graduate Research
+    Assistant, building production planning pipelines on Azure Databricks.
 
 - date: 2024-03-15
-  text: "Journal article published: Artificial Intelligence Approach to Predict Supply Chain Performance: Implications for Sustainability."
+  text: >-
+    Our article, <em>Artificial intelligence approach to predict supply chain performance:
+    Implications for sustainability</em>, with S. M. Ali, G. Kabir, and S. K. Paul, was
+    published in <em>Sustainability</em>.
 
 - date: 2023-08-15
-  text: Started the Ph.D. in Industrial and Systems Engineering at the University of Cincinnati.
+  text: >-
+    I began my Ph.D. in Industrial and Systems Engineering at the University of Cincinnati.
 
 - date: 2023-08-01
-  text: Completed the M.S. in Industrial Engineering at the University of Louisville.
+  text: >-
+    I completed my M.S. in Industrial Engineering at the University of Louisville.
 
 - date: 2022-11-15
-  text: Second place among Ph.D. students at the Graduate Student Research Competition, Department of Industrial Engineering, University of Louisville.
+  text: >-
+    I won second place among Ph.D. students at the Fall 2022 Graduate Student Research
+    Competition in the Department of Industrial Engineering at the University of Louisville.
 
 - date: 2022-10-15
-  text: Presented work on institutional variability in post-heart-transplant survivability at the 2022 INFORMS Annual Meeting in Indianapolis.
+  text: >-
+    I presented our work, <em>Impact of institutional variability and correlated multi-level
+    factors on post heart transplant survivability</em>, at the 2022 INFORMS Annual Meeting in
+    Indianapolis, IN. This is joint work with X. Chen, Monica Gentili, and J. Trivedi.
 
 - date: 2022-09-15
-  text: Third place in the poster competition at Research!Louisville for the multi-task Cox model of post-heart-transplant survival.
+  text: >-
+    Our poster, <em>Quantification of contributing factors affecting post heart transplant
+    survivability using multitask Cox model</em>, won third place in the poster competition at
+    Research!Louisville 2022.
 
 - date: 2021-08-15
-  text: Joined the Logistics and Distribution Institute at the University of Louisville as a Graduate Research Assistant.
+  text: >-
+    I joined the Logistics and Distribution Institute at the University of Louisville as a
+    Graduate Research Assistant.
 
 - date: 2020-09-15
-  text: Completed the M.S. in Industrial and Production Engineering at Bangladesh University of Engineering and Technology.
+  text: >-
+    I completed my M.S. in Industrial and Production Engineering at Bangladesh University of
+    Engineering and Technology.
 
 - date: 2018-12-01
-  text: Promoted to Assistant Professor in the Department of Mechanical and Production Engineering at Ahsanullah University of Science and Technology.
+  text: >-
+    I was promoted to Assistant Professor in the Department of Mechanical and Production
+    Engineering at Ahsanullah University of Science and Technology.
 
 - date: 2015-06-01
-  text: Joined Ahsanullah University of Science and Technology as a Lecturer in the Industrial and Production Engineering discipline.
+  text: >-
+    I joined Ahsanullah University of Science and Technology as a Lecturer in the Industrial and
+    Production Engineering discipline.
 
 - date: 2014-12-15
-  text: Graduated first among 65 students in the B.S. in Industrial and Production Engineering at Ahsanullah University of Science and Technology, with the Dean's Award.
+  text: >-
+    I graduated first among 65 students in the B.S. in Industrial and Production Engineering at
+    Ahsanullah University of Science and Technology and received the Dean's Award.
