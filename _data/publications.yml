@@ -11,11 +11,23 @@
   year: "2026"
   sort: "202610"
   abstract: >-
-    A two-stage stochastic program with an integer first stage that jointly determines
-    overbooking levels and appointment slot assignments under uncertain no-shows,
-    short-notice cancellations, and walk-in arrivals. The recourse problem is itself a
-    mixed-integer program; the model is solved by an enhanced integer L-shaped
-    decomposition embedded in a single-tree branch-and-cut framework.
+    Outpatient clinics face significant operational challenges when scheduling appointments
+    under uncertainty in the arrival times of scheduled and walk-in patients, service durations,
+    no-shows, and short-notice cancellations. Our study proposes a two-stage stochastic
+    programming model to mitigate these issues by jointly determining overbooking strategies for
+    scheduled patients and open-access slots for walk-in patients in a multi-provider clinic. The
+    first stage assigns scheduled patients to providers and appointment slots, and determines
+    which slots to overbook or designate as open-access. In the second stage, after the
+    uncertainty is realized, the model determines walk-in admission decisions. The objective is
+    to minimize the expected cost of patient waiting time, provider idle time and overtime, and
+    walk-in denial. To solve this stochastic mixed-integer program, we develop an enhanced integer
+    L-shaped decomposition (EILSD) algorithm, implemented as a single-tree branch-and-cut
+    procedure that generates scenario-wise integer L-shaped cuts and no-good feasibility cuts at
+    the nodes of the branch-and-bound tree. Extensive computational experiments show that the
+    proposed EILSD algorithm solves practical problem instances to optimality within a reasonable
+    time. The experiments also highlight the value of overbooking and open access, with open
+    access reducing the expected cost by up to 23.4% when the cost of denying admission to a
+    walk-in patient is high.
 
 - id: rahman2026pao
   type: working
