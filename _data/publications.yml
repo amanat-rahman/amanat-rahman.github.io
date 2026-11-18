@@ -62,9 +62,16 @@
   sort: "202406"
   doi: 10.1115/MSEC2024-125308
   abstract: >-
-    A dual linear Kalman filter for material removal rate prediction in chemical
-    mechanical planarization, attaining the lowest mean squared error against multiple
-    linear regression, EWMA, and Bayesian ARX benchmarks.
+    This paper explores a new virtual metrology method using Dual Linear Kalman Filter (DLKF) to
+    track the gradual data variations in the semiconductor manufacturing process. The prediction
+    of Material Removal Rate (MRR) in the Chemical Mechanical Planarization (CMP) is adopted to
+    demonstrate the results. The proposed approach ensures dynamic tracking of CMP process changes
+    and jointly updates state and parameter accordingly for the MRR prediction. This recursive
+    nature of DLKF allows for tracking the process drifts and self-adjusting the parameters
+    accordingly. The effectiveness of the proposed methodology for MRR prediction is tested based
+    on the dataset from the Prognostics and Health Management (PHM) Data Challenge 2016. The
+    prediction performance will be evaluated and benchmarked again with other peer algorithms that
+    are used in practice.
 
 - id: ali2024ai
   type: journal
@@ -74,6 +81,23 @@
   year: "2024"
   sort: "202403"
   doi: 10.3390/su16062373
+  abstract: >-
+    The performance of supply chains significantly impacts the success of businesses. In
+    addressing this critical aspect, this article presents a methodology for analyzing and
+    predicting key performance indicators (KPIs) within supply chains characterized by limited,
+    imprecise, and uncertain data. Drawing upon an extensive literature review, this study
+    identifies 21 KPIs using the balanced scorecard (BSC) methodology as a performance measurement
+    framework. While prior research has relied on the grey first-order one-variable GM (1,1) model
+    to predict supply chain performance within constrained datasets, this study introduces an
+    artificial intelligence approach, specifically a GM (1,1) based artificial neural network (ANN)
+    model, to enhance prediction precision. Unlike the traditional GM(1,1) model, the proposed
+    approach evaluates performance based on the mean relative error (MRE). The results demonstrate
+    a significant reduction in MRE levels, ranging from 77.09% to 0.23%, across various KPIs,
+    leading to improved prediction accuracy. Notably, the grey neural network (GNN) model exhibits
+    superior predictive accuracy compared to the GM (1,1) model. The findings of this study
+    underscore the potential of the proposed artificial intelligence approach in facilitating
+    informed decision-making by industrial managers, thereby fostering economic sustainability
+    within enterprises across all operational tiers.
 
 - id: rahman2018grey
   type: journal
