@@ -21,7 +21,7 @@
     {%- unless spoken -%}
     <p class="work__venue">{{ w.venue }}</p>
     {%- endunless -%}
-    <p class="work__chips">
+    <div class="work__chips">
       {%- if w.status %}<span class="chip chip--status">{{ w.status }}</span>{% endif -%}
       {%- if w.presenter %}<span class="chip chip--muted">Presented by {{ w.presenter }}</span>{% endif -%}
       {%- if w.award %}<span class="chip chip--award">{{ w.award }}</span>{% endif -%}
@@ -29,8 +29,8 @@
       <a class="chip chip--link" href="https://doi.org/{{ w.doi }}" target="_blank" rel="noopener">DOI {% include icon.html name="external" %}</a>
       {%- endif -%}
       {%- if w.abstract -%}
-      <span class="work__abstract-wrap"><details class="work__abstract"><summary class="chip chip--link">Abstract</summary><p>{{ w.abstract }}</p></details></span>
+      <div class="work__abstract-wrap"><details class="work__abstract"><summary class="chip chip--link">Abstract</summary><p>{{ w.abstract }}</p></details></div>
       {%- endif -%}
-    </p>
+    </div>
   </div>
 </li>

@@ -227,7 +227,8 @@ a.email:hover { color: var(--accent); }
 .work__abstract summary::-webkit-details-marker { display: none; }
 .work__abstract[open] summary { border-color: var(--accent); color: var(--accent); }
 .work__abstract p { margin-top: .6rem; padding: .85rem 1rem; background: var(--surface-2); border-radius: var(--radius-sm); font-size: .92rem; color: var(--ink-2); max-width: 70ch; font-style: normal; }
-.work__abstract-wrap { flex-basis: 100%; }
+.work__abstract-wrap { flex: 0 0 auto; }
+.work__abstract-wrap:has(details[open]) { flex-basis: 100%; }
 
 /* News ------------------------------------------------------------------- */
 .news { display: grid; position: relative; padding-left: 1.4rem; border-left: 1px solid var(--line); }
