@@ -29,8 +29,8 @@ import subprocess
 import sys
 import tempfile
 
-# Set to True once Amanat passes his Ph.D. proposal defense (November 20, 2026).
-CANDIDATE = False
+# True since Amanat passed his Ph.D. candidacy exam (November 20, 2026): the header keeps "Ph.D. Candidate".
+CANDIDATE = True
 
 DEFAULT_SRC = pathlib.Path.home() / "OneDrive" / "cv_AR_cowork" / "academic_cv"
 SRC_NAME = "Amanat_Ur_Rahman_CV_general.tex"

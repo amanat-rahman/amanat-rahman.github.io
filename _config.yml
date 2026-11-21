@@ -1,7 +1,7 @@
 # Site settings. Content lives in _data/*.yml; pages in the root; design in assets/css/style.css.
 title: Amanat Ur Rahman
 description: >-
-  Ph.D. student in Industrial Engineering at the University of Cincinnati. Stochastic
+  Ph.D. candidate in Industrial and Systems Engineering at the University of Cincinnati. Stochastic
   programming, exact decomposition algorithms, and applied operations research across
   healthcare, transportation, and manufacturing.
 url: https://amanat-rahman.github.io
