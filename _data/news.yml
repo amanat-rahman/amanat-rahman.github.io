@@ -3,6 +3,18 @@
 # text may contain HTML: <em> for titles, <a> for conference links. Use the >- block form
 # so colons and quotes in titles need no escaping.
 
+- date: 2026-11-20
+  text: >-
+    I passed my Ph.D. candidacy exam, in which I presented my dissertation proposal,
+    <em>Stochastic optimization and decomposition algorithms for large-scale scheduling systems
+    under uncertainty</em>. I thank my committee: Tommaso Giovannelli (chair), Karmel Shehadeh,
+    Jing Shi, and Yingyan Zeng.
+  image: /assets/img/news/candidacy-2026-11.jpg
+  image_w: 800
+  image_h: 472
+  image_alt: Amanat Ur Rahman beside the title slide of his Ph.D. dissertation proposal.
+  image_caption: Ph.D. dissertation proposal, University of Cincinnati, November 20, 2026.
+
 - date: 2026-11-01
   text: >-
     I presented our work, <em>Two-stage stochastic optimization of outpatient scheduling with
