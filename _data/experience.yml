@@ -31,7 +31,7 @@ industry:
       - Quantified network disruption cost through scenario-based Monte Carlo evaluation of the recourse value function.
       - Calibrated stochastic parameters from operational data on Azure Databricks, with automated input validation, conditional task execution, and end-to-end run provenance.
   - role: Graduate Research Assistant
-    org: Procter & Gamble Digital Accelerator, University of Cincinnati
+    org: Procter & Gamble (P&G) Digital Accelerator, University of Cincinnati
     location: Cincinnati, OH, USA
     start: Jun 2024
     end: May 2025
